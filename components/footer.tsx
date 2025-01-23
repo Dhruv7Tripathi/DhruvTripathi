@@ -3,14 +3,7 @@ import { motion } from 'framer-motion'
 import {
   Github,
   Linkedin,
-  Mail,
-  ExternalLink,
-  Code2,
-  Briefcase,
-  User,
-  Download,
-  Menu,
-  X
+  Mail
 } from 'lucide-react';
 const Footer = () => {
   return (

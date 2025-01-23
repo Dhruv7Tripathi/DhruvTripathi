@@ -29,8 +29,8 @@ const About = () => {
         </div>
         <div className="bg-white rounded-lg shadow-xl p-8">
           <p className="text-gray-600 leading-relaxed text-lg">
-            I'm a passionate full-stack developer building web applications.
-            I specialize in React, Node.js, and modern web technologies. When I'm not coding,
+            I&apos;m a passionate full-stack developer building web applications.
+            I specialize in React, Node.js, and modern web technologies. When I&apos;m not coding,
             you can find me contributing to open-source projects or writing technical blog posts.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">

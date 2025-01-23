@@ -22,7 +22,7 @@ const Contact = () => {
         variants={fadeIn}
       >
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-8">Let's Work Together</h2>
+          <h2 className="text-3xl font-bold mb-8">Let&apos;s Work Together</h2>
           <motion.div
             className="flex flex-col sm:flex-row items-center justify-center gap-6"
             initial={{ opacity: 0, y: 20 }}
