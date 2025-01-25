@@ -14,5 +14,7 @@ export default {
       },
     },
   },
+
+  safelist: ["bg-background", "text-foreground"],
   plugins: [],
 } satisfies Config;
