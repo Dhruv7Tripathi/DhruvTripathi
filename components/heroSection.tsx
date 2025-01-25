@@ -88,7 +88,7 @@ const heroSection = () => {
               <Linkedin size={24} />
             </motion.a>
             <motion.a
-              href="#"
+              href="/contactus"
               className="p-3 bg-white bg-opacity-20 rounded-full hover:bg-opacity-30 transition-colors"
               whileHover={{ y: -3 }}
             >

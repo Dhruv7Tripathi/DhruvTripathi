@@ -57,7 +57,7 @@ const Navbar = () => {
               <NavLink href="#projects">Projects</NavLink>
               <NavLink href="#contact">Contact</NavLink>
               <motion.a
-                href="/resume.pdf"
+                href="/Dhruv_Tripathi_Resume.pdf"
                 download
                 className="ml-4 px-6 py-2 bg-purple-500 text-white rounded-full flex items-center hover:bg-purple-600 transition-colors"
                 whileHover={{ scale: 1.05 }}

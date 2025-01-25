@@ -30,7 +30,7 @@ const Contact = () => {
             transition={{ delay: 0.2 }}
           >
             <motion.a
-              href="mailto:contact@johndoe.com"
+              href="mailto:tripathidhruv366@gmail.com"
               className="flex items-center px-6 py-3 bg-white text-purple-600 rounded-full hover:bg-purple-50 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
