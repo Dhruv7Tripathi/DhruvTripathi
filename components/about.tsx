@@ -72,7 +72,7 @@ const About = () => {
               { name: 'TypeScript', level: '85%' },
               { name: 'JAVA', level: '80%' },
               { name: 'NextJs', level: '75%' },
-              // { name: '', level: '85%' }
+              { name: 'Data structure', level: '85%' }
             ].map((skill, index) => (
               <motion.div
                 key={skill.name}
