@@ -14,7 +14,6 @@ const heroSection = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        {/* // Animatiom for the background circles next time pick from here */}
         <motion.div
           className="absolute w-64 h-64 bg-white opacity-10 rounded-full"
           animate={{
