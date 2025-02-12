@@ -52,7 +52,7 @@ const heroSection = () => {
         <div className="text-center z-10">
           <div className="text-xl sm:text-2xl text-white/90 mb-6 animate-slide-down">
             <span className="inline-block text-5xl animate-wave">👋</span>
-            <span className="ml-2">Hi there, I'm</span>
+            <span className="ml-2">Hi there, I&apos;m</span>
           </div>
           <motion.h1
             className="text-6xl sm:text-7xl font-bold mb-4"

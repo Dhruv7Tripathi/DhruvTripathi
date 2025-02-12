@@ -1,6 +1,6 @@
 import React from 'react';
 import { ExternalLink, Briefcase, Github } from 'lucide-react';
-
+import Image from 'next/image';
 const Project = () => {
   const projects = [
     {
@@ -58,10 +58,12 @@ const Project = () => {
               className="bg-background rounded-2xl overflow-hidden shadow-lg group hover:-translate-y-2 transition-all duration-300 border border-foreground/10"
             >
               <div className="relative overflow-hidden aspect-video">
-                <img
+                <Image
                   src={project.imageUrl}
                   alt={project.title}
                   className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
+                  width={30}
+                  height={30}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
