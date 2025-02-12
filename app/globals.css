@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Base theme configuration */
 :root {
   --background: #ffffff;
   --foreground: #000000;
@@ -13,13 +12,11 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-  
   html {
     color-scheme: dark;
   }
 }
 
-/* Base styles */
 html {
   color-scheme: light;
 }
@@ -28,129 +25,4 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Animation keyframes */
-@keyframes wave {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(20deg); }
-  75% { transform: rotate(-15deg); }
-}
-
-@keyframes float {
-  0%, 100% { 
-    transform: translate3d(0, 0, 0);
-  }
-  50% { 
-    transform: translate3d(20px, -20px, 0);
-  }
-}
-
-@keyframes floatSlow {
-  0%, 100% { 
-    transform: translate3d(0, 0, 0);
-  }
-  50% { 
-    transform: translate3d(-20px, 20px, 0);
-  }
-}
-
-@keyframes fadeIn {
-  from { 
-    opacity: 0;
-    transform: translate3d(0, 0, 0);
-  }
-  to { 
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes slideDown {
-  from { 
-    transform: translate3d(0, -20px, 0);
-    opacity: 0;
-  }
-  to { 
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideUp {
-  from { 
-    transform: translate3d(0, 20px, 0);
-    opacity: 0;
-  }
-  to { 
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInUp {
-  from { 
-    transform: translate3d(0, 20px, 0);
-    opacity: 0;
-  }
-  to { 
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-
-/* Animation classes */
-.animate-wave {
-  animation: wave 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-  transform-origin: center;
-  will-change: transform;
-}
-
-.animate-float-slow {
-  animation: float 20s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-  will-change: transform;
-}
-
-.animate-float-slower {
-  animation: floatSlow 25s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-  will-change: transform;
-}
-
-.animate-fade-in {
-  animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  will-change: transform, opacity;
-}
-
-.animate-slide-down {
-  animation: slideDown 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  will-change: transform, opacity;
-}
-
-.animate-slide-up {
-  animation: slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  will-change: transform, opacity;
-}
-
-.animate-slide-up-delay {
-  animation: slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
-  opacity: 0;
-  will-change: transform, opacity;
-}
-
-.animate-fade-in-delay {
-  animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;
-  opacity: 0;
-  will-change: transform, opacity;
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.6s forwards;
-  opacity: 0;
-  will-change: transform, opacity;
-}
-
-.animate-fade-in-up-delay {
-  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.8s forwards;
-  opacity: 0;
-  will-change: transform, opacity;
 }
