@@ -50,6 +50,10 @@ const heroSection = () => {
         />
 
         <div className="text-center z-10">
+          <div className="text-xl sm:text-2xl text-white/90 mb-6 animate-slide-down">
+            <span className="inline-block text-5xl animate-wave">👋</span>
+            <span className="ml-2">Hi there, I'm</span>
+          </div>
           <motion.h1
             className="text-6xl sm:text-7xl font-bold mb-4"
             initial={{ y: -50, opacity: 0 }}
@@ -94,6 +98,14 @@ const heroSection = () => {
               <Mail size={24} />
             </motion.a>
           </motion.div>
+          <div className="mt-12 animate-fade-in-up-delay">
+            <a
+              href="#projects"
+              className="inline-block px-8 py-3 bg-white/10 hover:bg-white/20 text-white rounded-full font-medium transition-all duration-300 hover:-translate-y-1 border border-white/20"
+            >
+              View My Work
+            </a>
+          </div>
         </div>
       </motion.header>
     </div>

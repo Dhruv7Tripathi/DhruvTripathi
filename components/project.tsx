@@ -38,41 +38,41 @@ const Project = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-purple-50">
+    <div className="min-h-screen bg-background">
       <section
         id="projects"
         className="py-20 px-4 sm:px-8 max-w-6xl mx-auto"
       >
         <div className="flex items-center mb-12">
-          <div className="bg-purple-100 p-3 rounded-xl">
-            <Briefcase className="text-purple-600" size={32} />
+          <div className="bg-background/10 p-3 rounded-xl">
+            <Briefcase className="text-foreground" size={32} />
           </div>
-          <h2 className="text-3xl font-bold ml-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-purple-800">
+          <h2 className="text-3xl font-bold ml-4 text-foreground">
             Featured Projects
           </h2>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <div
               key={project.title}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg group hover:-translate-y-2 transition-all duration-300 border border-purple-100/50"
+              className="bg-background rounded-2xl overflow-hidden shadow-lg group hover:-translate-y-2 transition-all duration-300 border border-foreground/10"
             >
               <div className="relative overflow-hidden aspect-video">
                 <img
                   src={project.imageUrl}
                   alt={project.title}
-                  className="object-cover w-full h-full group-hover:scale-100 transition-transform duration-500"
+                  className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-gray-900">{project.title}</h3>
-                <p className="text-gray-600 mb-4 line-clamp-3">{project.description}</p>
+                <h3 className="text-xl font-bold mb-2 text-foreground">{project.title}</h3>
+                <p className="text-foreground/70 mb-4 line-clamp-3">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map(tag => (
                     <span
                       key={tag}
-                      className="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-sm font-medium border border-purple-100"
+                      className="px-3 py-1 bg-background/10 text-foreground rounded-full text-sm font-medium border border-foreground/10"
                     >
                       {tag}
                     </span>
@@ -83,7 +83,7 @@ const Project = () => {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors duration-300"
+                    className="inline-flex items-center px-4 py-2 bg-foreground text-background rounded-lg hover:bg-foreground/90 transition-colors duration-300"
                   >
                     Live Demo <ExternalLink size={16} className="ml-2" />
                   </a>
@@ -91,7 +91,7 @@ const Project = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center px-4 py-2 border border-purple-200 text-purple-600 rounded-lg hover:bg-purple-50 transition-colors duration-300"
+                    className="inline-flex items-center px-4 py-2 border border-foreground/20 text-foreground rounded-lg hover:bg-foreground/10 transition-colors duration-300"
                   >
                     <Github size={16} className="mr-2" /> Code
                   </a>
