@@ -1,103 +1,142 @@
-import React from 'react'
-import { motion } from 'framer-motion';
-import {
-  Code2,
-  Briefcase,
-  User,
+import React from 'react';
+import { Code2, Briefcase, User, Github, ExternalLink } from 'lucide-react';
 
-} from 'lucide-react';
 const About = () => {
-  const fadeIn = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 }
-  };
+  const skills = [
+    {
+      name: 'React',
+      level: '95%',
+      description: 'Modern React with Hooks, Context, Redux',
+      color: 'bg-blue-500'
+    },
+    {
+      name: 'Node.js',
+      level: '60%',
+      description: 'Express, REST APIs, GraphQL',
+      color: 'bg-green-500'
+    },
+    {
+      name: 'TypeScript',
+      level: '30%',
+      description: 'Type-safe development, Advanced types',
+      color: 'bg-blue-600'
+    },
+    {
+      name: 'JAVA',
+      level: '80%',
+      description: 'Spring Boot, Microservices',
+      color: 'bg-red-500'
+    },
+    {
+      name: 'NextJs',
+      level: '75%',
+      description: 'SSR, ISR, API Routes',
+      color: 'bg-black'
+    },
+    {
+      name: 'Data Structures',
+      level: '85%',
+      description: 'Algorithms, Problem Solving',
+      color: 'bg-purple-500'
+    }
+  ];
+
+  const achievements = [
+    {
+      title: 'Open Source',
+      description: 'Active contributor to various open-source projects',
+      icon: <Github className="w-6 h-6" />
+    },
+    {
+      title: 'Technical Writing',
+      description: 'Regular blog posts about web development',
+      icon: <ExternalLink className="w-6 h-6" />
+    }
+  ];
 
   return (
-    <div>
-      <motion.section
+    <div className="min-h-screen">
+      <section
         id="about"
-        className="py-20 px-8 max-w-4xl mx-auto"
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: true }}
-        variants={fadeIn}
+        className="py-20 px-8 max-w-5xl mx-auto animate-fade-in"
       >
-        <div className="flex items-center mb-8">
-          <User className="mr-4 text-purple-500" size={32} />
+        <div className="flex items-center mb-8 animate-slide-down">
+          <User className="mr-4 text-purple-500 animate-float-slow" size={32} />
           <h2 className="text-3xl font-bold">About Me</h2>
         </div>
-        <div className="bg-white rounded-lg shadow-xl p-8">
-          <p className="text-gray-600 leading-relaxed text-lg">
+
+        <div className="bg-white rounded-xl shadow-xl p-8 backdrop-blur-sm bg-opacity-80 animate-fade-in-up">
+          <p className="text-gray-600 leading-relaxed text-lg mb-8">
             I&apos;m a passionate full-stack developer building web applications.
             I specialize in React, Node.js, and modern web technologies. When I&apos;m not coding,
             you can find me contributing to open-source projects or writing technical blog posts.
           </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <motion.div
-              className="flex items-center px-4 py-2 bg-purple-50 rounded-full text-purple-600"
-              whileHover={{ scale: 1.05 }}
-            >
-              <Code2 size={16} className="mr-2" />
-              Clean Code Enthusiast
-            </motion.div>
-            <motion.div
-              className="flex items-center px-4 py-2 bg-pink-50 rounded-full text-pink-600"
-              whileHover={{ scale: 1.05 }}
-            >
-              <Briefcase size={16} className="mr-2" />
-              Problem Solver
-            </motion.div>
-          </div>
-        </div>
-      </motion.section>
 
-      <motion.section
-        id="skills"
-        className="py-20 px-8 bg-gray-100"
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: true }}
-        variants={fadeIn}
-      >
-        <div className="max-w-4xl mx-auto">
-          <div className="flex items-center mb-8">
-            <Code2 className="mr-4 text-purple-500" size={32} />
-            <h2 className="text-3xl font-bold">Skills</h2>
+          <div className="flex flex-wrap gap-4 mb-8">
+            <div className="flex items-center px-4 py-2 bg-purple-50 rounded-full text-purple-600 hover:bg-purple-100 transition-colors animate-slide-up-delay">
+              <Code2 size={16} className="mr-2 animate-wave" />
+              Clean Code Enthusiast
+            </div>
+            <div className="flex items-center px-4 py-2 bg-pink-50 rounded-full text-pink-600 hover:bg-pink-100 transition-colors animate-slide-up-delay">
+              <Briefcase size={16} className="mr-2 animate-wave" />
+              Problem Solver
+            </div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            {[
-              { name: 'React', level: '95%' },
-              { name: 'Node.js', level: '90%' },
-              { name: 'TypeScript', level: '85%' },
-              { name: 'JAVA', level: '80%' },
-              { name: 'NextJs', level: '75%' },
-              { name: 'Data structure', level: '85%' }
-            ].map((skill, index) => (
-              <motion.div
-                key={skill.name}
-                className="bg-white p-6 rounded-lg shadow-lg"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-fade-in-delay">
+            {achievements.map((achievement, index) => (
+              <div
+                key={achievement.title}
+                className="p-6 rounded-lg bg-gradient-to-br from-purple-50 to-pink-50 hover:shadow-md transition-all duration-300"
               >
-                <h3 className="font-semibold mb-2">{skill.name}</h3>
-                <div className="w-full bg-gray-200 rounded-full h-2.5">
-                  <motion.div
-                    className="bg-purple-500 h-2.5 rounded-full"
-                    initial={{ width: 0 }}
-                    whileInView={{ width: skill.level }}
-                    transition={{ duration: 1, delay: index * 0.1 }}
-                  />
+                <div className="flex items-center mb-3">
+                  <div className="text-purple-500 mr-3">{achievement.icon}</div>
+                  <h3 className="font-semibold text-lg">{achievement.title}</h3>
                 </div>
-              </motion.div>
+                <p className="text-gray-600">{achievement.description}</p>
+              </div>
             ))}
           </div>
         </div>
-      </motion.section>
-    </div>
-  )
-}
+      </section>
 
-export default About
+      <section
+        id="skills"
+        className="py-20 px-8 bg-gray-50"
+      >
+        <div className="max-w-5xl mx-auto animate-fade-in">
+          <div className="flex items-center mb-12 animate-slide-down">
+            <Code2 className="mr-4 text-purple-500 animate-float-slow" size={32} />
+            <h2 className="text-3xl font-bold">Skills</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {skills.map((skill, index) => (
+              <div
+                key={skill.name}
+                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up-delay"
+              >
+                <h3 className="font-semibold text-lg mb-2">{skill.name}</h3>
+                <p className="text-sm text-gray-600 mb-4">{skill.description}</p>
+                <div className="w-full bg-gray-200 rounded-full h-2.5 overflow-hidden">
+                  <div
+                    className={`${skill.color} h-full rounded-full animate-slide-up-delay`}
+                    style={{
+                      width: skill.level,
+                      transition: `width 1s ease-out ${index * 0.1}s`
+                    }}
+                  />
+                </div>
+                <span className="text-sm font-medium text-gray-500 mt-2 block">
+                  {skill.level}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default About;
