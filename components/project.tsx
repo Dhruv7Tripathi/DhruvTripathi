@@ -16,7 +16,7 @@ const Project = () => {
       description: "Modern blog platform with markdown support, categories, and social sharing. Includes user authentication and comment system.",
       link: "https://your-blog-project.com",
       github: "https://github.com/yourusername/bloggify",
-      imageUrl: "/logo.webp ",
+      imageUrl: "/logo.webp",
       tags: ["NextJs", "APIs", "TailwindCSS", "MongoDB"]
     },
     {
@@ -62,8 +62,8 @@ const Project = () => {
                   src={project.imageUrl}
                   alt={project.title}
                   className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
-                  width={30}
-                  height={30}
+                  width={500}
+                  height={300}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
