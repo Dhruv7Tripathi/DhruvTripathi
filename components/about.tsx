@@ -84,7 +84,7 @@ const About = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-fade-in-delay">
-            {achievements.map((achievement, index) => (
+            {achievements.map((achievement) => (
               <div
                 key={achievement.title}
                 className="p-6 rounded-lg bg-gradient-to-br from-purple-50 to-pink-50 hover:shadow-md transition-all duration-300"

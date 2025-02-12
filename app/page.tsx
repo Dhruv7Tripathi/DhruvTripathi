@@ -3,7 +3,7 @@ import Navbar from '@/components/navbar';
 import HeroSection from '@/components/heroSection';
 import About from '@/components/about';
 import Project from '@/components/project';
-import Footer from '@/components/footer';
+// import Footer from '@/components/footer';
 import Contact from '@/components/contact';
 
 export default function Home() {

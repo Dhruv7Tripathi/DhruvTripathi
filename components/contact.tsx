@@ -64,12 +64,10 @@ const Contact = () => {
               Let&apos;s Work Together
             </h2>
             <p className="text-white/90 text-lg max-w-2xl mx-auto animate-fade-in-delay">
-              I'm always interested in hearing about new projects and opportunities.
+              I&apos;m always interested in hearing about new projects and opportunities.
               Feel free to reach out through any of these channels.
             </p>
           </div>
-
-          {/* Contact Methods */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {contactMethods.map((method, index) => (
               <div
@@ -97,8 +95,6 @@ const Contact = () => {
               </div>
             ))}
           </div>
-
-          {/* Resume Download */}
           <div className="text-center mb-12 animate-fade-in-up">
             <a
               href="/resume.pdf"
@@ -110,8 +106,6 @@ const Contact = () => {
               Download Resume
             </a>
           </div>
-
-          {/* Social Links */}
           <div className="flex justify-center gap-4 animate-fade-in-up-delay">
             {socialLinks.map((social) => (
               <a
