@@ -2,20 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  
-} */
+/* Base theme configuration */
 :root {
-  --background: #ffffff; 
-  --foreground: #000000; 
+  --background: #ffffff;
+  --foreground: #000000;
 }
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+  
+  html {
+    color-scheme: dark;
+  }
+}
+
+/* Base styles */
+html {
+  color-scheme: light;
 }
 
 body {
@@ -23,6 +29,8 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Animation keyframes */
 @keyframes wave {
   0%, 100% { transform: rotate(0deg); }
   25% { transform: rotate(20deg); }
@@ -30,77 +38,119 @@ body {
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0) translateX(0); }
-  50% { transform: translateY(-20px) translateX(20px); }
+  0%, 100% { 
+    transform: translate3d(0, 0, 0);
+  }
+  50% { 
+    transform: translate3d(20px, -20px, 0);
+  }
 }
 
 @keyframes floatSlow {
-  0%, 100% { transform: translateY(0) translateX(0); }
-  50% { transform: translateY(20px) translateX(-20px); }
-}
-
-.animate-wave {
-  animation: wave 2s infinite;
-}
-
-.animate-float-slow {
-  animation: float 20s infinite;
-}
-
-.animate-float-slower {
-  animation: floatSlow 25s infinite;
-}
-
-.animate-fade-in {
-  animation: fadeIn 1s ease-out;
-}
-
-.animate-slide-down {
-  animation: slideDown 0.8s ease-out;
-}
-
-.animate-slide-up {
-  animation: slideUp 0.8s ease-out;
-}
-
-.animate-slide-up-delay {
-  animation: slideUp 0.8s ease-out 0.2s backwards;
-}
-
-.animate-fade-in-delay {
-  animation: fadeIn 1s ease-out 0.4s backwards;
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out 0.6s backwards;
-}
-
-.animate-fade-in-up-delay {
-  animation: fadeInUp 0.8s ease-out 0.8s backwards;
+  0%, 100% { 
+    transform: translate3d(0, 0, 0);
+  }
+  50% { 
+    transform: translate3d(-20px, 20px, 0);
+  }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from { 
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+  }
+  to { 
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 @keyframes slideDown {
-  from { transform: translateY(-20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from { 
+    transform: translate3d(0, -20px, 0);
+    opacity: 0;
+  }
+  to { 
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from { 
+    transform: translate3d(0, 20px, 0);
+    opacity: 0;
+  }
+  to { 
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInUp {
   from { 
-    transform: translateY(20px);
+    transform: translate3d(0, 20px, 0);
     opacity: 0;
   }
-  to {
-    transform: translateY(0);
+  to { 
+    transform: translate3d(0, 0, 0);
     opacity: 1;
   }
+}
+
+/* Animation classes */
+.animate-wave {
+  animation: wave 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.animate-float-slow {
+  animation: float 20s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  will-change: transform;
+}
+
+.animate-float-slower {
+  animation: floatSlow 25s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  will-change: transform;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  will-change: transform, opacity;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  will-change: transform, opacity;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  will-change: transform, opacity;
+}
+
+.animate-slide-up-delay {
+  animation: slideUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s forwards;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.animate-fade-in-delay {
+  animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.6s forwards;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.animate-fade-in-up-delay {
+  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.8s forwards;
+  opacity: 0;
+  will-change: transform, opacity;
 }
