@@ -6,10 +6,7 @@ import {
   Linkedin,
   Twitter,
   ExternalLink,
-  MessageCircle,
-  Code2,
-  Briefcase,
-  User
+  MessageCircle
 } from 'lucide-react';
 
 const Contact = () => {
@@ -54,45 +51,75 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div >
       <section
-        id="about"
-        className="py-20 px-8 max-w-5xl mx-auto animate-fade-in"
+        id="contact"
+        className="relative py-20 px-8 overflow-hidden"
       >
-        <div className="flex items-center mb-8 animate-slide-down">
-          <User className="mr-4 text-primary animate-float-slow" size={32} />
-          <h2 className="text-3xl font-bold">About Me</h2>
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-500 animate-float-slower opacity-90"></div>
 
-        <div className="bg-card text-card-foreground rounded-xl shadow-xl p-8 animate-fade-in-up">
-          <p className="text-muted-foreground leading-relaxed text-lg mb-8">
-            I&apos;m a passionate full-stack developer building web applications.
-            I specialize in React, Node.js, and modern web technologies. When I&apos;m not coding,
-            you can find me contributing to open-source projects or writing technical blog posts.
-          </p>
-
-          <div className="flex flex-wrap gap-4 mb-8">
-            <div className="flex items-center px-4 py-2 bg-accent text-accent-foreground rounded-full transition-colors animate-slide-up-delay">
-              <Code2 size={16} className="mr-2 animate-wave" />
-              Clean Code Enthusiast
-            </div>
-            <div className="flex items-center px-4 py-2 bg-secondary text-secondary-foreground rounded-full transition-colors animate-slide-up-delay">
-              <Briefcase size={16} className="mr-2 animate-wave" />
-              Problem Solver
-            </div>
+        <div className="relative max-w-5xl mx-auto">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Let&apos;s Work Together
+            </h2>
+            <p className="text-white/90 text-lg max-w-2xl mx-auto animate-fade-in-delay">
+              Im always interested in hearing about new projects and opportunities.
+              Feel free to reach out through any of these channels.
+            </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-6 rounded-lg bg-muted text-muted-foreground">
-              <Github className="w-6 h-6 mb-3 text-primary" />
-              <h3 className="font-semibold text-foreground">Open Source</h3>
-              <p>Active contributor to various open-source projects</p>
-            </div>
-            <div className="p-6 rounded-lg bg-muted text-muted-foreground">
-              <ExternalLink className="w-6 h-6 mb-3 text-primary" />
-              <h3 className="font-semibold text-foreground">Technical Writing</h3>
-              <p>Regular blog posts about web development</p>
-            </div>
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {contactMethods.map((method, index) => (
+              <div
+                key={method.title}
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-8 text-white animate-slide-up"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="flex items-center mb-4">
+                  <div className="p-3 bg-white/20 rounded-lg mr-4 animate-float-slow">
+                    {method.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold">{method.title}</h3>
+                    <p className="text-white/80">{method.description}</p>
+                  </div>
+                </div>
+                <a
+                  href={method.link}
+                  className="inline-flex items-center px-6 py-3 bg-white text-purple-600 rounded-full 
+                           hover:bg-purple-50 transition-all duration-300 animate-fade-in-up-delay"
+                >
+                  {method.buttonText}
+                  <ExternalLink className="w-4 h-4 ml-2" />
+                </a>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mb-12 animate-fade-in-up">
+            <a
+              href="/resume.pdf"
+              download
+              className="inline-flex items-center px-8 py-4 bg-white text-purple-600 rounded-full 
+                       hover:bg-purple-50 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              <Download className="w-5 h-5 mr-2 animate-bounce" />
+              Download Resume
+            </a>
+          </div>
+          <div className="flex justify-center gap-4 animate-fade-in-up-delay">
+            {socialLinks.map((social) => (
+              <a
+                key={social.name}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`p-3 rounded-full text-white transition-all duration-300 
+                          hover:scale-110 ${social.color}`}
+                aria-label={social.name}
+              >
+                {social.icon}
+              </a>
+            ))}
           </div>
         </div>
       </section>
