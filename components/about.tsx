@@ -1,7 +1,46 @@
 import React from 'react';
 import { Code2, Briefcase, User, Github, ExternalLink } from 'lucide-react';
-import { skills } from '@/contant';
+
 const About = () => {
+  const skills = [
+    {
+      name: 'React',
+      level: '95%',
+      description: 'Modern React with Hooks, Context, Redux',
+      color: 'bg-emerald-500'
+    },
+    {
+      name: 'Node.js',
+      level: '60%',
+      description: 'Express, REST APIs',
+      color: 'bg-emerald-500'
+    },
+    {
+      name: 'TypeScript',
+      level: '30%',
+      description: 'Type-safe development, Interfaces',
+      color: 'bg-emerald-500'
+    },
+    {
+      name: 'JAVA',
+      level: '80%',
+      description: 'Classes, object Oriented Programming',
+      color: 'bg-emerald-500'
+    },
+    {
+      name: 'NextJs',
+      level: '75%',
+      description: 'SSR, ISR, API Routes',
+      color: 'bg-emerald-500'
+    },
+    {
+      name: 'Data Structures',
+      level: '85%',
+      description: 'Algorithms, Problem Solving',
+      color: 'bg-emerald-500'
+    }
+  ];
+
   const achievements = [
     {
       title: 'Open Source',
@@ -51,7 +90,7 @@ const About = () => {
                 className="p-6 rounded-lg bg-gradient-to-br from-purple-50 to-pink-50 hover:shadow-md transition-all duration-300"
               >
                 <div className="flex items-center mb-3">
-                  <div className="text-purple-500 mr-3">{achievement.icon}</div>
+                  <div className="text-emerald-500 mr-3">{achievement.icon}</div>
                   <h3 className="font-semibold text-lg">{achievement.title}</h3>
                 </div>
                 <p className="text-gray-600">{achievement.description}</p>
