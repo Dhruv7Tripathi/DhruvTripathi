@@ -1,46 +1,7 @@
 import React from 'react';
 import { Code2, Briefcase, User, Github, ExternalLink } from 'lucide-react';
-
+import { skills } from '@/contant';
 const About = () => {
-  const skills = [
-    {
-      name: 'React',
-      level: '95%',
-      description: 'Modern React with Hooks, Context, Redux',
-      color: 'bg-blue-500'
-    },
-    {
-      name: 'Node.js',
-      level: '60%',
-      description: 'Express, REST APIs, GraphQL',
-      color: 'bg-green-500'
-    },
-    {
-      name: 'TypeScript',
-      level: '30%',
-      description: 'Type-safe development, Advanced types',
-      color: 'bg-blue-600'
-    },
-    {
-      name: 'JAVA',
-      level: '80%',
-      description: 'Spring Boot, Microservices',
-      color: 'bg-red-500'
-    },
-    {
-      name: 'NextJs',
-      level: '75%',
-      description: 'SSR, ISR, API Routes',
-      color: 'bg-black'
-    },
-    {
-      name: 'Data Structures',
-      level: '85%',
-      description: 'Algorithms, Problem Solving',
-      color: 'bg-purple-500'
-    }
-  ];
-
   const achievements = [
     {
       title: 'Open Source',
