@@ -45,7 +45,7 @@ const Contact = () => {
       description: 'Let\'s discuss your project',
       icon: <MessageCircle className="w-6 h-6" />,
       action: 'Schedule a call',
-      link: '#',
+      link: '/',
       buttonText: 'Schedule Call'
     }
   ];

@@ -45,11 +45,13 @@ const About = () => {
     {
       title: 'Open Source',
       description: 'Active contributor to various open-source projects',
+      href: 'https://github.com/Dhruv7Tripathi',
       icon: <Github className="w-6 h-6" />
     },
     {
       title: 'Technical Writing',
       description: 'Regular blog posts about web development',
+      href: 'https://bloggify-two.vercel.app/',
       icon: <ExternalLink className="w-6 h-6" />
     }
   ];
@@ -94,6 +96,14 @@ const About = () => {
                   <h3 className="font-semibold text-lg">{achievement.title}</h3>
                 </div>
                 <p className="text-gray-600">{achievement.description}</p>
+                <a
+                  href={achievement.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-emerald-500 hover:underline flex items-center mt-2"
+                >
+                  Visit <ExternalLink className="w-4 h-4 ml-1" />
+                </a>
               </div>
             ))}
           </div>
