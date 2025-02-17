@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-// import { Badge } from '@/components/ui/badge';
-import { Github, Linkedin, Mail, Trophy, School } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { Github, Linkedin, Mail, School, Code, } from 'lucide-react';
 
 const AboutPage = () => {
   const education = [
@@ -12,10 +12,10 @@ const AboutPage = () => {
       description: "Try to become a full stack developer"
     },
     {
-      institution: "SR Public School",
-      degree: "12th Grade",
-      year: "2021-2022",
-      description: "Physics, Chemistry, Maths"
+      institution: "Example High School",
+      degree: "High School Diploma",
+      year: "2018-2020",
+      description: "Science and Mathematics focus"
     }
   ];
 
@@ -34,10 +34,10 @@ const AboutPage = () => {
   //   }
   // ];
 
-  // const skills = [
-  //   "React", "Node.js", "Java", "NextJs",
-  //   "JavaScript", "Docker", "DataStructure", "TypeScript"
-  // ];
+  const skills = [
+    "React", "Node.js", "Java", "NextJs",
+    "JavaScript", "Docker", "DataStructure", "TypeScript"
+  ];
 
   return (
     <div className="min-h-screen bg-white text-foreground p-8">
@@ -52,7 +52,7 @@ const AboutPage = () => {
             👋
           </h1>
           <p className="text-xl text-muted-foreground">
-            Full Stack Developer | AI Enthusiast | Hackathon Winner
+            Full Stack Developer | AI Enthusiast
           </p>
           <div className="flex justify-center space-x-4">
             <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
@@ -107,11 +107,11 @@ const AboutPage = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-      </section> */}
+        </div> */}
+      {/* </section> */}
 
       {/* */}
-      {/* <section className="max-w-5xl mx-auto">
+      <section className="max-w-5xl mx-auto">
         <div className="flex items-center mb-8">
           <Code className="w-8 h-8 mr-4" />
           <h2 className="text-3xl font-bold">Skills</h2>
@@ -123,7 +123,7 @@ const AboutPage = () => {
             </Badge>
           ))}
         </div>
-      </section> */}
+      </section>
     </div>
   );
 };

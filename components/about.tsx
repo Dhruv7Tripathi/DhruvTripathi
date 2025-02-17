@@ -1,6 +1,6 @@
 import React from 'react';
 import { Code2, Briefcase, User, Github, ExternalLink } from 'lucide-react';
-
+// import Link from 'next/navigation';
 const About = () => {
   const skills = [
     {
@@ -58,6 +58,7 @@ const About = () => {
 
   return (
     <div className="min-h-screen">
+      {/* <Link href="/about"> */}
       <section
         id="about"
         className="py-20 px-8 max-w-5xl mx-auto animate-fade-in"
@@ -145,6 +146,7 @@ const About = () => {
           </div>
         </div>
       </section>
+      {/* </Link> */}
     </div>
   );
 };

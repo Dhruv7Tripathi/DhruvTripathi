@@ -44,7 +44,7 @@ const Project = () => {
         className="py-20 px-4 sm:px-8 max-w-6xl mx-auto"
       >
         <div className="flex items-center mb-12">
-          <div className="bg-background/10 p-3 rounded-xl">
+          <div className="bg-white/10 p-3 rounded-xl">
             <Briefcase className="text-foreground" size={32} />
           </div>
           <h2 className="text-3xl font-bold ml-4 text-foreground">
@@ -65,7 +65,7 @@ const Project = () => {
                   width={500}
                   height={300}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2 text-foreground">{project.title}</h3>
@@ -85,7 +85,7 @@ const Project = () => {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center px-4 py-2 bg-foreground text-background rounded-lg hover:bg-foreground/90 transition-colors duration-300"
+                    className="inline-flex items-center px-4 py-2 bg-foreground text-white rounded-lg hover:bg-foreground/90 transition-colors duration-300"
                   >
                     Live Demo <ExternalLink size={16} className="ml-2" />
                   </a>
