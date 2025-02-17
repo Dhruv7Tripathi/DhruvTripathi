@@ -1,52 +1,52 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Github, Linkedin, Mail, Trophy, School, Code, Workflow } from 'lucide-react';
+// import { Badge } from '@/components/ui/badge';
+import { Github, Linkedin, Mail, Trophy, School } from 'lucide-react';
 
 const AboutPage = () => {
   const education = [
     {
-      institution: "Example University",
+      institution: "GLA University",
       degree: "Bachelor of Computer Science",
-      year: "2020-2024",
-      description: "Specialized in Artificial Intelligence and Machine Learning"
+      year: "2023-2027",
+      description: "Try to become a full stack developer"
     },
     {
-      institution: "Example High School",
-      degree: "High School Diploma",
-      year: "2018-2020",
-      description: "Science and Mathematics focus"
+      institution: "SR Public School",
+      degree: "12th Grade",
+      year: "2021-2022",
+      description: "Physics, Chemistry, Maths"
     }
   ];
 
-  const hackathons = [
-    {
-      name: "Global Hack 2024",
-      position: "1st Place",
-      project: "AI-Powered Healthcare Solution",
-      description: "Developed an innovative healthcare platform using machine learning"
-    },
-    {
-      name: "CodeFest 2023",
-      position: "2nd Place",
-      project: "Smart City Initiative",
-      description: "Created a sustainable urban planning solution"
-    }
-  ];
+  // const hackathons = [
+  //   {
+  //     name: "Global Hack 2024",
+  //     position: "1st Place",
+  //     project: "AI-Powered Healthcare Solution",
+  //     description: "Developed an innovative healthcare platform using machine learning"
+  //   },
+  //   {
+  //     name: "CodeFest 2023",
+  //     position: "2nd Place",
+  //     project: "Smart City Initiative",
+  //     description: "Created a sustainable urban planning solution"
+  //   }
+  // ];
 
-  const skills = [
-    "React", "Node.js", "Java", "NextJs",
-    "JavaScript", "Docker", "DataStructure", "TypeScript"
-  ];
+  // const skills = [
+  //   "React", "Node.js", "Java", "NextJs",
+  //   "JavaScript", "Docker", "DataStructure", "TypeScript"
+  // ];
 
   return (
-    <div className="min-h-screen bg-background text-foreground p-8">
+    <div className="min-h-screen bg-white text-foreground p-8">
       {/*  */}
       <div className="max-w-5xl mx-auto mb-16">
         <div className="text-center space-y-4">
           <h1 className="text-4xl font-bold">
             Hello, I'm{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
               Dhruv Tripathi
             </span>{" "}
             👋
@@ -89,7 +89,7 @@ const AboutPage = () => {
       </section>
 
       {/*  */}
-      <section className="max-w-5xl mx-auto mb-16">
+      {/* <section className="max-w-5xl mx-auto mb-16">
         <div className="flex items-center mb-8">
           <Trophy className="w-8 h-8 mr-4" />
           <h2 className="text-3xl font-bold">Hackathon Achievements</h2>
@@ -108,10 +108,10 @@ const AboutPage = () => {
             </Card>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* */}
-      <section className="max-w-5xl mx-auto">
+      {/* <section className="max-w-5xl mx-auto">
         <div className="flex items-center mb-8">
           <Code className="w-8 h-8 mr-4" />
           <h2 className="text-3xl font-bold">Skills</h2>
@@ -123,7 +123,7 @@ const AboutPage = () => {
             </Badge>
           ))}
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

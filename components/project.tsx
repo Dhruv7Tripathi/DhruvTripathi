@@ -38,7 +38,7 @@ const Project = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white text-foreground p-8">
       <section
         id="projects"
         className="py-20 px-4 sm:px-8 max-w-6xl mx-auto"
@@ -55,7 +55,7 @@ const Project = () => {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="bg-background rounded-2xl overflow-hidden shadow-lg group hover:-translate-y-2 transition-all duration-300 border border-foreground/10"
+              className="bg-white rounded-2xl overflow-hidden shadow-lg group hover:-translate-y-2 transition-all duration-300 border border-foreground/10"
             >
               <div className="relative overflow-hidden aspect-video">
                 <Image
@@ -74,7 +74,7 @@ const Project = () => {
                   {project.tags.map(tag => (
                     <span
                       key={tag}
-                      className="px-3 py-1 bg-background/10 text-foreground rounded-full text-sm font-medium border border-foreground/10"
+                      className="px-3 py-1 bg-white/10 text-foreground rounded-full text-sm font-medium border border-foreground/10"
                     >
                       {tag}
                     </span>
