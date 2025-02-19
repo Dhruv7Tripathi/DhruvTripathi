@@ -10,7 +10,6 @@ import {
   Plus,
   Save,
   GraduationCap,
-  //   Trophy,
   Briefcase,
   Code
 } from 'lucide-react';
@@ -22,7 +21,6 @@ import {
 } from '@/components/ui/tabs';
 
 const AdminPanel = () => {
-  // State for different sections
   const [education, setEducation] = useState([
     {
       institution: "Example University",
@@ -46,8 +44,6 @@ const AdminPanel = () => {
   ]);
 
   const [newSkill, setNewSkill] = useState("");
-
-  // Handlers for education section
   const addEducation = () => {
     setEducation([...education, {
       institution: "",
@@ -67,7 +63,6 @@ const AdminPanel = () => {
     setEducation(education.filter((_, i) => i !== index));
   };
 
-  // Handlers for projects section
   const addProject = () => {
     setProjects([...projects, {
       name: "",
@@ -98,15 +93,12 @@ const AdminPanel = () => {
   const removeSkill = (skill: string) => {
     setSkills(skills.filter(s => s !== skill));
   };
-
-  // Mock save function - replace with actual API call
   const saveChanges = (section: string) => {
     console.log(`Saving ${section}:`, {
       education,
       projects,
       skills
     });
-    // Add your API call here
   };
 
   return (

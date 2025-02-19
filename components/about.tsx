@@ -58,7 +58,6 @@ const About = () => {
 
   return (
     <div className="min-h-screen">
-      {/* <Link href="/about"> */}
       <section
         id="about"
         className="py-20 px-8 max-w-5xl mx-auto animate-fade-in"
