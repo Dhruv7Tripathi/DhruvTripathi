@@ -52,10 +52,10 @@ const Navbar = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-4">
-              <NavLink href="#about">About</NavLink>
+              <NavLink href="/about">About</NavLink>
               <NavLink href="#skills">Skills</NavLink>
               <NavLink href="#projects">Projects</NavLink>
-              <NavLink href="#contact">Contact</NavLink>
+              <NavLink href="/contactus">Contact</NavLink>
               <motion.a
                 href="/Dhruv_Tripathi_Resume.pdf"
                 download

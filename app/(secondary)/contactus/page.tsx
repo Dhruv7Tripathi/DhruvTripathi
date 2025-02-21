@@ -39,7 +39,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background py-20">
+    <div className="min-h-screen bg-white py-20">
       <div className="max-w-6xl mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold mb-8 text-center">Contact Us</h1>
 
@@ -81,7 +81,7 @@ export default function ContactPage() {
                   id="name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-2 border rounded-md bg-background"
+                  className="w-full px-4 py-2 border rounded-md bg-white"
                   required
                 />
               </div>
@@ -95,7 +95,7 @@ export default function ContactPage() {
                   id="email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-4 py-2 border rounded-md bg-background"
+                  className="w-full px-4 py-2 border rounded-md bg-white"
                   required
                 />
               </div>
@@ -109,7 +109,7 @@ export default function ContactPage() {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   rows={5}
-                  className="w-full px-4 py-2 border rounded-md bg-background"
+                  className="w-full px-4 py-2 border rounded-md bg-white"
                   required
                 />
               </div>
