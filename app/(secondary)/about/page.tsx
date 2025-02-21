@@ -45,7 +45,7 @@ const AboutPage = () => {
       <div className="max-w-5xl mx-auto mb-16">
         <div className="text-center space-y-4">
           <h1 className="text-4xl font-bold">
-            Hello, I'm{" "}
+            Hello, I&apos;m{" "}
             <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
               Dhruv Tripathi
             </span>{" "}
@@ -55,10 +55,10 @@ const AboutPage = () => {
             Full Stack Developer | AI Enthusiast
           </p>
           <div className="flex justify-center space-x-4">
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="https://github.com/dhruv7tripathi" className="text-muted-foreground hover:text-foreground transition-colors">
               <Github className="w-6 h-6" />
             </a>
-            <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+            <a href="" className="text-muted-foreground hover:text-foreground transition-colors">
               <Linkedin className="w-6 h-6" />
             </a>
             <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
