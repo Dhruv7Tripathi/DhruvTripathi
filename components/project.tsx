@@ -65,7 +65,7 @@ const Project = () => {
                   width={500}
                   height={300}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" /> */}
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2 text-foreground">{project.title}</h3>
