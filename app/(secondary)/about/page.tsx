@@ -3,39 +3,41 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Github, Linkedin, Mail, School, Code } from "lucide-react";
 import Image from "next/image";
-
+import { skills } from "@/contant";
+import { education } from "@/contant";
 const AboutPage = () => {
-  const education = [
-    {
-      institution: "GLA University",
-      degree: "Bachelor of Computer Science",
-      year: "2023-2027",
-      description: "Try to become a full-stack developer",
-      imageUrl: "/university.jpeg", // Add an appropriate image
-    },
-    {
-      institution: "SR public School",
-      class: "12th standard",
-      year: "2018-2022",
-      description: "Science student",
-      imageUrl: "/school.avif",
-    },
-  ];
+  // const education = [
+  //   {
+  //     institution: "GLA University",
+  //     degree: "Bachelor of Computer Science",
+  //     year: "2023-2027",
+  //     performance: "cpi : 7.7",
+  //     description: "Try to become a full-stack developer",
+  //     imageUrl: "/university.jpeg",
+  //   },
+  //   {
+  //     institution: "SR public School",
+  //     performance: "percentage : 88%",
+  //     degree: "12th standard",
+  //     year: "2018-2022",
+  //     description: "Science student",
+  //     imageUrl: "/school.avif",
+  //   },
+  // ];
 
-  const skills = [
-    "React",
-    "Node.js",
-    "Java",
-    "Next.js",
-    "JavaScript",
-    "Docker",
-    "Data Structure",
-    "TypeScript",
-  ];
+  // const skills = [
+  //   "React",
+  //   "Node.js",
+  //   "Java",
+  //   "Next.js",
+  //   "JavaScript",
+  //   "Docker",
+  //   "Data Structure",
+  //   "TypeScript",
+  // ];
 
   return (
     <div className="min-h-screen bg-white text-foreground p-8 w-full">
-      {/* Header */}
       <div className="max-w-5xl mx-auto mb-16">
         <div className="text-center space-y-4">
           <h1 className="text-4xl font-bold">
@@ -70,8 +72,6 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-
-      {/* Education Section */}
       <section className="max-w-5xl mx-auto mb-16">
         <div className="flex items-center mb-8">
           <School className="w-8 h-8 mr-4" />
@@ -92,6 +92,7 @@ const AboutPage = () => {
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-2">{edu.institution}</h3>
                 <p className="text-muted-foreground mb-2">{edu.degree}</p>
+                <p className="text-muted-foreground mb-2">{edu.performance}</p>
                 <p className="text-sm text-muted-foreground mb-4">{edu.year}</p>
                 <p>{edu.description}</p>
               </CardContent>
@@ -99,8 +100,6 @@ const AboutPage = () => {
           ))}
         </div>
       </section>
-
-      {/* Skills Section */}
       <section className="max-w-5xl mx-auto">
         <div className="flex items-center mb-8">
           <Code className="w-8 h-8 mr-4" />
