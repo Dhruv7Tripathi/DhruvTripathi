@@ -91,6 +91,15 @@ const AboutPage = () => {
           <h2 className="text-3xl font-bold">Blogs</h2>
         </div>
         <FocusCardsDemo />
+        <div className="flex justify-center mt-8">
+          <a
+            href="/blogs"
+            className="inline-flex items-center px-8 py-4 bg-white text-purple-600 rounded-full 
+                        hover:bg-purple-50 transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
+            <span>View all blogs</span>
+          </a>
+        </div>
 
 
       </section>
