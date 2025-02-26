@@ -52,7 +52,7 @@ const About = () => {
     {
       title: 'Technical Writing',
       description: 'Regular blog posts about web development',
-      href: 'https://bloggify-two.vercel.app/',
+      href: '/blogs',
       icon: <ExternalLink className="w-6 h-6" />
     }
   ];
