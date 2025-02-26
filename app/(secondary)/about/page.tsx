@@ -1,41 +1,25 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Github, Linkedin, Mail, School, Code } from "lucide-react";
+import { Github, Linkedin, Mail, School, Code, NotebookPen } from "lucide-react";
 import Image from "next/image";
 import { skills } from "@/contant";
 import { education } from "@/contant";
+import { FocusCardsDemo } from "@/components/blogs";
+
 const AboutPage = () => {
-  // const education = [
+  // const blogs = [
   //   {
-  //     institution: "GLA University",
-  //     degree: "Bachelor of Computer Science",
-  //     year: "2023-2027",
-  //     performance: "cpi : 7.7",
   //     description: "Try to become a full-stack developer",
-  //     imageUrl: "/university.jpeg",
+  //     link: "",
+  //     imageUrl: "/blog/billa.webp",
   //   },
   //   {
-  //     institution: "SR public School",
-  //     performance: "percentage : 88%",
-  //     degree: "12th standard",
-  //     year: "2018-2022",
   //     description: "Science student",
+  //     link: "",
   //     imageUrl: "/school.avif",
   //   },
   // ];
-
-  // const skills = [
-  //   "React",
-  //   "Node.js",
-  //   "Java",
-  //   "Next.js",
-  //   "JavaScript",
-  //   "Docker",
-  //   "Data Structure",
-  //   "TypeScript",
-  // ];
-
   return (
     <div className="min-h-screen bg-white text-foreground p-8 w-full">
       <div className="max-w-5xl mx-auto mb-16">
@@ -99,6 +83,16 @@ const AboutPage = () => {
             </Card>
           ))}
         </div>
+      </section>
+
+      <section className="max-w-5xl mx-auto mb-16">
+        <div className="flex items-center mb-8">
+          <NotebookPen className="w-8 h-8 mr-4" />
+          <h2 className="text-3xl font-bold">Blogs</h2>
+        </div>
+        <FocusCardsDemo />
+
+
       </section>
       <section className="max-w-5xl mx-auto">
         <div className="flex items-center mb-8">
