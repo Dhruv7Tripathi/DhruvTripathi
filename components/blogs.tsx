@@ -11,20 +11,8 @@ export function FocusCardsDemo() {
       src: "/blog/inspiration.jpg",
     },
     {
-      title: "Friends",
-      src: "/blog/trio.jpg",
-    },
-    {
-      title: "Impact of cricket",
-      src: "/blog/Kohli.jpg",
-    },
-    {
       title: "Impact of Technology",
       src: "/blog/w.png",
-    },
-    {
-      title: "Believe in yourself",
-      src: "/blog/shiva.jpg",
     },
   ];
 
