@@ -9,13 +9,11 @@ interface NavItem {
 }
 
 export default function Sidebar() {
-  // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems: NavItem[] = [
     { href: 'https://github.com/dhruv7tripathi', icon: <Github size={30} /> },
     { href: 'https://www.linkedin.com/in/dhruv-tripathi-9848792aa/', icon: <Linkedin size={30} /> },
     { href: '/contactus', icon: <Mail size={30} /> },
-    // { name: 'Profile', href: '/', icon: <User size={20} /> },
   ];
 
   return (
