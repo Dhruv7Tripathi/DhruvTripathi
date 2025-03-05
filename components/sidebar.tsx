@@ -1,7 +1,7 @@
 "use client"
 import React from 'react';
 import Link from 'next/link';
-import { Github, Linkedin, Mail, User, Menu, X } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 interface NavItem {
   href: string;
