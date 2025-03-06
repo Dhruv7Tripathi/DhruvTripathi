@@ -129,6 +129,7 @@
 
 import { FocusCards } from "@/components/ui/focus-cards";
 import Sidebar from "@/components/sidebar";
+import Rightbar from "@/components/rightbar";
 export default function Blog() {
   const demoCards = [
     {
@@ -167,5 +168,6 @@ export default function Blog() {
     <div className="flex">
       <Sidebar />
       <FocusCards cards={demoCards} />
+      <Rightbar />
     </div>);
 }

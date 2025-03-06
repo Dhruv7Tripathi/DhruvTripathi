@@ -15,7 +15,7 @@ export const education = [
     degree: "Bachelor of Computer Science",
     year: "2023-2027",
     performance: "cpi : 7.7",
-    description: "Try to become a full-stack developer",
+    description: "Trying to become a full-stack developer",
     imageUrl: "/university.jpeg",
   },
   {

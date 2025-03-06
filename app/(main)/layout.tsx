@@ -1,4 +1,3 @@
-
 import "../globals.css";
 import Sidebar from "@/components/sidebar";
 import Rightbar from "@/components/rightbar";

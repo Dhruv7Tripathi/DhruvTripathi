@@ -1,62 +1,39 @@
-"use client";
-import React from "react";
-import Link from "next/link";
-import { Github, Linkedin, X } from "lucide-react";
-
-const LeetCodeIcon = () => (
-  <img
-    src="https://simpleicons.org/icons/leetcode.svg"
-    alt="LeetCode"
-    width={30}
-    height={30}
-  />
-);
-
-interface NavItem {
+interface Project {
+  name: string;
+  icon: string;
   href: string;
-  icon: React.ReactNode;
 }
 
-export default function Sidebar() {
-  const navItems: NavItem[] = [
-    { href: "https://github.com/dhruv7tripathi", icon: <Github size={30} /> },
-    { href: "https://www.linkedin.com/in/dhruv-tripathi-9848792aa/", icon: <Linkedin size={30} /> },
-    { href: "https://x.com/DhruvTripathi77", icon: <X size={30} /> },
-    { href: "https://leetcode.com/u/Dhruv_Tripathi0705/", icon: <LeetCodeIcon /> },
+const RightSidebar = () => {
+  const projects: Project[] = [
+    { name: "Bloggify", icon: "💬", href: "https://kaiblog.vercel.app" },
+    { name: "Donezo", icon: "📝", href: "https://donezo-psi.vercel.app/" },
+    { name: "CodeX", icon: "📝", href: "https://ai-codexx.vercel.app/" },
+    { name: "Quizzer", icon: "⚙️", href: "https://quizzer-navy.vercel.app/" },
   ];
 
   return (
-    <>
-      <div className="hidden md:flex md:w-60 md:flex-col md:fixed md:inset-y-0">
-        <div className="flex flex-col flex-grow pt-5 bg-white border-r border-gray-200 overflow-y-auto">
-          <div className="mt-8 flex-grow flex flex-col">
-            <nav className="flex-1 flex flex-col items-center justify-center space-y-6">
-              {navItems.map((item, index) => (
-                <Link
-                  key={index}
-                  href={item.href}
-                  className="flex justify-center items-center p-3 text-gray-600 rounded-md hover:bg-gray-100 hover:text-gray-900 w-full"
-                >
-                  <span className="text-gray-500 hover:text-gray-700">{item.icon}</span>
-                </Link>
-              ))}
-            </nav>
-          </div>
-        </div>
-      </div>
-      <div className="md:hidden fixed bottom-0 inset-x-0 bg-white border-t backdrop-blur border-gray-200 z-10">
-        <div className="flex justify-around">
-          {navItems.map((item, index) => (
-            <Link
-              key={index}
-              href={item.href}
-              className="flex flex-col items-center py-2 px-2 text-xs text-gray-600"
-            >
-              <span className="mb-1">{item.icon}</span>
-            </Link>
+    <div className="fixed right-5 top-1/4 space-y-4 hidden md:block">
+      <div className="bg-white shadow-lg rounded-2xl p-4 w-64">
+        <h2 className="font-bold mb-2">Full Stack Projects:</h2>
+        <ul className="space-y-2">
+          {projects.map((project, index) => (
+            <li key={index}>
+              <a
+                href={project.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 text-blue-500 hover:underline cursor-pointer"
+              >
+                <span>{project.icon}</span>
+                <span>{project.name}</span>
+              </a>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
-    </>
+    </div>
   );
-}
+};
+
+export default RightSidebar;
