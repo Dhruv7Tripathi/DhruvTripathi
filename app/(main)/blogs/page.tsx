@@ -103,7 +103,7 @@
 //       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 //         {blogs.map((blog) => (
 //           <div key={blog.id} className="border rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-//             <Link href={`/blogs/${blog.id}`}>
+//             <Link link={`/blogs/${blog.id}`}>
 //               <div className="cursor-pointer">
 //                 <div className="h-48 overflow-hidden">
 //                   <img
@@ -126,54 +126,56 @@
 //   // Alternative: Use FocusCards component if you prefer
 //   // return <FocusCards cards={blogs} />;
 // }
-
+"use client"
 import { FocusCards } from "@/components/ui/focus-cards";
 import Sidebar from "@/components/sidebar";
 import Rightbar from "@/components/rightbar";
+
 export default function Blog() {
-  const demoCards = [
+  // Making sure to use the exact property names expected by the Card component
+  const cards = [
     {
-      id: "1",
       title: "Developer",
       src: "/blog/billa.webp",
-      href: "/(allblogs)/developer"
+      href: "/developer"
     },
     {
-      id: "2",
       title: "Inspiration",
       src: "/blog/inspiration.jpg",
-      href: "/(allblogs)/inspiration"
+      href: "/inspiration"
     },
     {
-      id: "3",
       title: "Friends",
       src: "/blog/trio.jpg",
-      href: "/(allblogs)/friends"
+      href: "/friends"
     },
     {
-      id: "4",
       title: "Impact of cricket",
       src: "/blog/Kohli.jpg",
-      href: "/(allblogs)/cricket"
+      href: "/cricket"
     },
     {
-      id: "5",
       title: "Impact of Technology",
       src: "/blog/w.png",
-      href: "/(allblogs)/technology"
+      href: "/technology"
     },
     {
-      id: "6",
       title: "Believe in yourself",
       src: "/blog/shiva.jpg",
-      href: "/(allblogs)/yourself"
+      href: "/yourself"
     },
   ];
 
+  // Debug log
+  console.log("Cards in Blog component:", JSON.stringify(cards));
+
   return (
-    <div className="flex">
+    <div className="flex w-full">
       <Sidebar />
-      <FocusCards cards={demoCards} />
+      <div className="flex-grow">
+        <FocusCards cards={cards} />
+      </div>
       <Rightbar />
-    </div>);
+    </div>
+  );
 }
