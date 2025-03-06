@@ -136,31 +136,37 @@ export default function Blog() {
       id: "1",
       title: "Developer",
       src: "/blog/billa.webp",
+      href: "/(allblogs)/developer"
     },
     {
       id: "2",
       title: "Inspiration",
       src: "/blog/inspiration.jpg",
+      href: "/(allblogs)/inspiration"
     },
     {
       id: "3",
       title: "Friends",
       src: "/blog/trio.jpg",
+      href: "/(allblogs)/friends"
     },
     {
       id: "4",
       title: "Impact of cricket",
       src: "/blog/Kohli.jpg",
+      href: "/(allblogs)/cricket"
     },
     {
       id: "5",
       title: "Impact of Technology",
       src: "/blog/w.png",
+      href: "/(allblogs)/technology"
     },
     {
       id: "6",
       title: "Believe in yourself",
       src: "/blog/shiva.jpg",
+      href: "/(allblogs)/yourself"
     },
   ];
 
