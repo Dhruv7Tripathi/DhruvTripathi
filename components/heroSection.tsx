@@ -77,14 +77,14 @@ const heroSection = () => {
             transition={{ delay: 0.6 }}
           >
             <motion.a
-              href="#"
+              href="https://github.com/Dhruv7Tripathi"
               className="p-3 bg-white bg-opacity-20 rounded-full hover:bg-opacity-30 transition-colors"
               whileHover={{ y: -3 }}
             >
               <Github size={24} />
             </motion.a>
             <motion.a
-              href="#"
+              href="https://www.linkedin.com/in/dhruv-tripathi-9848792aa/"
               className="p-3 bg-white bg-opacity-20 rounded-full hover:bg-opacity-30 transition-colors"
               whileHover={{ y: -3 }}
             >
