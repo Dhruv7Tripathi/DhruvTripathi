@@ -19,7 +19,7 @@
 //     const fetchBlogs = async () => {
 //       try {
 //         setLoading(true);
-//         const response = await axios.get(`${process.env.NEXT_PUBLIC_GHOST_API_URL}/blogs`);
+//          const response= await axios.get(`${process.env.NEXT_PUBLIC_GHOST_API_URL}/blogs`);
 //         setBlogs(response.data);
 //         setError(null);
 //       } catch (error) {

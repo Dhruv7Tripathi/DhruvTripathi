@@ -27,16 +27,15 @@ export default function Sidebar() {
 
   return (
     <>
-      {/* Glassy Sidebar for Desktop */}
-      <div className="hidden md:flex md:w-60 md:flex-col md:fixed md:inset-y-0 bg-white/30 backdrop-blur-lg border border-white/20 shadow-lg">
-        <div className="flex flex-col flex-grow pt-5 overflow-y-auto">
+      <div className="hidden md:flex md:w-60 md:flex-col md:fixed md:inset-y-0">
+        <div className="flex flex-col flex-grow pt-5 bg-white border-r border-gray-200 overflow-y-auto">
           <div className="mt-8 flex-grow flex flex-col">
             <nav className="flex-1 flex flex-col items-center justify-center space-y-6">
               {navItems.map((item, index) => (
                 <Link
                   key={index}
                   href={item.href}
-                  className="flex justify-center items-center p-3 text-gray-600 rounded-md hover:bg-gray-100/30 hover:text-gray-900 w-full transition duration-200"
+                  className="flex justify-center items-center p-3 text-gray-600 rounded-md hover:bg-gray-100 hover:text-gray-900 w-full"
                 >
                   <span className="text-gray-500 hover:text-gray-700">{item.icon}</span>
                 </Link>
@@ -45,9 +44,7 @@ export default function Sidebar() {
           </div>
         </div>
       </div>
-
-      {/* Glassy Bottom Navbar for Mobile */}
-      <div className="md:hidden fixed bottom-0 inset-x-0 bg-white/30 backdrop-blur-lg border-t border-white/20 shadow-lg z-10">
+      <div className="md:hidden fixed bottom-0 inset-x-0 bg-white border-t backdrop-blur border-gray-200 z-10">
         <div className="flex justify-around">
           {navItems.map((item, index) => (
             <Link
