@@ -18,9 +18,9 @@ const TechnologyBlog = () => {
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Devotion and Commitmentn</h2>
       <p className="mb-4">
-        Hanuman's unwavering devotion to Lord Rama teaches me the importance of loyalty and commitment. Whether it is towards my work, relationships, or personal goals, his example inspires me to stay dedicated and persistent. His selfless service reminds me that true success lies in giving my best without expecting immediate rewards.    </p>
+        Hanuman&apos;s unwavering devotion to Lord Rama teaches me the importance of loyalty and commitment. Whether it is towards my work, relationships, or personal goals, his example inspires me to stay dedicated and persistent. His selfless service reminds me that true success lies in giving my best without expecting immediate rewards.    </p>
       {/* <p className="mb-6">
-        Moore's Law—the observation that computing power doubles approximately every two years—has held remarkably true, driving innovations across fields from medicine to entertainment, transportation to communication. This acceleration means that the technological landscape can transform dramatically in just a few years, constantly reshaping how we live, work, and connect.
+        Moore&apos;s Law—the observation that computing power doubles approximately every two years—has held remarkably true, driving innovations across fields from medicine to entertainment, transportation to communication. This acceleration means that the technological landscape can transform dramatically in just a few years, constantly reshaping how we live, work, and connect.
       </p> */}
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Fearlessness and Strength</h2>
@@ -34,7 +34,7 @@ const TechnologyBlog = () => {
       <p className="mb-4">
         Even with immense strength and intelligence, Hanuman remained humble. He never sought personal glory but always acted in service of others. This teaches me the value of humility and the importance of using knowledge and skills for the greater good rather than personal gain.      </p>
       {/* <p className="mb-6">
-        The potential impact of advanced AI systems on society could rival that of electricity or the internet. Machines that can diagnose diseases, optimize energy usage, accelerate scientific research, and augment human creativity are not science fiction but emerging realities. As these technologies evolve, they promise to address some of humanity's most pressing challenges while raising important questions about the future of work, privacy, and human uniqueness.
+        The potential impact of advanced AI systems on society could rival that of electricity or the internet. Machines that can diagnose diseases, optimize energy usage, accelerate scientific research, and augment human creativity are not science fiction but emerging realities. As these technologies evolve, they promise to address some of humanity&apos;s most pressing challenges while raising important questions about the future of work, privacy, and human uniqueness.
       </p> */}
 
 

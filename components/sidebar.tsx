@@ -2,9 +2,9 @@
 import React from "react";
 import Link from "next/link";
 import { Github, Linkedin, X } from "lucide-react";
-
+import Image from "next/image";
 const LeetCodeIcon = () => (
-  <img
+  <Image
     src="https://simpleicons.org/icons/leetcode.svg"
     alt="LeetCode"
     width={30}
