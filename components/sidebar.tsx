@@ -27,7 +27,6 @@ export default function Sidebar() {
 
   return (
     <>
-      {/* Glassy Sidebar for Desktop */}
       <div className="hidden md:flex md:w-60 md:flex-col md:fixed md:inset-y-0 bg-white/30 backdrop-blur-lg border border-white/20 shadow-lg">
         <div className="flex flex-col flex-grow pt-5 overflow-y-auto">
           <div className="mt-8 flex-grow flex flex-col">
@@ -45,8 +44,6 @@ export default function Sidebar() {
           </div>
         </div>
       </div>
-
-      {/* Glassy Bottom Navbar for Mobile */}
       <div className="md:hidden fixed bottom-0 inset-x-0 bg-white/30 backdrop-blur-lg border-t border-white/20 shadow-lg z-10">
         <div className="flex justify-around">
           {navItems.map((item, index) => (

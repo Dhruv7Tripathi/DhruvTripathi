@@ -12,7 +12,6 @@ const BelieveInYourselfBlog = () => {
           className="w-full h-auto rounded-lg shadow-md"
         /> */}
       </div>
-
       <p className="mb-6 text-lg font-semibold italic">
         Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle. — Christian D. Larson
       </p>
