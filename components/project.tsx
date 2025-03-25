@@ -14,7 +14,7 @@ const Project = () => {
     {
       title: "Bloggify",
       description: "Modern blog platform with markdown support, categories, and social sharing. Includes user authentication and comment system.",
-      link: "https://kaiblog.vercel.app",
+      link: "https://bloggify-two.vercel.app/",
       github: "https://github.com/Dhruv7Tripathi/bloggify",
       imageUrl: "/logo.webp",
       tags: ["NextJs", "APIs", "TailwindCSS", "MongoDB"]

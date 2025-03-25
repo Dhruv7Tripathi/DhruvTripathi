@@ -132,7 +132,6 @@ import Sidebar from "@/components/sidebar";
 import Rightbar from "@/components/rightbar";
 
 export default function Blog() {
-  // Making sure to use the exact property names expected by the Card component
   const cards = [
     {
       title: "Developer",
@@ -167,7 +166,7 @@ export default function Blog() {
   ];
 
   // Debug log
-  console.log("Cards in Blog component:", JSON.stringify(cards));
+  // console.log("Cards in Blog component:", JSON.stringify(cards));
 
   return (
     <div className="flex w-full">

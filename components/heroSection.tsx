@@ -5,7 +5,8 @@ import {
   Mail,
 } from 'lucide-react';
 import { motion } from 'framer-motion';
-const heroSection = () => {
+
+const HeroSection = () => {
   return (
     <div>
       <motion.header
@@ -112,4 +113,4 @@ const heroSection = () => {
   )
 }
 
-export default heroSection
+export default HeroSection
