@@ -3,7 +3,6 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { cn } from "@/lib/utils";
 
-// Explicitly define the Card type
 type Card = {
   title: string;
   src: string;
@@ -22,8 +21,6 @@ export const Card = React.memo(
     hovered: number | null;
     setHovered: React.Dispatch<React.SetStateAction<number | null>>;
   }) => {
-    // Debug log to check what's coming in
-    console.log(`Card ${index} data:`, JSON.stringify(card));
 
     return (
       <div
@@ -63,9 +60,6 @@ Card.displayName = "Card";
 
 export function FocusCards({ cards }: { cards: Card[] }) {
   const [hovered, setHovered] = useState<number | null>(null);
-
-  // Debug log to check what's coming in
-  console.log("Cards data in FocusCards:", JSON.stringify(cards));
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto md:px-8 w-full">

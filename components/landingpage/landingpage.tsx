@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from './navbar'
 import HeroSection from './heroSection'
-import About from '../secondary/about'
+import About from './about'
 import Project from './project'
 import Contact from '../secondary/contact'
 
