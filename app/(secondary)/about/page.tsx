@@ -3,8 +3,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { School, NotebookPen } from "lucide-react";
 import Image from "next/image";
 import { education } from "@/contant";
-import { FocusCardsDemo } from "@/components/blogs";
-import Sidebar from "@/components/sidebar";
+import { FocusCardsDemo } from "@/components/secondary/blogs";
+import Sidebar from "@/components/secondary/sidebar";
 
 const AboutPage = () => {
   return (

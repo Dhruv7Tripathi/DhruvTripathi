@@ -1,42 +1,8 @@
 import React from 'react';
 import { ExternalLink, Briefcase, Github } from 'lucide-react';
 import Image from 'next/image';
+import { projects } from '@/contant';
 const Project = () => {
-  const projects = [
-    {
-      title: "CodeX",
-      description: "An Ai platform where you ask your coding questions.",
-      link: "https://ai-codexx.vercel.app/",
-      github: "https://github.com/Dhruv7Tripathi/CodeX",
-      imageUrl: "/FIXLY.AI.png",
-      tags: ["Nextjs", "Typescript", "TailwindCSS", "PostgressSql"]
-    },
-    {
-      title: "Bloggify",
-      description: "Modern blog platform with markdown support, categories, and social sharing. Includes user authentication and comment system.",
-      link: "https://bloggify-two.vercel.app/",
-      github: "https://github.com/Dhruv7Tripathi/bloggify",
-      imageUrl: "/logo.webp",
-      tags: ["NextJs", "APIs", "TailwindCSS", "MongoDB"]
-    },
-    {
-      title: "Quizzer",
-      description: "Interactive quiz application featuring multiple categories, real-time scoring, and leaderboards. Supports both single and multiplayer modes.",
-      link: "https://quizzer-navy.vercel.app/",
-      github: "https://github.com/Dhruv7Tripathi/quizzer",
-      imageUrl: "/q.webp",
-      tags: ["TypeScript", "Nextjs", "TailwindCSS", "PostgressSql"]
-    },
-    {
-      title: "Donezo",
-      description: "A simple to-do list application with user authentication and real-time updates. and task prioritization.",
-      link: "https://donezo-psi.vercel.app/",
-      github: "https://github.com/Dhruv7Tripathi/donezo",
-      imageUrl: "/l2.webp",
-      tags: ["TypeScript", "Nextjs", "TailwindCSS", "PostgressSql"]
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-white text-foreground p-8">
       <section
