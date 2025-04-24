@@ -10,7 +10,7 @@ const AboutPage = () => {
   return (
     <div className="flex">
       <Sidebar />
-      <div className="min-h-screen bg-white text-foreground p-8 w-full">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-800 to-black text-white p-8 w-full">
         <div className="max-w-5xl mx-auto mb-16">
           <div className="text-center space-y-4">
             <h1 className="text-4xl font-bold">
@@ -63,7 +63,7 @@ const AboutPage = () => {
           <div className="flex justify-center mt-8">
             <a
               href="/blogs"
-              className="inline-flex items-center px-8 py-4 bg-white text-purple-600 rounded-full 
+              className="inline-flex items-center px-8 py-4 bg-white text-emerald-600 rounded-full 
                         hover:bg-purple-50 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <span>View all blogs</span>

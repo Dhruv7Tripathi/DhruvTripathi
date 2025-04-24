@@ -43,7 +43,7 @@ export const projects = [
     link: "https://bloggify-two.vercel.app/",
     github: "https://github.com/Dhruv7Tripathi/bloggify",
     imageUrl: "/projects/logo.webp",
-    tags: ["NextJs", "APIs", "TailwindCSS", "MongoDB"]
+    tags: ["NextJs", "APIs", "TailwindCSS", "PostgressSql"]
   },
   {
     title: "Quizzer",

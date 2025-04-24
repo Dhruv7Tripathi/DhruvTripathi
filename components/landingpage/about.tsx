@@ -58,7 +58,7 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-black text-white flex items-center justify-center">
       <Link href="/about" className="cursor-pointer">
         <section
           id="about"
@@ -68,8 +68,8 @@ const About = () => {
             <User className="mr-4 text-green-500 animate-float-slow" size={32} />
             <h2 className="text-3xl font-bold">About Me</h2>
           </div>
-          <div className="bg-white rounded-xl shadow-xl p-8 backdrop-blur-sm bg-opacity-80 animate-fade-in-up">
-            <p className="text-gray-600 leading-relaxed text-lg mb-8">
+          <div className="bg-gray-600 rounded-xl shadow-xl p-8 backdrop-blur-sm bg-opacity-80 animate-fade-in-up">
+            <p className="text-white leading-relaxed text-lg mb-8">
               I&apos;m a passionate full-stack developer building web applications.
               I specialize in React, Node.js, and modern web technologies. When I&apos;m not coding,
               you can find me contributing to open-source projects or writing technical blog posts.
@@ -90,13 +90,13 @@ const About = () => {
               {achievements.map((achievement) => (
                 <div
                   key={achievement.title}
-                  className="p-6 rounded-lg bg-gradient-to-br from-purple-50 to-pink-50 hover:shadow-md transition-all duration-300"
+                  className="p-6 rounded-lg bg-gray-600 hover:shadow-md transition-all duration-300"
                 >
                   <div className="flex items-center mb-3">
                     <div className="text-emerald-500 mr-3">{achievement.icon}</div>
                     <h3 className="font-semibold text-lg">{achievement.title}</h3>
                   </div>
-                  <p className="text-gray-600">{achievement.description}</p>
+                  <p className="text-white">{achievement.description}</p>
                   <a
                     href={achievement.href}
                     target="_blank"

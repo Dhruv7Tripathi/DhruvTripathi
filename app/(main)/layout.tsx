@@ -9,7 +9,7 @@ export default function RootLayout({
     <div>
       <div>
         <Sidebar />
-        <main className="">{children}</main>
+        <main className="bg-white">{children}</main>
         <Rightbar />
       </div>
     </div>

@@ -1,15 +1,15 @@
 interface Project {
   name: string;
-  icon: string;
   href: string;
 }
 
 const RightSidebar = () => {
   const projects: Project[] = [
-    { name: "Bloggify", icon: "💬", href: "https://kaiblog.vercel.app" },
-    { name: "Donezo", icon: "📝", href: "https://donezo-psi.vercel.app/" },
-    { name: "CodeX", icon: "📝", href: "https://ai-codexx.vercel.app/" },
-    { name: "Quizzer", icon: "⚙️", href: "https://quizzer-navy.vercel.app/" },
+    { name: "Bloggify", href: "https://bloggify-two.vercel.app/" },
+    { name: "Donezo", href: "https://donezo-psi.vercel.app/" },
+    { name: "CodeX", href: "https://ai-codexx.vercel.app/" },
+    { name: "Quizzer", href: "https://quizzer-navy.vercel.app/" },
+    { name: "chitti", href: "https://chitti-bice.vercel.app/" },
   ];
 
   return (
@@ -25,7 +25,6 @@ const RightSidebar = () => {
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 text-blue-500 hover:underline cursor-pointer"
               >
-                <span>{project.icon}</span>
                 <span>{project.name}</span>
               </a>
             </li>

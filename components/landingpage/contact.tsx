@@ -54,14 +54,14 @@ const Contact = () => {
     <div>
       <section
         id="contact"
-        className="relative py-20 px-8 overflow-hidden bg-white"
+        className="relative py-20 px-8 overflow-hidden  bg-black text-white p-8"
       >
         <div className="relative max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4">
               Let&apos;s Work Together
             </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            <p className="text-white text-lg max-w-2xl mx-auto">
               I&apos;m always interested in hearing about new projects and opportunities.
               Feel free to reach out through any of these channels.
             </p>
@@ -70,16 +70,16 @@ const Contact = () => {
             {contactMethods.map((method, index) => (
               <div
                 key={method.title}
-                className="bg-gray-50 rounded-xl p-8 text-gray-800 shadow-sm border border-gray-100"
+                className="bg-gray-700 rounded-xl p-8 text-white shadow-sm border "
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-center mb-4">
-                  <div className="p-3 bg-purple-100 rounded-lg mr-4">
+                  <div className="p-3 bg-gray-700 rounded-lg mr-4">
                     {method.icon}
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold">{method.title}</h3>
-                    <p className="text-gray-600">{method.description}</p>
+                    <p className="text-white">{method.description}</p>
                   </div>
                 </div>
                 <a
