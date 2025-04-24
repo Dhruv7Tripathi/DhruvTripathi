@@ -1,47 +1,46 @@
-
 import React from 'react';
 import { Code2, Briefcase, User, Github, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 
 const About = () => {
-  const skills = [
-    {
-      name: 'React',
-      level: '95%',
-      description: 'Modern React with Hooks, Context, Redux',
-      color: 'bg-emerald-500'
-    },
-    {
-      name: 'Node.js',
-      level: '60%',
-      description: 'Express, REST APIs',
-      color: 'bg-emerald-500'
-    },
-    {
-      name: 'TypeScript',
-      level: '30%',
-      description: 'Type-safe development, Interfaces',
-      color: 'bg-emerald-500'
-    },
-    {
-      name: 'JAVA',
-      level: '80%',
-      description: 'Classes, Object-Oriented Programming',
-      color: 'bg-emerald-500'
-    },
-    {
-      name: 'Next.js',
-      level: '75%',
-      description: 'SSR, ISR, API Routes',
-      color: 'bg-emerald-500'
-    },
-    {
-      name: 'Data Structures',
-      level: '85%',
-      description: 'Algorithms, Problem Solving',
-      color: 'bg-emerald-500'
-    }
-  ];
+  // const skills = [
+  //   {
+  //     name: 'React',
+  //     level: '95%',
+  //     description: 'Modern React with Hooks, Context, Redux',
+  //     color: 'bg-emerald-500'
+  //   },
+  //   {
+  //     name: 'Node.js',
+  //     level: '60%',
+  //     description: 'Express, REST APIs',
+  //     color: 'bg-emerald-500'
+  //   },
+  //   {
+  //     name: 'TypeScript',
+  //     level: '30%',
+  //     description: 'Type-safe development, Interfaces',
+  //     color: 'bg-emerald-500'
+  //   },
+  //   {
+  //     name: 'JAVA',
+  //     level: '80%',
+  //     description: 'Classes, Object-Oriented Programming',
+  //     color: 'bg-emerald-500'
+  //   },
+  //   {
+  //     name: 'Next.js',
+  //     level: '75%',
+  //     description: 'SSR, ISR, API Routes',
+  //     color: 'bg-emerald-500'
+  //   },
+  //   {
+  //     name: 'Data Structures',
+  //     level: '85%',
+  //     description: 'Algorithms, Problem Solving',
+  //     color: 'bg-emerald-500'
+  //   }
+  // ];
 
   const achievements = [
     {
@@ -59,14 +58,14 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <Link href="/about" className="cursor-pointer">
         <section
           id="about"
           className="py-20 px-8 max-w-5xl mx-auto animate-fade-in"
         >
           <div className="flex items-center mb-8 animate-slide-down">
-            <User className="mr-4 text-purple-500 animate-float-slow" size={32} />
+            <User className="mr-4 text-green-500 animate-float-slow" size={32} />
             <h2 className="text-3xl font-bold">About Me</h2>
           </div>
           <div className="bg-white rounded-xl shadow-xl p-8 backdrop-blur-sm bg-opacity-80 animate-fade-in-up">
@@ -113,10 +112,10 @@ const About = () => {
         </section>
       </Link>
 
-      <Link href="#skills" className="cursor-pointer">
+      {/* <Link href="#skills" className="cursor-pointer">
         <section
           id="skills"
-          className="py-20 px-8 bg-gray-50"
+          className="py-20 px-8 bg-white"
         >
           <div className="max-w-5xl mx-auto animate-fade-in">
             <div className="flex items-center mb-12 animate-slide-down">
@@ -149,7 +148,7 @@ const About = () => {
             </div>
           </div>
         </section>
-      </Link>
+      </Link> */}
     </div>
   );
 };

@@ -3,7 +3,7 @@ import Navbar from './navbar'
 import HeroSection from './heroSection'
 import About from './about'
 import Project from './project'
-import Contact from '../secondary/contact'
+import Contact from './contact'
 
 const landingpage = () => {
   return (

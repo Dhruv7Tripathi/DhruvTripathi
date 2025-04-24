@@ -15,19 +15,19 @@ const Contact = () => {
       name: 'GitHub',
       icon: <Github className="w-5 h-5" />,
       href: 'https://github.com/DhruvTripathi',
-      color: 'bg-gray-800 hover:bg-gray-900'
+      color: 'bg-black hover:bg-gray-300 text-white'
     },
     {
       name: 'LinkedIn',
       icon: <Linkedin className="w-5 h-5" />,
       href: 'https://linkedin.com/in/dhruv-tripathi',
-      color: 'bg-blue-600 hover:bg-blue-700'
+      color: 'bg-black hover:bg-blue-200 text-white'
     },
     {
       name: 'Twitter',
       icon: <Twitter className="w-5 h-5" />,
       href: 'https://twitter.com/dhruv_tripathi',
-      color: 'bg-sky-500 hover:bg-sky-600'
+      color: 'bg-black hover:bg-sky-200 text-white'
     }
   ];
 
@@ -35,7 +35,7 @@ const Contact = () => {
     {
       title: 'Email',
       description: 'Get in touch via email',
-      icon: <Mail className="w-6 h-6" />,
+      icon: <Mail className="w-6 h-6 text-green-600" />,
       action: 'tripathidhruv366@gmail.com',
       link: 'mailto:tripathidhruv366@gmail.com',
       buttonText: 'Send Email'
@@ -43,7 +43,7 @@ const Contact = () => {
     {
       title: 'Chat',
       description: 'Let\'s discuss your project',
-      icon: <MessageCircle className="w-6 h-6" />,
+      icon: <MessageCircle className="w-6 h-6 text-green-600" />,
       action: 'Schedule a call',
       link: '/',
       buttonText: 'Schedule Call'
@@ -51,20 +51,18 @@ const Contact = () => {
   ];
 
   return (
-    <div >
+    <div>
       <section
         id="contact"
-        className="relative py-20 px-8 overflow-hidden"
+        className="relative py-20 px-8 overflow-hidden bg-white"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-500 animate-float-slower opacity-90"></div>
-
         <div className="relative max-w-5xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl font-bold text-white mb-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-800 mb-4">
               Let&apos;s Work Together
             </h2>
-            <p className="text-white/90 text-lg max-w-2xl mx-auto animate-fade-in-delay">
-              Im always interested in hearing about new projects and opportunities.
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              I&apos;m always interested in hearing about new projects and opportunities.
               Feel free to reach out through any of these channels.
             </p>
           </div>
@@ -72,22 +70,22 @@ const Contact = () => {
             {contactMethods.map((method, index) => (
               <div
                 key={method.title}
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-8 text-white animate-slide-up"
+                className="bg-gray-50 rounded-xl p-8 text-gray-800 shadow-sm border border-gray-100"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-center mb-4">
-                  <div className="p-3 bg-white/20 rounded-lg mr-4 animate-float-slow">
+                  <div className="p-3 bg-purple-100 rounded-lg mr-4">
                     {method.icon}
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold">{method.title}</h3>
-                    <p className="text-white/80">{method.description}</p>
+                    <p className="text-gray-600">{method.description}</p>
                   </div>
                 </div>
                 <a
                   href={method.link}
-                  className="inline-flex items-center px-6 py-3 bg-white text-purple-600 rounded-full 
-                           hover:bg-purple-50 transition-all duration-300 animate-fade-in-up-delay"
+                  className="inline-flex items-center px-6 py-3 bg-emerald-600 text-white rounded-full 
+                           hover:bg-green-700 transition-all duration-300"
                 >
                   {method.buttonText}
                   <ExternalLink className="w-4 h-4 ml-2" />
@@ -95,25 +93,25 @@ const Contact = () => {
               </div>
             ))}
           </div>
-          <div className="text-center mb-12 animate-fade-in-up">
+          <div className="text-center mb-12">
             <a
               href="/resume.pdf"
               download
-              className="inline-flex items-center px-8 py-4 bg-white text-purple-600 rounded-full 
-                       hover:bg-purple-50 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center px-8 py-4 bg-emerald-600 text-white rounded-full 
+                       hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              <Download className="w-5 h-5 mr-2 animate-bounce" />
+              <Download className="w-5 h-5 mr-2" />
               Download Resume
             </a>
           </div>
-          <div className="flex justify-center gap-4 animate-fade-in-up-delay">
+          <div className="flex justify-center gap-4">
             {socialLinks.map((social) => (
               <a
                 key={social.name}
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`p-3 rounded-full text-white transition-all duration-300 
+                className={`p-3 rounded-full transition-all duration-300 
                           hover:scale-110 ${social.color}`}
                 aria-label={social.name}
               >
@@ -123,8 +121,8 @@ const Contact = () => {
           </div>
         </div>
       </section>
-      <div className="bg-black py-6 px-8 text-center animate-fade-in">
-        <p className="text-white/90">
+      <div className="bg-black py-6 px-8 text-center border-t border-gray-200">
+        <p className="text-white">
           Looking forward to creating something amazing together!
         </p>
       </div>
