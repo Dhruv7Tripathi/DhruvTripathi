@@ -10,7 +10,7 @@ const AboutPage = () => {
   return (
     <div className="flex">
       <Sidebar />
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-800 to-black text-white p-8 w-full">
+      <div className="min-h-screen bg-black text-white p-8 w-full">
         <div className="max-w-5xl mx-auto mb-16">
           <div className="text-center space-y-4">
             <h1 className="text-4xl font-bold">
@@ -20,7 +20,7 @@ const AboutPage = () => {
               </span>{" "}
               <span className="inline-block text-5xl animate-wave">👋</span>
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-white">
               Full Stack Developer | AI Enthusiast
             </p>
           </div>
