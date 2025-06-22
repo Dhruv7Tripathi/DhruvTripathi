@@ -11,11 +11,10 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const { scrollYProgress } = useScroll();
 
-  // Updated the background color to match dark theme with better transparency
   const navBackground = useTransform(
     scrollYProgress,
     [0, 0.1],
-    ["rgba(0, 0, 0, 0)", "rgba(17, 24, 39, 0.9)"] // Using gray-900 equivalent
+    ["rgba(0, 0, 0, 0)", "rgba(17, 24, 39, 0.9)"]
   );
 
   useEffect(() => {
@@ -46,7 +45,7 @@ const Navbar = () => {
 
             <div className="hidden md:flex items-center space-x-8">
               <Link href="/about" className="text-gray-300 hover:text-green-400 transition-colors">About</Link>
-              <Link href="#skills" className="text-gray-300 hover:text-green-400 transition-colors">Skills</Link>
+              <Link href="/contactus" className="text-gray-300 hover:text-green-400 transition-colors">ContactUs</Link>
               <Link href="#projects" className="text-gray-300 hover:text-green-400 transition-colors">Projects</Link>
               <Link href="/blogs" className="text-gray-300 hover:text-green-400 transition-colors">Blogs</Link>
               {/* <motion.a
