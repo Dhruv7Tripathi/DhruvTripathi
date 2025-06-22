@@ -69,4 +69,13 @@ export const projects = [
     imageUrl: "/projects/chitti.png",
     tags: ["TypeScript", "Nextjs", "TailwindCSS", "PostgressSql", "Express"]
   }
+  ,
+  {
+    title: "BuyBuddy",
+    description: "BuyBuddy is a modern and responsive e-commerce website that allows users to browse, search, and purchase products with ease. BuyBuddy focuses on performance, design, and seamless user experience",
+    link: "https://buy-buddy-zcyf.vercel.app/",
+    github: "https://github.com/Dhruv7Tripathi/buybuddy",
+    imageUrl: "/projects/BuyBuddy.png",
+    tags: ["TypeScript", "Nextjs", "TailwindCSS", "PostgressSql", "Express", "Razorpay"]
+  }
 ];
