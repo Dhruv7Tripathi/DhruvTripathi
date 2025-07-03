@@ -55,7 +55,6 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
       <div className="container mx-auto px-4 py-16 lg:py-24">
-        {/* Header Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-4">Get in Touch</h1>
           <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
@@ -65,7 +64,6 @@ export default function ContactPage() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Information */}
           <div className="space-y-8">
             <Card className="border-0 shadow-lg bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
               <CardHeader>
@@ -108,7 +106,6 @@ export default function ContactPage() {
             </Card>
           </div>
 
-          {/* Contact Form */}
           <Card className="border-0 shadow-xl bg-white dark:bg-slate-800">
             <CardHeader>
               <CardTitle className="text-2xl text-slate-900 dark:text-white">Send us a Message</CardTitle>

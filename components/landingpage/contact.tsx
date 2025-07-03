@@ -70,7 +70,7 @@ const Contact = () => {
             {contactMethods.map((method, index) => (
               <div
                 key={method.title}
-                className="bg-gray-700 rounded-xl p-8 text-white shadow-sm border "
+                className="bg-gray-700 rounded-xl p-8 text-white shadow-sm border-gray-600 "
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-center mb-4">
@@ -121,7 +121,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
-      <div className="bg-black py-6 px-8 text-center border-t border-gray-200">
+      <div className="bg-black py-6 px-8 text-center border-gray-200 ">
         <p className="text-white">
           Looking forward to creating something amazing together!
         </p>

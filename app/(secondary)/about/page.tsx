@@ -30,7 +30,7 @@ const AboutPage = () => {
             <School className="w-8 h-8 mr-4" />
             <h2 className="text-3xl font-bold">Education</h2>
           </div>
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2 border-gray-800 pt-6">
             {education.map((edu, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow">
                 <div className="relative overflow-hidden aspect-video">
