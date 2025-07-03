@@ -32,12 +32,12 @@ const AboutPage = () => {
           </div>
           <div className="grid gap-6 md:grid-cols-2 border-gray-800 pt-6">
             {education.map((edu, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
-                <div className="relative overflow-hidden aspect-video">
+              <Card key={index} className="hover:shadow-lg border-gray-800 transition-shadow">
+                <div className="relative overflow-hidden border-gray-800 aspect-video">
                   <Image
                     src={edu.imageUrl}
                     alt={edu.institution}
-                    className="object-cover w-full h-full transition-transform duration-500"
+                    className="border-gray-800 w-full h-full transition-transform duration-500"
                     width={500}
                     height={300}
                   />

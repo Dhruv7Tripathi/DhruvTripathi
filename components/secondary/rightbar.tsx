@@ -10,6 +10,7 @@ const RightSidebar = () => {
     { name: "CodeX", href: "https://ai-codexx.vercel.app/" },
     { name: "Quizzer", href: "https://quizzer-navy.vercel.app/" },
     { name: "chitti", href: "https://chitti-bice.vercel.app/" },
+    { name: "BuyBuddy", href: "https://buybuddy.dhruvtripathi.in/" },
   ];
 
   return (
