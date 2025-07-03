@@ -58,7 +58,7 @@ export default function ContactPage() {
         <div className="text-center mb-16">
           <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-4">Get in Touch</h1>
           <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-            Have questions or feedback? We'd love to hear from you. Send us a message and we'll respond as soon as
+            Have questions or feedback? We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as
             possible.
           </p>
         </div>
@@ -109,7 +109,7 @@ export default function ContactPage() {
           <Card className="border-0 shadow-xl bg-white dark:bg-slate-800">
             <CardHeader>
               <CardTitle className="text-2xl text-slate-900 dark:text-white">Send us a Message</CardTitle>
-              <CardDescription>Fill out the form below and we'll get back to you soon</CardDescription>
+              <CardDescription>Fill out the form below and we&apos;ll get back to you soon</CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -180,7 +180,7 @@ export default function ContactPage() {
                   <Alert className="border-green-200 bg-green-50 dark:bg-green-900/20">
                     <CheckCircleIcon className="h-4 w-4 text-green-600" />
                     <AlertDescription className="text-green-700 dark:text-green-300">
-                      Message sent successfully! We'll get back to you soon.
+                      Message sent successfully! We&apos;ll get back to you soon.
                     </AlertDescription>
                   </Alert>
                 )}

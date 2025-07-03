@@ -58,7 +58,7 @@ const Project = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center px-4 py-2 border border-foreground/20 text-white rounded-lg hover:bg-gray-500 transition-colors duration-300"
+                    className="inline-flex items-center px-4 py-2  text-white rounded-full hover:bg-gray-500 transition-colors duration-300"
                   >
                     <Github size={16} className="mr-2" /> Code
                   </a>

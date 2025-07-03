@@ -14,19 +14,19 @@ const Contact = () => {
     {
       name: 'GitHub',
       icon: <Github className="w-5 h-5" />,
-      href: 'https://github.com/DhruvTripathi',
+      href: 'https://github.com/Dhruv7Tripathi',
       color: 'bg-black hover:bg-gray-300 text-white'
     },
     {
       name: 'LinkedIn',
       icon: <Linkedin className="w-5 h-5" />,
-      href: 'https://linkedin.com/in/dhruv-tripathi',
+      href: 'https://www.linkedin.com/in/dhruv-tripathi-9848792aa/',
       color: 'bg-black hover:bg-blue-200 text-white'
     },
     {
       name: 'Twitter',
       icon: <Twitter className="w-5 h-5" />,
-      href: 'https://twitter.com/dhruv_tripathi',
+      href: 'https://twitter.com/dhruvtripathi77',
       color: 'bg-black hover:bg-sky-200 text-white'
     }
   ];
