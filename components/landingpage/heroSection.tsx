@@ -1,10 +1,4 @@
 import React from 'react';
-import {
-  Github,
-  Linkedin,
-  Mail,
-} from 'lucide-react';
-
 const HeroSection = () => {
   return (
     <div>
@@ -25,30 +19,9 @@ const HeroSection = () => {
           <h2
             className="text-2xl sm:text-3xl mb-8 text-green-400"
           >
-            Full Stack Developer
+            Frontend Developer
           </h2>
-          <div
-            className="flex space-x-6 justify-center"
-          >
-            <a
-              href="https://github.com/Dhruv7Tripathi"
-              className="p-3 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors border border-gray-600"
-            >
-              <Github size={24} className="text-white" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/dhruv-tripathi-9848792aa/"
-              className="p-3 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors border border-gray-600"
-            >
-              <Linkedin size={24} className="text-white" />
-            </a>
-            <a
-              href="/contactus"
-              className="p-3 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors border border-gray-600"
-            >
-              <Mail size={24} className="text-white" />
-            </a>
-          </div>
+
           <div className="mt-12">
             <a
               href="#projects"

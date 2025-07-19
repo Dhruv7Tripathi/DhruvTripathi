@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Dhruv Tripathi",
-  description: "The Dhruv Tripathi, a Full Stack Developer specializing in React, Nextjs,TypeScript, and learningmodern web technologies.",
+  description: "The Dhruv Tripathi, a Frontend Developer specializing in React, Nextjs,TypeScript, and learningmodern web technologies.",
 };
 
 export default function RootLayout({

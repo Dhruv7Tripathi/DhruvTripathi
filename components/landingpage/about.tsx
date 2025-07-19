@@ -3,45 +3,6 @@ import { Code2, Briefcase, User, Github, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 
 const About = () => {
-  // const skills = [
-  //   {
-  //     name: 'React',
-  //     level: '95%',
-  //     description: 'Modern React with Hooks, Context, Redux',
-  //     color: 'bg-emerald-500'
-  //   },
-  //   {
-  //     name: 'Node.js',
-  //     level: '60%',
-  //     description: 'Express, REST APIs',
-  //     color: 'bg-emerald-500'
-  //   },
-  //   {
-  //     name: 'TypeScript',
-  //     level: '30%',
-  //     description: 'Type-safe development, Interfaces',
-  //     color: 'bg-emerald-500'
-  //   },
-  //   {
-  //     name: 'JAVA',
-  //     level: '80%',
-  //     description: 'Classes, Object-Oriented Programming',
-  //     color: 'bg-emerald-500'
-  //   },
-  //   {
-  //     name: 'Next.js',
-  //     level: '75%',
-  //     description: 'SSR, ISR, API Routes',
-  //     color: 'bg-emerald-500'
-  //   },
-  //   {
-  //     name: 'Data Structures',
-  //     level: '85%',
-  //     description: 'Algorithms, Problem Solving',
-  //     color: 'bg-emerald-500'
-  //   }
-  // ];
-
   const achievements = [
     {
       title: 'Open Source',
@@ -86,11 +47,11 @@ const About = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-fade-in-delay">
+            <div className="grid grid-cols-1 md:grid-cols-2  gap-6 animate-fade-in-delay">
               {achievements.map((achievement) => (
                 <div
                   key={achievement.title}
-                  className="p-6 rounded-lg bg-gray-600 hover:shadow-md transition-all duration-300"
+                  className="p-6 rounded-2xl bg-gray-600 hover:shadow-md transition-all duration-300"
                 >
                   <div className="flex items-center mb-3">
                     <div className="text-emerald-500 mr-3">{achievement.icon}</div>
@@ -111,44 +72,6 @@ const About = () => {
           </div>
         </section>
       </Link>
-
-      {/* <Link href="#skills" className="cursor-pointer">
-        <section
-          id="skills"
-          className="py-20 px-8 bg-white"
-        >
-          <div className="max-w-5xl mx-auto animate-fade-in">
-            <div className="flex items-center mb-12 animate-slide-down">
-              <Code2 className="mr-4 text-purple-500 animate-float-slow" size={32} />
-              <h2 className="text-3xl font-bold">Skills</h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {skills.map((skill, index) => (
-                <div
-                  key={skill.name}
-                  className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up-delay"
-                >
-                  <h3 className="font-semibold text-lg mb-2">{skill.name}</h3>
-                  <p className="text-sm text-gray-600 mb-4">{skill.description}</p>
-                  <div className="w-full bg-gray-200 rounded-full h-2.5 overflow-hidden">
-                    <div
-                      className={`${skill.color} h-full rounded-full animate-slide-up-delay`}
-                      style={{
-                        width: skill.level,
-                        transition: `width 1s ease-out ${index * 0.1}s`
-                      }}
-                    />
-                  </div>
-                  <span className="text-sm font-medium text-gray-500 mt-2 block">
-                    {skill.level}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      </Link> */}
     </div>
   );
 };

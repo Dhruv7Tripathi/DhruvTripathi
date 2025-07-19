@@ -27,7 +27,7 @@ const Project = () => {
                 <Image
                   src={project.imageUrl}
                   alt={project.title}
-                  className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full group-hover:scale-110 transition-transform duration-500"
                   width={500}
                   height={300}
                 />
