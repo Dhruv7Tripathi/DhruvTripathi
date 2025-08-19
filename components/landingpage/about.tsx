@@ -1,79 +1,79 @@
-import React from 'react';
-import { Code2, Briefcase, User, Github, ExternalLink } from 'lucide-react';
-import Link from 'next/link';
+// import React from 'react';
+// import { Code2, Briefcase, User, Github, ExternalLink } from 'lucide-react';
+// import Link from 'next/link';
 
-const About = () => {
-  const achievements = [
-    {
-      title: 'Open Source',
-      description: 'Active contributor to various open-source projects',
-      href: 'https://github.com/Dhruv7Tripathi',
-      icon: <Github className="w-6 h-6" />
-    },
-    {
-      title: 'Technical Writing',
-      description: 'Regular blog posts about web development',
-      href: '/blogs',
-      icon: <ExternalLink className="w-6 h-6" />
-    }
-  ];
+// const About = () => {
+//   const achievements = [
+//     {
+//       title: 'Open Source',
+//       description: 'Active contributor to various open-source projects',
+//       href: 'https://github.com/Dhruv7Tripathi',
+//       icon: <Github className="w-6 h-6" />
+//     },
+//     {
+//       title: 'Technical Writing',
+//       description: 'Regular blog posts about web development',
+//       href: '/blogs',
+//       icon: <ExternalLink className="w-6 h-6" />
+//     }
+//   ];
 
-  return (
-    <div className="min-h-screen bg-black text-white flex items-center justify-center">
-      {/* <Link href="/about" className="cursor-pointer"> */}
-      <section
-        id="about"
-        className="py-20 px-8 max-w-5xl mx-auto animate-fade-in"
-      >
-        <div className="flex items-center mb-8 animate-slide-down">
-          <User className="mr-4 text-green-500 animate-float-slow" size={32} />
-          <h2 className="text-3xl font-bold">About Me</h2>
-        </div>
-        <div className="bg-gray-600 rounded-xl shadow-xl p-8 backdrop-blur-sm bg-opacity-80 animate-fade-in-up">
-          <p className="text-white leading-relaxed text-lg mb-8">
-            I&apos;m a passionate full-stack developer building web applications.
-            I specialize in React, Node.js, and modern web technologies. When I&apos;m not coding,
-            you can find me contributing to open-source projects or writing technical blog posts.
-          </p>
+//   return (
+//     <div className="min-h-screen bg-black text-white flex items-center justify-center">
+//       {/* <Link href="/about" className="cursor-pointer"> */}
+//       <section
+//         id="about"
+//         className="py-20 px-8 max-w-5xl mx-auto animate-fade-in"
+//       >
+//         <div className="flex items-center mb-8 animate-slide-down">
+//           <User className="mr-4 text-green-500 animate-float-slow" size={32} />
+//           <h2 className="text-3xl font-bold">About Me</h2>
+//         </div>
+//         <div className="bg-gray-600 rounded-xl shadow-xl p-8 backdrop-blur-sm bg-opacity-80 animate-fade-in-up">
+//           <p className="text-white leading-relaxed text-lg mb-8">
+//             I&apos;m a passionate full-stack developer building web applications.
+//             I specialize in React, Node.js, and modern web technologies. When I&apos;m not coding,
+//             you can find me contributing to open-source projects or writing technical blog posts.
+//           </p>
 
-          <div className="flex flex-wrap gap-4 mb-8">
-            <div className="flex items-center px-4 py-2 bg-purple-50 rounded-full text-purple-600 hover:bg-purple-100 transition-colors animate-slide-up-delay">
-              <Code2 size={16} className="mr-2 animate-wave" />
-              Clean Code Enthusiast
-            </div>
-            <div className="flex items-center px-4 py-2 bg-pink-50 rounded-full text-pink-600 hover:bg-pink-100 transition-colors animate-slide-up-delay">
-              <Briefcase size={16} className="mr-2 animate-wave" />
-              Problem Solver
-            </div>
-          </div>
+//           <div className="flex flex-wrap gap-4 mb-8">
+//             <div className="flex items-center px-4 py-2 bg-purple-50 rounded-full text-purple-600 hover:bg-purple-100 transition-colors animate-slide-up-delay">
+//               <Code2 size={16} className="mr-2 animate-wave" />
+//               Clean Code Enthusiast
+//             </div>
+//             <div className="flex items-center px-4 py-2 bg-pink-50 rounded-full text-pink-600 hover:bg-pink-100 transition-colors animate-slide-up-delay">
+//               <Briefcase size={16} className="mr-2 animate-wave" />
+//               Problem Solver
+//             </div>
+//           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2  gap-6 animate-fade-in-delay">
-            {achievements.map((achievement) => (
-              <div
-                key={achievement.title}
-                className="p-6 rounded-2xl bg-gray-600 hover:shadow-md transition-all duration-300"
-              >
-                <div className="flex items-center mb-3">
-                  <div className="text-emerald-500 mr-3">{achievement.icon}</div>
-                  <h3 className="font-semibold text-lg">{achievement.title}</h3>
-                </div>
-                <p className="text-white">{achievement.description}</p>
-                <a
-                  href={achievement.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-emerald-500 hover:underline flex items-center mt-2"
-                >
-                  Visit <ExternalLink className="w-4 h-4 ml-1" />
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* </Link> */}
-    </div>
-  );
-};
+//           <div className="grid grid-cols-1 md:grid-cols-2  gap-6 animate-fade-in-delay">
+//             {achievements.map((achievement) => (
+//               <div
+//                 key={achievement.title}
+//                 className="p-6 rounded-2xl bg-gray-600 hover:shadow-md transition-all duration-300"
+//               >
+//                 <div className="flex items-center mb-3">
+//                   <div className="text-emerald-500 mr-3">{achievement.icon}</div>
+//                   <h3 className="font-semibold text-lg">{achievement.title}</h3>
+//                 </div>
+//                 <p className="text-white">{achievement.description}</p>
+//                 <a
+//                   href={achievement.href}
+//                   target="_blank"
+//                   rel="noopener noreferrer"
+//                   className="text-emerald-500 hover:underline flex items-center mt-2"
+//                 >
+//                   Visit <ExternalLink className="w-4 h-4 ml-1" />
+//                 </a>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
+//       {/* </Link> */}
+//     </div>
+//   );
+// };
 
-export default About;
+// export default About;

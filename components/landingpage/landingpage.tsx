@@ -12,9 +12,9 @@ const landingpage = () => {
       <HeroSection />
       {/* <About /> */}
       {/* <Project /> */}
-      <Contact />
+      {/* <Contact /> */}
 
-      <Footer />
+      {/* <Footer /> */}
 
     </div>
   )
