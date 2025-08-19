@@ -1,18 +1,20 @@
 import React from 'react'
 import Navbar from './navbar'
 import HeroSection from './heroSection'
-import About from './about'
+import { Footer } from '@/app/Footer'
 import Project from './project'
 import Contact from './contact'
 
 const landingpage = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       <Navbar />
       <HeroSection />
       {/* <About /> */}
-      <Project />
+      {/* <Project /> */}
       <Contact />
+
+      <Footer />
 
     </div>
   )

@@ -1,5 +1,7 @@
 import { Briefcase, Code2, ExternalLink, Github } from 'lucide-react';
 import React from 'react';
+import Image from 'next/image';
+import { projects } from '@/contant';
 
 const achievements = [
   {
@@ -48,7 +50,7 @@ const HeroSection = () => {
               View My Work
             </a>
           </div> */}
-          <div className="bg-background max-w-xl rounded-xl shadow-xl backdrop-blur-sm bg-opacity-80 animate-fade-in-up">
+          <div className="bg-background max-w-xl rounded-xl shadow-xl backdrop-blur-sm bg-opacity-80 ">
             <p className="text-neutral-200 leading-relaxed text-lg mb-8">
               I&apos;m a passionate full-stack developer building web applications.
               I specialize in React, Node.js, and modern web technologies. When I&apos;m not coding,
@@ -59,7 +61,7 @@ const HeroSection = () => {
               {achievements.map((achievement) => (
                 <div
                   key={achievement.title}
-                  className="p-6 rounded-2xl bg-gray-600 hover:shadow-md transition-all duration-300"
+                  className="p-6 rounded-xl bg-background ring ring-white/10 hover:shadow-md transition-all duration-300"
                 >
                   <div className="flex items-center mb-3">
                     <div className="text-emerald-500 mr-3">{achievement.icon}</div>
@@ -70,7 +72,7 @@ const HeroSection = () => {
                     href={achievement.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-emerald-500 hover:underline flex items-center mt-2"
+                    className="text-neutral-200 hover:underline flex items-center mt-2"
                   >
                     Visit <ExternalLink className="w-4 h-4 ml-1" />
                   </a>
@@ -78,6 +80,66 @@ const HeroSection = () => {
               ))}
             </div>
           </div>
+          <section
+            id="projects"
+            className="py-20  sm:px-8 max-w-xl mx-auto"
+          >
+            <div className="flex items-center mb-12">
+              <h2 className="text-3xl font-semibold  text-white">
+                Selected Projects
+              </h2>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+              {projects.map((project) => (
+                <div
+                  key={project.title}
+                  className="bg-background rounded-xl overflow-hidden shadow-lg group  transition-all duration-300 ring ring-white/10"
+                >
+                  <div className="relative overflow-hidden aspect-video">
+                    <Image
+                      src={project.imageUrl}
+                      alt={project.title}
+                      className="w-full h-full group-hover:scale-110 transition-transform duration-500"
+                      width={500}
+                      height={300}
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
+                    <p className="text-white mb-4 line-clamp-3">{project.description}</p>
+                    {/* <div className="flex flex-wrap gap-2 mb-6">
+                      {project.tags.map(tag => (
+                        <span
+                          key={tag}
+                          className="px-3 py-1 bg-white/10 text-emerald-400 rounded-full text-sm font-medium border border-foreground/10"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div> */}
+                    {/* <div className="flex items-center gap-4">
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center px-4 py-2 bg-foreground text-green-500 rounded-lg hover:bg-foreground/90 transition-colors duration-300"
+                      >
+                        Live Demo <ExternalLink size={16} className="ml-2" />
+                      </a>
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center px-4 py-2  text-white rounded-full hover:bg-gray-500 transition-colors duration-300"
+                      >
+                        <Github size={16} className="mr-2" /> Code
+                      </a>
+                    </div> */}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
         </div>
       </header>
     </div>
