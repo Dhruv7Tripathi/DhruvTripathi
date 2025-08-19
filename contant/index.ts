@@ -9,6 +9,26 @@ export const skills = [
   "TypeScript",
 ];
 
+type SocialLink = {
+  label: string;
+  link: string;
+};
+
+export const SOCIAL_LINKS: SocialLink[] = [
+  {
+    label: 'Github',
+    link: 'https://github.com/dhruv7tripathi',
+  },
+  {
+    label: 'Twitter',
+    link: 'https://twitter.com/dhruvtripathi77',
+  },
+  {
+    label: 'LinkedIn',
+    link: 'https://www.linkedin.com/in/dhruv-tripathi-9848792aa/',
+  },
+]
+
 export const education = [
   {
     institution: "GLA University",

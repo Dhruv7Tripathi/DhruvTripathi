@@ -8,9 +8,9 @@ export default function RootLayout({
   return (
     <div>
       <div>
-        <Sidebar />
+        {/* <Sidebar /> */}
         <main className="bg-black text-white">{children}</main>
-        <Rightbar />
+        {/* <Rightbar /> */}
       </div>
     </div>
   );

@@ -9,10 +9,10 @@ import Sidebar from "@/components/secondary/sidebar";
 const AboutPage = () => {
   return (
     <div className="flex">
-      <Sidebar />
-      <div className="min-h-screen bg-black text-white p-8 w-full">
-        <div className="max-w-5xl mx-auto mb-16">
-          <div className="text-center space-y-4">
+      {/* <Sidebar /> */}
+      <div className="min-h-screen  bg-black text-white p-8 w-full">
+        <div className="max-w-2xl mx-auto mb-16">
+          <div className=" space-y-4">
             <h1 className="text-4xl font-bold">
               Hello, I&apos;m{" "}
               <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
@@ -20,30 +20,32 @@ const AboutPage = () => {
               </span>{" "}
               <span className="inline-block text-5xl animate-wave">👋</span>
             </h1>
-            <p className="text-xl text-white">
-              Full Stack Developer | AI Enthusiast
+            <p className="text-sm text-neutral-200 mt-4">
+              Frontend Developer specializing in React, Next.js, and TypeScript. Passionate about building modern web applications and exploring new technologies.
             </p>
           </div>
         </div>
-        <section className="max-w-5xl mx-auto mb-16">
-          <div className="flex items-center mb-8">
-            <School className="w-8 h-8 mr-4" />
-            <h2 className="text-3xl font-bold">Education</h2>
+        <section className="max-w-2xl mx-auto mb-16">
+          <div className="flex items-center mb-2">
+            <h2 className="text-3xl font-semibold">Education</h2>
           </div>
-          <div className="grid gap-6 md:grid-cols-2 border-gray-800 pt-6">
+          <div className="grid gap-6 md:grid-cols-2  pt-6">
             {education.map((edu, index) => (
-              <Card key={index} className="hover:shadow-lg border-gray-800 transition-shadow">
-                <div className="relative overflow-hidden border-gray-800 aspect-video">
+              <Card
+                key={index}
+                className=" rounded-xl ring-2 ring-white/10 "
+              >
+                <div className="relative overflow-hidden rounded-xl ring-2 ring-white/10 aspect-video">
                   <Image
                     src={edu.imageUrl}
                     alt={edu.institution}
-                    className="border-gray-800 w-full h-full transition-transform duration-500"
+                    className="w-full h-full object-cover transition-transform duration-500"
                     width={500}
-                    height={300}
+                    height={500}
                   />
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-2">{edu.institution}</h3>
+                <CardContent className="p-4">
+                  <h3 className="text-xl font-semibold mb-2">{edu.institution}</h3>
                   <p className="text-muted-foreground mb-2">{edu.degree}</p>
                   <p className="text-muted-foreground mb-2">{edu.performance}</p>
                   <p className="text-sm text-muted-foreground mb-4">{edu.year}</p>
@@ -54,23 +56,14 @@ const AboutPage = () => {
           </div>
         </section>
 
-        <section className="max-w-5xl mx-auto mb-16">
+        <section className="max-w-2xl mx-auto mb-16">
           <div className="flex items-center mb-8">
-            <NotebookPen className="w-8 h-8 mr-4" />
-            <h2 className="text-3xl font-bold">Blogs</h2>
+            <h2 className="text-3xl font-semibold">Blogs</h2>
           </div>
-          <FocusCardsDemo />
-          <div className="flex justify-center mt-8">
-            <a
-              href="/blogs"
-              className="inline-flex items-center px-8 py-4 bg-white text-emerald-600 rounded-full 
-                        hover:bg-purple-50 transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              <span>View all blogs</span>
-            </a>
+          <div className="rounded-xl overflow-hidden">
+
+            <FocusCardsDemo />
           </div>
-
-
         </section>
       </div>
     </div>

@@ -6,11 +6,11 @@ import { cards } from "@/contant/blogCards";
 export default function Blog() {
   return (
     <div className="flex w-full">
-      <Sidebar />
+      {/* <Sidebar /> */}
       <div className="flex-grow">
         <FocusCards cards={cards} />
       </div>
-      <Rightbar />
+      {/* <Rightbar /> */}
     </div>
   );
 }
