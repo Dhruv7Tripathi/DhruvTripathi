@@ -35,7 +35,7 @@ const Navbar = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <motion.span
-              className="text-2xl font-bold text-white"
+              className="text-2xl font-bold ml-24 px-40 text-white"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
@@ -43,7 +43,7 @@ const Navbar = () => {
               DT
             </motion.span>
 
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center mr-16 space-x-8">
               <Link href="/about" className="text-gray-300 hover:text-green-400 transition-colors">About</Link>
               <Link href="/contactus" className="text-gray-300 hover:text-green-400 transition-colors">ContactUs</Link>
               <Link href="#projects" className="text-gray-300 hover:text-green-400 transition-colors">Projects</Link>

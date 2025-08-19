@@ -10,7 +10,7 @@ const landingpage = () => {
     <div className="min-h-screen bg-gray-50">
       <Navbar />
       <HeroSection />
-      <About />
+      {/* <About /> */}
       <Project />
       <Contact />
 
