@@ -8,6 +8,7 @@ import { TextLoop } from '@/components/ui/text-loop'
 import { MonitorIcon, MoonIcon, SunIcon } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { Magnetic } from '../magnit';
+import LeetCodeIcon from '../icons/leetcode';
 import {
   Menu,
   X
@@ -168,25 +169,26 @@ const HeroSection = () => {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
               {projects.map((project) => (
-                <div
-                  key={project.title}
-                  className="bg-background rounded-xl overflow-hidden shadow-lg group  transition-all duration-300 ring ring-white/10"
-                >
-                  <div className="relative overflow-hidden aspect-video">
-                    <Image
-                      src={project.imageUrl}
-                      alt={project.title}
-                      className="w-full h-full group-hover:scale-110 transition-transform duration-500"
-                      width={500}
-                      height={300}
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2 text-neutral-800 dark:text-white">{project.title}</h3>
-                    <p className="text-neutral-800 dark:text-neutral-200 mb-4 line-clamp-3">{project.description}</p>
+                <Link key={project.title} href={project.link} passHref>
+                  <div
+                    className="bg-background rounded-xl overflow-hidden shadow-lg group  transition-all duration-300 ring ring-white/10"
+                  >
+                    <div className="relative overflow-hidden aspect-video">
+                      <Image
+                        src={project.imageUrl}
+                        alt={project.title}
+                        className="w-full h-full group-hover:scale-110 transition-transform duration-500"
+                        width={500}
+                        height={300}
+                      />
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold mb-2 text-neutral-800 dark:text-white">{project.title}</h3>
+                      <p className="text-neutral-800 dark:text-neutral-200 mb-4 line-clamp-3">{project.description}</p>
 
+                    </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </section>
@@ -275,6 +277,10 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: <Linkedin size={24} className='bg-background' />,
     link: 'https://www.linkedin.com/in/dhruv-tripathi-9848792aa/',
+  },
+  {
+    label: <LeetCodeIcon />,
+    link: 'https://leetcode.com/u/Dhruv_Tripathi0705/',
   },
 ]
 

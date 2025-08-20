@@ -53,7 +53,7 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
+    <div className="min-h-screen bg-white dark:bg-black text-slate-900 dark:text-white">
       <div className="container mx-auto px-4 py-16 lg:py-24">
         <div className="text-center mb-16">
           <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-4">Get in Touch</h1>
@@ -65,7 +65,7 @@ export default function ContactPage() {
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           <div className="space-y-8">
-            <Card className="border-0 shadow-lg bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
+            <Card className="border-0 shadow-lg bg-white/50 dark:bg-neutral-800 rounded-xl backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="text-2xl text-slate-900 dark:text-white">Contact Information</CardTitle>
                 <CardDescription className="text-slate-600 dark:text-slate-300">
@@ -73,7 +73,7 @@ export default function ContactPage() {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div className="flex items-center space-x-4 p-4 rounded-lg bg-slate-50 dark:bg-slate-700/50 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">
+                <div className="flex items-center space-x-4 p-4 rounded-lg bg-slate-50 dark:bg-neutral-800  transition-colors">
                   <div className="flex-shrink-0">
                     <MailIcon className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                   </div>
@@ -83,7 +83,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-4 p-4 rounded-lg bg-slate-50 dark:bg-slate-700/50 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">
+                <div className="flex items-center space-x-4 p-4 rounded-lg bg-slate-50 dark:bg-neutral-800  transition-colors">
                   <div className="flex-shrink-0">
                     <PhoneIcon className="h-6 w-6 text-green-600 dark:text-green-400" />
                   </div>
@@ -93,20 +93,20 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-4 p-4 rounded-lg bg-slate-50 dark:bg-slate-700/50 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors">
+                <div className="flex items-center space-x-4 p-4 rounded-lg bg-slate-50 dark:bg-neutral-800  transition-colors">
                   <div className="flex-shrink-0">
                     <MapPinIcon className="h-6 w-6 text-red-600 dark:text-red-400" />
                   </div>
                   <div>
                     <p className="font-medium text-slate-900 dark:text-white">Location</p>
-                    <p className="text-slate-600 dark:text-slate-300">Near GLA University, Mathura</p>
+                    <p className="text-neutral-600 dark:text-slate-300">Near GLA University, Mathura</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
           </div>
 
-          <Card className="border-0 shadow-xl bg-white dark:bg-slate-800">
+          <Card className="border-0 shadow-xl bg-white dark:bg-neutral-800">
             <CardHeader>
               <CardTitle className="text-2xl text-slate-900 dark:text-white">Send us a Message</CardTitle>
               <CardDescription>Fill out the form below and we&apos;ll get back to you soon</CardDescription>
@@ -123,7 +123,7 @@ export default function ContactPage() {
                     value={formData.name}
                     onChange={(e) => handleInputChange("name", e.target.value)}
                     placeholder="Enter your full name"
-                    className="bg-slate-50 dark:bg-slate-700 border-slate-200 dark:border-slate-600"
+                    className="bg-slate-50 dark:bg-neutral-800 border-neutral-200 dark:border-neutral-600 rounded"
                     required
                   />
                 </div>
@@ -138,7 +138,7 @@ export default function ContactPage() {
                     value={formData.email}
                     onChange={(e) => handleInputChange("email", e.target.value)}
                     placeholder="Enter your email address"
-                    className="bg-slate-50 dark:bg-slate-700 border-slate-200 dark:border-slate-600"
+                    className="bg-slate-50 dark:bg-neutral-800 border-neutral-200 dark:border-neutral-600 rounde"
                     required
                   />
                 </div>
@@ -153,7 +153,7 @@ export default function ContactPage() {
                     onChange={(e) => handleInputChange("message", e.target.value)}
                     placeholder="Tell us how we can help you..."
                     rows={5}
-                    className="bg-slate-50 dark:bg-slate-700 border-slate-200 dark:border-slate-600 resize-none"
+                    className="bg-slate-50 dark:bg-neutral-800 border-neutral-200 dark:border-neutral-600 rounde"
                     required
                   />
                 </div>
@@ -161,7 +161,7 @@ export default function ContactPage() {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-emerald-600 hover:bg-green-700 text-white font-medium py-2.5 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-emerald-600 rounded-xl hover:bg-green-700 text-white font-medium py-2.5 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     <>
