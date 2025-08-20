@@ -89,8 +89,6 @@ const CricketBlogPost = () => {
         As the famous cricket commentator John Arlott once said, Cricket is the most wonderful entertainment in the world. I couldn&apos;t
         agree more—and I look forward to many more years of this wonderful entertainment, both on and off the field.
       </p>
-
-      <hr className="border-gray-300 my-8" />
     </div>
   );
 };

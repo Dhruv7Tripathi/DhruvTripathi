@@ -37,8 +37,6 @@ const TechnologyBlog = () => {
         The potential impact of advanced AI systems on society could rival that of electricity or the internet. Machines that can diagnose diseases, optimize energy usage, accelerate scientific research, and augment human creativity are not science fiction but emerging realities. As these technologies evolve, they promise to address some of humanity&apos;s most pressing challenges while raising important questions about the future of work, privacy, and human uniqueness.
       </p> */}
 
-
-      <hr className="border-gray-300 my-8" />
     </div>
   );
 };

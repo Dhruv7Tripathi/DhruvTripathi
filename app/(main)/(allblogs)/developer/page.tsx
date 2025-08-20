@@ -68,7 +68,6 @@ const WebDevBlogPost = () => {
         As renowned developer Kent C. Dodds once said, The best way to learn is to build. I&apos;ve taken this to heart, and each project has been a stepping stone to greater understanding and capability.
       </p>
 
-      <hr className="border-gray-300 my-8" />
 
     </div>
   );

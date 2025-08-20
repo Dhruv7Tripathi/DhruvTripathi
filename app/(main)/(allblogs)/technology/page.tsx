@@ -80,7 +80,6 @@ const TechnologyBlog = () => {
         In this ongoing story of technological evolution, we are both the authors and the beneficiaries. By embracing innovation while thoughtfully guiding its development, we can create a future where technology continues to empower us to address our greatest challenges and realize our highest aspirations.
       </p>
 
-      <hr className="border-gray-300 my-8" />
 
       <p className="italic text-gray-600">
         What technological development do you believe will have the greatest impact on humanity in the next decade? Share your thoughts in the comments below!

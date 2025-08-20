@@ -43,10 +43,9 @@ const Navbar = () => {
               DT
             </motion.span>
 
-            <div className="hidden md:flex items-center mr-16 space-x-8">
+            <div className="hidden md:flex items-center mr-20 space-x-8">
               <Link href="/about" className="text-gray-300 hover:text-white transition-colors">About</Link>
               <Link href="/contactus" className="text-gray-300 hover:text-white transition-colors">ContactUs</Link>
-              <Link href="#projects" className="text-gray-300 hover:text-white transition-colors">Projects</Link>
               <Link href="/blogs" className="text-gray-300 hover:text-white transition-colors">Blogs</Link>
               {/* <motion.a
                 href="/Dhruv_Tripathi_Resume.pdf"
@@ -75,10 +74,9 @@ const Navbar = () => {
           animate={{ opacity: isMenuOpen ? 1 : 0, height: isMenuOpen ? 'auto' : 0 }}
         >
           <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900 shadow-lg">
-            <a href="#about" className="block px-3 py-2 rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">About</a>
-            <a href="#skills" className="block px-3 py-2 rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">Skills</a>
-            <a href="#projects" className="block px-3 py-2 rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">Projects</a>
-            <a href="#contact" className="block px-3 py-2 rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">Contact</a>
+            <a href="/about" className="block px-3 py-2 rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">About</a>
+            <a href="/skills" className="block px-3 py-2 rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">Skills</a>
+            <a href="/contact" className="block px-3 py-2 rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">Contact</a>
             {/* <a
               href="/resume.pdf"
               download

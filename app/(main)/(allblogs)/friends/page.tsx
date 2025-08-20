@@ -79,8 +79,6 @@ const FriendshipBlog = () => {
       <p className="mb-8">
         The friendships that have most enriched my life weren&appos;t accidents—they were the result of mutual investment, showing up consistently, and choosing depth over convenience. In a world that often prioritizes productivity and achievement, nurturing these connections might be the most important work we do.
       </p>
-
-      <hr className="border-gray-300 my-8" />
     </div>
   );
 };

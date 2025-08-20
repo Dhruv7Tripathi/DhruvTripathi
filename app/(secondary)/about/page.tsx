@@ -1,18 +1,18 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { School, NotebookPen } from "lucide-react";
 import Image from "next/image";
 import { education } from "@/contant";
 import { FocusCardsDemo } from "@/components/secondary/blogs";
-import Sidebar from "@/components/secondary/sidebar";
+// import Sidebar from "@/components/secondary/sidebar";
 
 const AboutPage = () => {
   return (
     <div className="flex">
       {/* <Sidebar /> */}
-      <div className="min-h-screen  bg-black text-white p-8 w-full">
+      <div className="min-h-screen bg-black text-white p-8 w-full">
+        {/* Hero Section */}
         <div className="max-w-2xl mx-auto mb-16">
-          <div className=" space-y-4">
+          <div className="space-y-4">
             <h1 className="text-4xl font-bold">
               Hello, I&apos;m{" "}
               <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
@@ -25,21 +25,23 @@ const AboutPage = () => {
             </p>
           </div>
         </div>
+
+        {/* Education Section */}
         <section className="max-w-2xl mx-auto mb-16">
           <div className="flex items-center mb-2">
             <h2 className="text-3xl font-semibold">Education</h2>
           </div>
-          <div className="grid gap-6 md:grid-cols-2  pt-6">
+          <div className="grid gap-6 md:grid-cols-2 pt-6">
             {education.map((edu, index) => (
               <Card
                 key={index}
-                className=" rounded-xl ring-2 ring-white/10 "
+                className="rounded-xl ring-1 ring-white/10 overflow-hidden"
               >
-                <div className="relative overflow-hidden rounded-xl ring-2 ring-white/10 aspect-video">
+                <div className="relative aspect-video">
                   <Image
                     src={edu.imageUrl}
                     alt={edu.institution}
-                    className="w-full h-full object-cover transition-transform duration-500"
+                    className="w-full h-full object-cover"
                     width={500}
                     height={500}
                   />
@@ -56,12 +58,12 @@ const AboutPage = () => {
           </div>
         </section>
 
+        {/* Blogs Section */}
         <section className="max-w-2xl mx-auto mb-16">
           <div className="flex items-center mb-8">
             <h2 className="text-3xl font-semibold">Blogs</h2>
           </div>
-          <div className="rounded-xl overflow-hidden">
-
+          <div className="rounded-xl ring-1 ring-white/10 overflow-hidden">
             <FocusCardsDemo />
           </div>
         </section>

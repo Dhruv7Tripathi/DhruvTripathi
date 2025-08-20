@@ -5,7 +5,7 @@ import Rightbar from "@/components/secondary/rightbar";
 import { cards } from "@/contant/blogCards";
 export default function Blog() {
   return (
-    <div className="flex w-full">
+    <div className="flex ">
       {/* <Sidebar /> */}
       <div className="flex-grow">
         <FocusCards cards={cards} />

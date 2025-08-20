@@ -79,7 +79,6 @@ const BelieveInYourselfBlog = () => {
         The journey to self-belief isn&apos;t always linear, but it&apos;s invariably transformative. As you cultivate faith in yourself, you&apos;ll find that the limits you once perceived were largely self-imposed—and the possibilities that await when you release them are extraordinary.
       </p>
 
-      <hr className="border-gray-300 my-8" />
     </div>
   );
 };
