@@ -81,7 +81,7 @@ const TechnologyBlog = () => {
       </p>
 
 
-      <p className="italic text-gray-600">
+      <p className="italic text-neutral-300">
         What technological development do you believe will have the greatest impact on humanity in the next decade? Share your thoughts in the comments below!
       </p>
     </div>

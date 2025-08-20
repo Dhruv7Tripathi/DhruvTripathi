@@ -11,7 +11,7 @@ const AboutPage = () => {
       {/* <Sidebar /> */}
       <div className="min-h-screen bg-black text-white p-8 w-full">
         {/* Hero Section */}
-        <div className="max-w-2xl mx-auto mb-16">
+        <div className="max-w-2xl mx-auto mb-8">
           <div className="space-y-4">
             <h1 className="text-4xl font-bold">
               Hello, I&apos;m{" "}
@@ -21,27 +21,26 @@ const AboutPage = () => {
               <span className="inline-block text-5xl animate-wave">👋</span>
             </h1>
             <p className="text-sm text-neutral-200 mt-4">
-              Frontend Developer specializing in React, Next.js, and TypeScript. Passionate about building modern web applications and exploring new technologies.
+              I am a dedicated frontend developer with a strong focus on React, Next.js, and TypeScript. I enjoy crafting seamless user experiences and continuously learning about the latest trends in web development. My goal is to build impactful and efficient web applications.
             </p>
           </div>
         </div>
 
-        {/* Education Section */}
         <section className="max-w-2xl mx-auto mb-16">
           <div className="flex items-center mb-2">
             <h2 className="text-3xl font-semibold">Education</h2>
           </div>
-          <div className="grid gap-6 md:grid-cols-2 pt-6">
+          <div className="grid gap-6 md:grid-cols-2 pt-3  ">
             {education.map((edu, index) => (
               <Card
                 key={index}
-                className="rounded-xl ring-1 ring-white/10 overflow-hidden"
+                className="rounded-xl ring-2 ring-white/10 overflow-hidden"
               >
-                <div className="relative aspect-video">
+                <div className="relative rounded-lg aspect-video">
                   <Image
                     src={edu.imageUrl}
                     alt={edu.institution}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full rounded-xl object-cover"
                     width={500}
                     height={500}
                   />
@@ -58,7 +57,6 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* Blogs Section */}
         <section className="max-w-2xl mx-auto mb-16">
           <div className="flex items-center mb-8">
             <h2 className="text-3xl font-semibold">Blogs</h2>

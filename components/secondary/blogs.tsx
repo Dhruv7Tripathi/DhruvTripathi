@@ -12,7 +12,7 @@ export const cards = [
     href: "/inspiration"
   },
   {
-    title: "Friends",
+    title: "Me and my friends",
     src: "/blog/trio.jpg",
     href: "/friends"
   },

@@ -1,16 +1,16 @@
-import Sidebar from "@/components/secondary/sidebar";
-import Rightbar from "@/components/secondary/rightbar";
+import { Footer } from "@/app/Footer";
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <div>
-      <div>
-        {/* <Sidebar /> */}
-        <main className="bg-black text-white">{children}</main>
-        {/* <Rightbar /> */}
+    <div className="bg-black min-h-screen text-white">
+      <div className="max-w-2xl mx-auto flex flex-col ">
+        <main className="w-full flex flex-col items-center justify-center">
+          {children}
+        </main>
+        <Footer />
       </div>
     </div>
   );

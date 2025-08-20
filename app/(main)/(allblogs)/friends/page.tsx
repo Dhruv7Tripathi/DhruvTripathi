@@ -6,11 +6,11 @@ const FriendshipBlog = () => {
       <h1 className="text-3xl font-bold mb-6">The Extraordinary Power of Friendship: How Deep Connections Shape Our Lives</h1>
 
       <div className="mb-8">
-        {/* <img
-          src="/api/placeholder/800/400"
+        <img
+          src="/blog/trio.jpg"
           alt="Group of friends laughing together at sunset"
-          className="w-full h-auto rounded-lg shadow-md"
-        /> */}
+          className="w-full h-auto rounded-xl shadow-md"
+        />
       </div>
 
       <p className="mb-6 text-lg font-semibold italic">
