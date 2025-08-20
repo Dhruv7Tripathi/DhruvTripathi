@@ -38,7 +38,7 @@ const achievements = [
   {
     title: 'Technical Writing',
     description: 'Regular blog posts about web development',
-    href: '/blogs',
+    href: '/about',
     icon: <ExternalLink className="w-6 h-6" />
   }
 ];
@@ -46,23 +46,23 @@ const achievements = [
 
 const HeroSection = () => {
   return (
-    <div className=' bg-gradient-to-br from-black via-gray-800 to-black'>
+    <div className=' bg-gradient-to-br dark:from-black dark:via-gray-800 dark:to-black bg-white'>
       <header
-        className="min-h-screen  text-white flex  justify-center"
+        className="min-h-screen   text-neutral-800 dark:text-white flex  justify-center"
       >
 
-        <div className="z-10 max-w-2xl mt-28">
-          <div className="text-xl sm:text-2xl text-neutral-300 mb-6">
+        <div className="z-10 max-w-2xl mt-16">
+          <div className="text-xl sm:text-2xl  text-neutral-800 dark:text-white mb-6">
             <span className="inline-block text-5xl">👋</span>
             <span className="ml-2">Hi there, I&apos;m</span>
           </div>
           <h1
-            className="text-6xl sm:text-5xl font-semibold mb-4 text-white"
+            className="text-6xl sm:text-5xl font-semibold mb-4 text-neutral-800 dark:text-white"
           >
             Dhruv Tripathi
           </h1>
           <h2
-            className="text-2xl sm:text-2xl mb-8 text-neutral-100"
+            className="text-2xl sm:text-2xl mb-8  text-neutral-800 dark:text-white"
           >
             Frontend Developer
           </h2>
@@ -75,8 +75,8 @@ const HeroSection = () => {
               View My Work
             </a>
           </div> */}
-          <div className="bg-background max-w-2xl rounded-xl shadow-xl backdrop-blur-sm bg-opacity-80 ">
-            <p className="text-neutral-200 leading-relaxed text-lg mb-8">
+          <div className="bg-background max-w-2xl rounded-xl  backdrop-blur-sm bg-opacity-80 ">
+            <p className="text-neutral-800 dark:text-neutral-200 leading-relaxed text-lg mb-8">
               I&apos;m a passionate full-stack developer building web applications.
               I specialize in React, Node.js, and modern web technologies. When I&apos;m not coding,
               you can find me contributing to open-source projects or writing technical blog posts.
@@ -86,18 +86,18 @@ const HeroSection = () => {
               {achievements.map((achievement) => (
                 <div
                   key={achievement.title}
-                  className="p-6 rounded-xl bg-background ring ring-white/10 hover:shadow-md transition-all duration-300"
+                  className="p-6 rounded-xl bg-background border shadow-md border-neutral-200 ring ring-white/10   transition-all duration-300"
                 >
                   <div className="flex items-center mb-3">
                     <div className="text-emerald-500 mr-3">{achievement.icon}</div>
                     <h3 className="font-semibold text-lg">{achievement.title}</h3>
                   </div>
-                  <p className="text-white">{achievement.description}</p>
+                  <p className="text-neutral-800 dark:text-neutral-200">{achievement.description}</p>
                   <a
                     href={achievement.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-neutral-200 hover:underline flex items-center mt-2"
+                    className="text-neutral-800 dark:text-neutral-200 hover:underline flex items-center mt-2"
                   >
                     Visit <ExternalLink className="w-4 h-4 ml-1" />
                   </a>
@@ -110,7 +110,7 @@ const HeroSection = () => {
             className="py-20   max-w-2xl mx-auto"
           >
             <div className="flex items-center mb-12">
-              <h2 className="text-3xl font-semibold  text-white">
+              <h2 className="text-3xl font-semibold   text-neutral-800 dark:text-white">
                 Selected Projects
               </h2>
             </div>
@@ -130,8 +130,8 @@ const HeroSection = () => {
                     />
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
-                    <p className="text-white mb-4 line-clamp-3">{project.description}</p>
+                    <h3 className="text-xl font-bold mb-2 text-neutral-800 dark:text-white">{project.title}</h3>
+                    <p className="text-neutral-800 dark:text-neutral-200 mb-4 line-clamp-3">{project.description}</p>
                     {/* <div className="flex flex-wrap gap-2 mb-6">
                       {project.tags.map(tag => (
                         <span
@@ -171,10 +171,10 @@ const HeroSection = () => {
           >
             <div className="relative max-w-5xl">
               <div className="mb-8">
-                <h2 className="text-4xl font-bold text-white mb-4">
+                <h2 className="text-4xl font-bold text-neutral-800 dark:text-white mb-4">
                   Let&apos;s Work Together
                 </h2>
-                <p className="text-white text-lg max-w-2xl mx-auto">
+                <p className="text-neutral-800 dark:text-neutral-200 text-lg max-w-2xl mx-auto">
                   I&apos;m always interested in hearing about new projects and opportunities.
                   Feel free to reach out through any of these channels.
                   <br />
@@ -195,10 +195,10 @@ const HeroSection = () => {
 
         </div>
       </header>
-      <footer className="mt-24 border-t max-w-2xl mx-auto bg-background border-zinc-100 py-4 dark:border-neutral-700">
+      <footer className="mt-24 border-t max-w-2xl mx-auto bg-background border-zinc-400 py-4 dark:border-neutral-700">
         <div className="flex items-center justify-between">
           <a href="https://github.com/dhruv7tripathi" target="_blank">
-            <TextLoop className="text-xs text-zinc-500">
+            <TextLoop className="text-xs text-zinc-800 dark:text-zinc-200">
               <span>Dhruv Tripathi</span>
               <span>FrontEnd Developer</span>
             </TextLoop>

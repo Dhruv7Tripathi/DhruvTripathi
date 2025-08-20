@@ -1,41 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   Menu,
   X
 } from 'lucide-react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const { scrollYProgress } = useScroll();
-
-  const navBackground = useTransform(
-    scrollYProgress,
-    [0, 0.1],
-    ["rgba(0, 0, 0, 0)", "rgba(17, 24, 39, 0.9)"]
-  );
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <div>
       <motion.nav
-        style={{ backgroundColor: navBackground }}
-        className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'shadow-md shadow-black/30 backdrop-blur-sm' : ''
+        className={`sticky z-10 top-0 w-full transition-all duration-300 
           }`}
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <motion.span
-              className="text-2xl font-bold ml-11 px-40 text-white"
+              className="text-3xl font-bold ml-11 px-40  text-neutral-800 dark:text-white"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
@@ -43,10 +26,10 @@ const Navbar = () => {
               DT
             </motion.span>
 
-            <div className="hidden md:flex items-center mr-20 space-x-8">
-              <Link href="/about" className="text-gray-300 hover:text-white transition-colors">About</Link>
-              <Link href="/contactus" className="text-gray-300 hover:text-white transition-colors">ContactUs</Link>
-              <Link href="/blogs" className="text-gray-300 hover:text-white transition-colors">Blogs</Link>
+            <div className="hidden md:flex font-semibold items-center mr-20 space-x-8">
+              <Link href="/about" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">About</Link>
+              <Link href="/contactus" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">ContactUs</Link>
+              <Link href="/blogs" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">Blogs</Link>
               {/* <motion.a
                 href="/Dhruv_Tripathi_Resume.pdf"
                 download
@@ -73,10 +56,10 @@ const Navbar = () => {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: isMenuOpen ? 1 : 0, height: isMenuOpen ? 'auto' : 0 }}
         >
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900 shadow-lg">
-            <a href="/about" className="block px-3 py-2 rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">About</a>
-            <a href="/skills" className="block px-3 py-2 rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">Skills</a>
-            <a href="/contact" className="block px-3 py-2 rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">Contact</a>
+          <div className="px-2 pt-2 pb-3  space-y-1 bg-gray-900 shadow-lg">
+            <a href="/about" className="block px-3 py-2 font-semibold rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">About</a>
+            <a href="/skills" className="block px-3 py-2 font-semibold rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">Skills</a>
+            <a href="/contact" className="block px-3 py-2  font-semibold rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">Contact</a>
             {/* <a
               href="/resume.pdf"
               download
