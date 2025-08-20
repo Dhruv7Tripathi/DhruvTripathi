@@ -1,4 +1,4 @@
-import { Briefcase, Code2, ExternalLink, Github, Linkedin } from 'lucide-react';
+import { ExternalLink, Github, Linkedin } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { projects } from '@/contant';
@@ -8,7 +8,12 @@ import { TextLoop } from '@/components/ui/text-loop'
 import { MonitorIcon, MoonIcon, SunIcon } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { Magnetic } from '../magnit';
-import { Icon } from 'next/dist/lib/metadata/types/metadata-types';
+import {
+  Menu,
+  X
+} from 'lucide-react';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const THEMES_OPTIONS = [
   {
@@ -45,8 +50,64 @@ const achievements = [
 
 
 const HeroSection = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className=' bg-gradient-to-br dark:from-black dark:via-gray-800 dark:to-black bg-white'>
+      <div>
+        <motion.nav
+          className={`sticky z-10 top-0 w-full transition-all duration-300 
+          }`}
+        >
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between h-16">
+              <motion.span
+                className="text-3xl font-bold ml-11 px-40  text-neutral-800 dark:text-white"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+              >
+                DT
+              </motion.span>
+
+              <div className="hidden md:flex font-semibold items-center mr-20 space-x-8">
+                <Link href="/about" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">About</Link>
+                <Link href="/contactus" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">ContactUs</Link>
+                <Link href="/blogs" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">Blogs</Link>
+                {/* <motion.a
+                href="/Dhruv_Tripathi_Resume.pdf"
+                download
+                className="ml-4 px-6 py-2 bg-white text-white rounded-full flex items-center hover:bg-white transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Download size={16} className="mr-2" />
+                Resume
+              </motion.a> */}
+              </div>
+
+              <button
+                className="md:hidden p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-800"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+              >
+                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
+          </div>
+
+          <motion.div
+            className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: isMenuOpen ? 1 : 0, height: isMenuOpen ? 'auto' : 0 }}
+          >
+            <div className="px-2 pt-2 pb-3  space-y-1 bg-gray-900 shadow-lg">
+              <a href="/about" className="block px-3 py-2 font-semibold rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">About</a>
+              <a href="/skills" className="block px-3 py-2 font-semibold rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">Skills</a>
+              <a href="/contact" className="block px-3 py-2  font-semibold rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">Contact</a>
+
+            </div>
+          </motion.div>
+        </motion.nav>
+      </div>
       <header
         className="min-h-screen   text-neutral-800 dark:text-white flex  justify-center"
       >
@@ -66,15 +127,6 @@ const HeroSection = () => {
           >
             Frontend Developer
           </h2>
-
-          {/* <div className="mt-12">
-            <a
-              href="#projects"
-              className="inline-block px-8 py-3 bg-green-600 hover:bg-green-700 text-white rounded-full font-medium transition-all duration-300 hover:-translate-y-1"
-            >
-              View My Work
-            </a>
-          </div> */}
           <div className="bg-background max-w-2xl rounded-xl  backdrop-blur-sm bg-opacity-80 ">
             <p className="text-neutral-800 dark:text-neutral-200 leading-relaxed text-lg mb-8">
               I&apos;m a passionate full-stack developer building web applications.
@@ -86,7 +138,7 @@ const HeroSection = () => {
               {achievements.map((achievement) => (
                 <div
                   key={achievement.title}
-                  className="p-6 rounded-xl bg-background border shadow-md border-neutral-200 ring ring-white/10   transition-all duration-300"
+                  className="p-6 rounded-xl bg-background border shadow-md border-neutral-200 dark:border-neutral-700 ring ring-white/10   transition-all duration-300"
                 >
                   <div className="flex items-center mb-3">
                     <div className="text-emerald-500 mr-3">{achievement.icon}</div>
@@ -132,34 +184,7 @@ const HeroSection = () => {
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2 text-neutral-800 dark:text-white">{project.title}</h3>
                     <p className="text-neutral-800 dark:text-neutral-200 mb-4 line-clamp-3">{project.description}</p>
-                    {/* <div className="flex flex-wrap gap-2 mb-6">
-                      {project.tags.map(tag => (
-                        <span
-                          key={tag}
-                          className="px-3 py-1 bg-white/10 text-emerald-400 rounded-full text-sm font-medium border border-foreground/10"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div> */}
-                    {/* <div className="flex items-center gap-4">
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center px-4 py-2 bg-foreground text-green-500 rounded-lg hover:bg-foreground/90 transition-colors duration-300"
-                      >
-                        Live Demo <ExternalLink size={16} className="ml-2" />
-                      </a>
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center px-4 py-2  text-white rounded-full hover:bg-gray-500 transition-colors duration-300"
-                      >
-                        <Github size={16} className="mr-2" /> Code
-                      </a>
-                    </div> */}
+
                   </div>
                 </div>
               ))}
