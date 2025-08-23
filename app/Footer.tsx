@@ -68,7 +68,7 @@ function ThemeSwitch() {
 
 export function Footer() {
   return (
-    <footer className=" border-t bg-background border-zinc-300 px-0 py-4 dark:border-zinc-500">
+    <footer className="mt-6 border-t bg-background border-zinc-300 px-0 py-4 dark:border-zinc-500">
       <div className="flex items-center justify-between">
         <a href="https://github.com/dhruv7tripathi" target="_blank">
           <TextLoop className="text-xs text-neutral-800 dark:text-neutral-200">

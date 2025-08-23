@@ -73,7 +73,7 @@ const HeroSection = () => {
               <div className="hidden md:flex font-semibold items-center mr-20 space-x-8">
                 <Link href="/about" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">About</Link>
                 <Link href="/contactus" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">ContactUs</Link>
-                <Link href="/blogs" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">Blogs</Link>
+                <Link href="/yourself" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">Blogs</Link>
                 {/* <motion.a
                 href="/Dhruv_Tripathi_Resume.pdf"
                 download
@@ -102,8 +102,8 @@ const HeroSection = () => {
           >
             <div className="px-2 pt-2 pb-3  space-y-1 bg-gray-900 shadow-lg">
               <a href="/about" className="block px-3 py-2 font-semibold rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">About</a>
-              <a href="/skills" className="block px-3 py-2 font-semibold rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">Skills</a>
-              <a href="/contact" className="block px-3 py-2  font-semibold rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">Contact</a>
+              <a href="/contactus" className="block px-3 py-2 font-semibold rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">ContactUs</a>
+              <a href="/yourself" className="block px-3 py-2  font-semibold rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">Blogs</a>
 
             </div>
           </motion.div>
