@@ -13,23 +13,23 @@ const AboutPage = () => {
       {/* Navbar fixed at top */}
       <Navbar className="fixed top-0 left-0 w-full z-30" />
 
-      {/* Add top padding equal to navbar height */}
-      <div className="flex-1 pt-20 max-w-3xl mx-auto px-4">
-        {/* Hero Section */}
+      <div className="flex-1 pt-20 max-w-2xl mx-auto px-4">
         <section className="mb-16">
-          <h1 className="text-4xl font-bold">
-            Hello, I&apos;m{" "}
-            <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">
+          <h1 className="text-4xl font-semibold">
+            {/* Hello */}
+            {/* <span className="inline-block text-5xl animate-wave">👋</span> */}
+            {/* <br /> */}
+            I&apos;m{" "}
+            <span className="bg-gradient-stop  text-balance bg-gradient-to-br from-neutral-800 via-neutral-800 to-neutral-900/30 dark:from-neutral-100 dark:via-neutral-100 via-50% dark:to-neutral-100/50 bg-clip-text py-2 text-5xl font-medium leading-[1.1] tracking-tighter text-transparent md:text-6xl lg:text-4xl"
+            >
               Dhruv Tripathi
             </span>{" "}
-            <span className="inline-block text-5xl animate-wave">👋</span>
           </h1>
           <p className="text-sm text-neutral-800 dark:text-neutral-200 mt-4">
             I am a dedicated frontend developer with a strong focus on React, Next.js, and TypeScript. I enjoy crafting seamless user experiences and continuously learning about the latest trends in web development. My goal is to build impactful and efficient web applications.
           </p>
         </section>
 
-        {/* Education Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-semibold mb-4">Education</h2>
           <div className="grid gap-6 md:grid-cols-2">
@@ -59,10 +59,9 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* Blogs Section */}
         <section className="mb-16">
           <h2 className="text-3xl font-semibold mb-4">Blogs</h2>
-          <div className="rounded-xl ring-1 ring-white/10 overflow-hidden">
+          <div className="rounded-xl  ring-white/10 overflow-hidden">
             <FocusCardsDemo />
           </div>
         </section>

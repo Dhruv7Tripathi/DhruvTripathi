@@ -119,7 +119,7 @@ const HeroSection = () => {
             <span className="ml-2">Hi there, I&apos;m</span>
           </div>
           <h1
-            className="text-6xl sm:text-5xl font-semibold mb-4 text-neutral-800 dark:text-white"
+            className="bg-gradient-stop mx-auto max-w-6xl text-balance bg-gradient-to-br from-neutral-800 via-neutral-800 to-neutral-900/30 dark:from-neutral-100 dark:via-neutral-100 via-50% dark:to-neutral-100/30 bg-clip-text py-2 text-5xl font-medium leading-[1.1] tracking-tighter text-transparent md:text-6xl lg:text-5xl"
           >
             Dhruv Tripathi
           </h1>

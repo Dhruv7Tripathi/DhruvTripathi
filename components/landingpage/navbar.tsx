@@ -12,49 +12,63 @@ const Navbar: React.FC<NavbarProps> = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className=" z-50 w-full bg-white dark:bg-black shadow-md">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-2">
-        <div className="flex items-center justify-between h-16">
-          <motion.span
-            className="text-3xl font-bold text-neutral-800 dark:text-white"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-          >
-            DT
-          </motion.span>
-
-          {/* Desktop Menu */}
-          <div className="hidden md:flex font-semibold items-center space-x-8">
-            <Link href="/about" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">About</Link>
-            <Link href="/contactus" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">ContactUs</Link>
-            <Link href="/yourself" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">Blogs</Link>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2 rounded-md text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-800"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-        </div>
-      </div>
-
-      {/* Mobile Menu */}
-      <motion.div
-        className={`md:hidden overflow-hidden`}
-        initial={{ height: 0, opacity: 0 }}
-        animate={{ height: isMenuOpen ? "auto" : 0, opacity: isMenuOpen ? 1 : 0 }}
-        transition={{ duration: 0.3 }}
+    <div>
+      <motion.nav
+        className={`sticky z-10 top-0 w-full transition-all duration-300 
+          }`}
       >
-        <div className="px-4 pt-2 pb-3 space-y-1 bg-gray-100 dark:bg-gray-900">
-          <Link href="/about" className="block px-3 py-2 font-semibold rounded-md text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-800">About</Link>
-          <Link href="/contactus" className="block px-3 py-2 font-semibold rounded-md text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-800">ContactUs</Link>
-          <Link href="/yourself" className="block px-3 py-2 font-semibold rounded-md text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-800">Blogs</Link>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            <Link href="/">
+              <motion.span
+                className="text-3xl font-bold ml-11 px-40  text-neutral-800 dark:text-white"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+              >
+                DT
+              </motion.span>
+            </Link>
+
+            <div className="hidden md:flex font-semibold items-center mr-20 space-x-8">
+              <Link href="/about" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">About</Link>
+              <Link href="/contactus" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">ContactUs</Link>
+              <Link href="/yourself" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">Blogs</Link>
+              {/* <motion.a
+                href="/Dhruv_Tripathi_Resume.pdf"
+                download
+                className="ml-4 px-6 py-2 bg-white text-white rounded-full flex items-center hover:bg-white transition-colors"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Download size={16} className="mr-2" />
+                Resume
+              </motion.a> */}
+            </div>
+
+            <button
+              className="md:hidden p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-800"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
-      </motion.div>
-    </nav>
+
+        <motion.div
+          className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: isMenuOpen ? 1 : 0, height: isMenuOpen ? 'auto' : 0 }}
+        >
+          <div className="px-2 pt-2 pb-3  space-y-1 bg-gray-900 shadow-lg">
+            <a href="/about" className="block px-3 py-2 font-semibold rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">About</a>
+            <a href="/contactus" className="block px-3 py-2 font-semibold rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">ContactUs</a>
+            <a href="/yourself" className="block px-3 py-2  font-semibold rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">Blogs</a>
+
+          </div>
+        </motion.div>
+      </motion.nav>
+    </div>
 
   );
 };
