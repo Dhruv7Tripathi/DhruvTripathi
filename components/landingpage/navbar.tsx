@@ -8,7 +8,7 @@ interface NavbarProps {
   className?: string;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ className }) => {
+const Navbar: React.FC<NavbarProps> = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
