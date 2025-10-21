@@ -1,9 +1,9 @@
 "use client"
 import React from 'react'
-import LandingPage from '@/components/landingpage/landingpage'
+import LandingPage from '@/components/landing-page'
 const Home = () => {
   return (
-    <div>
+    <div className="min-h-screen">
       <LandingPage />
     </div>
   )

@@ -7,8 +7,8 @@ import { AnimatedBackground } from '@/components/ui/animated-background'
 import { TextLoop } from '@/components/ui/text-loop'
 import { MonitorIcon, MoonIcon, SunIcon } from 'lucide-react'
 import { useTheme } from 'next-themes'
-import { Magnetic } from '../magnit';
-import LeetCodeIcon from '../icons/leetcode';
+import { Magnetic } from './ui/magnit';
+import LeetCodeIcon from './icons/leetcode';
 import {
   Menu,
   X
@@ -50,7 +50,7 @@ const achievements = [
 ];
 
 
-const HeroSection = () => {
+const LandingPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className=' bg-gradient-to-br dark:from-black dark:via-gray-800 dark:to-black bg-white'>
@@ -62,7 +62,7 @@ const HeroSection = () => {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               <motion.span
-                className="text-3xl font-bold ml-11 px-40  text-neutral-800 dark:text-white"
+                className="text-3xl font-bold  lg:ml-11 px-2 lg:px-40  text-neutral-800 dark:text-white"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
@@ -113,8 +113,8 @@ const HeroSection = () => {
         className="min-h-screen   text-neutral-800 dark:text-white flex  justify-center"
       >
 
-        <div className="z-10 max-w-2xl mt-16">
-          <div className="text-xl sm:text-2xl  text-neutral-800 dark:text-white mb-6">
+        <div className="z-10 px-6 lg:max-w-2xl mt-16">
+          <div className="text-xl  lg:text-2xl  text-neutral-800 dark:text-white mb-6">
             <span className="inline-block text-5xl">👋</span>
             <span className="ml-2">Hi there, I&apos;m</span>
           </div>
@@ -149,6 +149,7 @@ const HeroSection = () => {
                   <a
                     href={achievement.href}
                     target="_blank"
+                    aria-label={`Visit ${achievement.title}`}
                     rel="noopener noreferrer"
                     className="text-neutral-800 dark:text-neutral-200 hover:underline flex items-center mt-2"
                   >
@@ -180,6 +181,7 @@ const HeroSection = () => {
                         className="w-full h-full group-hover:scale-110 transition-transform duration-500"
                         width={500}
                         height={300}
+                        loading="lazy"
                       />
                     </div>
                     <div className="p-6">
@@ -222,7 +224,7 @@ const HeroSection = () => {
 
         </div>
       </header>
-      <footer className="mt-24 border-t max-w-2xl mx-auto bg-background border-zinc-400 py-4 dark:border-neutral-700">
+      <footer className="mt-24 border-t p-2 max-w-2xl mx-auto bg-background border-zinc-400 py-4 dark:border-neutral-700">
         <div className="flex items-center justify-between">
           <a href="https://github.com/dhruv7tripathi" target="_blank">
             <TextLoop className="text-xs text-zinc-800 dark:text-zinc-200">
@@ -239,7 +241,7 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default LandingPage;
 
 
 function MagneticSocialLink({

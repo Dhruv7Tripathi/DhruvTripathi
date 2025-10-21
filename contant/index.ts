@@ -53,7 +53,7 @@ export const projects = [
   {
     title: "LayrdUI",
     description: " Beautiful, responsive UI components and templates built with React, TypeScript, and Tailwind CSS. Ship faster with our production-ready blocks.",
-    link: "https://layrd.vercel.app/",
+    link: "https://layrdui.dhruvtripathi.in",
     // github: "#privaterepo",
     imageUrl: "/projects/layrdUI.png",
     // tags: ["Nextjs", "Typescript", "TailwindCSS", "FramerMotion"]

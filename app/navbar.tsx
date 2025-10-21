@@ -19,16 +19,14 @@ const Navbar: React.FC<NavbarProps> = () => {
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <Link href="/">
-              <motion.span
-                className="text-3xl font-bold ml-11 px-40  text-neutral-800 dark:text-white"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
-              >
-                DT
-              </motion.span>
-            </Link>
+            <motion.span
+              className="text-3xl font-bold  lg:ml-11 px-2 lg:px-40  text-neutral-800 dark:text-white"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+            >
+              DT
+            </motion.span>
 
             <div className="hidden md:flex font-semibold items-center mr-20 space-x-8">
               <Link href="/about" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">About</Link>
@@ -60,7 +58,7 @@ const Navbar: React.FC<NavbarProps> = () => {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: isMenuOpen ? 1 : 0, height: isMenuOpen ? 'auto' : 0 }}
         >
-          <div className="px-2 pt-2 pb-3  space-y-1 bg-gray-900 shadow-lg">
+          <div className="px-2 pt-2 pb-3  space-y-1 bg-neutral-950 shadow-lg">
             <a href="/about" className="block px-3 py-2 font-semibold rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">About</a>
             <a href="/contactus" className="block px-3 py-2 font-semibold rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">ContactUs</a>
             <a href="/yourself" className="block px-3 py-2  font-semibold rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">Blogs</a>
@@ -69,7 +67,6 @@ const Navbar: React.FC<NavbarProps> = () => {
         </motion.div>
       </motion.nav>
     </div>
-
   );
 };
 

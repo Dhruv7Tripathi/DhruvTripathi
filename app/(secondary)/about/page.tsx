@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import { education } from "@/contant";
 import { FocusCardsDemo } from "@/components/secondary/blogs";
-import Navbar from "@/components/landingpage/navbar";
+import Navbar from "@/app/navbar";
 import { Footer } from "@/app/Footer";
 
 const AboutPage = () => {
