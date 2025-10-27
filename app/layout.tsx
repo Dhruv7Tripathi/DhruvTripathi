@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "Dhruv Tripathi | Frontend Developer",
     description:
       "Portfolio of Dhruv Tripathi — a React & Next.js Frontend Developer building fast, modern web experiences.",
-    url: "https://www.dhruvtripathi.dev",
+    url: "https://www.dhruvtripathi.in",
     siteName: "Dhruv Tripathi",
     images: [
       {
