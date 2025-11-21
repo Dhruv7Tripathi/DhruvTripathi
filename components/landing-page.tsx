@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import GithubContributions from './secondary/github-canvas';
 
 const THEMES_OPTIONS = [
   {
@@ -59,13 +60,13 @@ const LandingPage = () => {
           className={`sticky z-10 top-0 w-full transition-all duration-300 
           }`}
         >
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
             <div className="flex items-center justify-between h-16">
               <motion.span
                 className="text-3xl font-bold  lg:ml-11 px-2 lg:px-40  text-neutral-800 dark:text-white"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
+              // initial={{ opacity: 0 }}
+              // animate={{ opacity: 1 }}
+              // transition={{ delay: 0.2 }}
               >
                 DT
               </motion.span>
@@ -134,6 +135,10 @@ const LandingPage = () => {
               I specialize in React, Node.js, and modern web technologies. When I&apos;m not coding,
               you can find me contributing to open-source projects or writing technical blog posts.
             </p>
+            <div>
+
+              <GithubContributions />
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2  gap-6 animate-fade-in-delay">
               {achievements.map((achievement) => (
@@ -170,7 +175,11 @@ const LandingPage = () => {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
               {projects.map((project) => (
-                <Link key={project.title} href={project.link} passHref>
+                <Link key={project.title}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={project.link}
+                  passHref>
                   <div
                     className="bg-background rounded-xl overflow-hidden shadow-lg group  transition-all duration-300 ring ring-white/10"
                   >
