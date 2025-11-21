@@ -54,7 +54,7 @@ const achievements = [
 const LandingPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div className=' bg-gradient-to-br dark:from-black dark:via-gray-800 dark:to-black bg-white'>
+    <div className=' dark:bg-black bg-white'>
       <div>
         <motion.nav
           className={`sticky z-10 top-0 w-full transition-all duration-300 
@@ -135,10 +135,10 @@ const LandingPage = () => {
               I specialize in React, Node.js, and modern web technologies. When I&apos;m not coding,
               you can find me contributing to open-source projects or writing technical blog posts.
             </p>
-            <div>
-
+            <div className="w-full overflow-hidden mb-8">
               <GithubContributions />
             </div>
+
 
             <div className="grid grid-cols-1 md:grid-cols-2  gap-6 animate-fade-in-delay">
               {achievements.map((achievement) => (
@@ -153,9 +153,7 @@ const LandingPage = () => {
                   <p className="text-neutral-800 dark:text-neutral-200">{achievement.description}</p>
                   <a
                     href={achievement.href}
-                    target="_blank"
                     aria-label={`Visit ${achievement.title}`}
-                    rel="noopener noreferrer"
                     className="text-neutral-800 dark:text-neutral-200 hover:underline flex items-center mt-2"
                   >
                     Visit <ExternalLink className="w-4 h-4 ml-1" />

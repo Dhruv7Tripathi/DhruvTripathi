@@ -1,6 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Ensure responsiveness */
+.react-github-calendar {
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+}
+
+/* Prevent horizontal overflow inside children */
+.react-github-calendar > * {
+  max-width: 100% !important;
+}
+
+/* Remove forced static width on SVG */
+.react-activity-calendar svg {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Dark mode base cell color */
+.react-activity-calendar rect[fill="#EBEDF0"] {
+  fill: #333 !important;
+}
+
  /* @keyframes wave {
   0%, 100% { transform: rotate(0deg); }
   25% { transform: rotate(20deg); }

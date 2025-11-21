@@ -20,10 +20,8 @@ const Navbar: React.FC<NavbarProps> = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <motion.span
-              className="text-3xl font-bold  lg:ml-11 px-2 lg:px-40  text-neutral-800 dark:text-white"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
+              className="text-3xl font-bold  lg:ml-11 px-2 lg:px-44  text-neutral-800 dark:text-white"
+
             >
               DT
             </motion.span>

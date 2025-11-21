@@ -42,7 +42,7 @@ const AboutPage = () => {
                   <Image
                     src={edu.imageUrl}
                     alt={edu.institution}
-                    className="w-full h-full rounded-xl object-cover"
+                    className="w-full h-full rounded-xl"
                     width={500}
                     height={500}
                   />
