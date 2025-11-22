@@ -54,41 +54,27 @@ const achievements = [
 const LandingPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div className=' dark:bg-black bg-white'>
+    <div className='dark:bg-black bg-white'>
       <div>
         <motion.nav
-          className={`sticky z-10 top-0 w-full transition-all duration-300 
-          }`}
+          className="sticky z-10 top-0 w-full transition-all duration-300 bg-white/80 dark:bg-black/80 backdrop-blur-sm"
         >
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-12">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               <motion.span
-                className="text-3xl font-bold  lg:ml-11 px-2 lg:px-40  text-neutral-800 dark:text-white"
-              // initial={{ opacity: 0 }}
-              // animate={{ opacity: 1 }}
-              // transition={{ delay: 0.2 }}
+                className="text-2xl sm:text-3xl font-bold text-neutral-800 dark:text-white"
               >
                 DT
               </motion.span>
 
-              <div className="hidden md:flex font-semibold items-center mr-20 space-x-8">
+              <div className="hidden md:flex font-semibold items-center space-x-4 lg:space-x-8">
                 <Link href="/about" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">About</Link>
                 <Link href="/contactus" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">ContactUs</Link>
                 <Link href="/yourself" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">Blogs</Link>
-                {/* <motion.a
-                href="/Dhruv_Tripathi_Resume.pdf"
-                download
-                className="ml-4 px-6 py-2 bg-white text-white rounded-full flex items-center hover:bg-white transition-colors"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Download size={16} className="mr-2" />
-                Resume
-              </motion.a> */}
               </div>
 
               <button
-                className="md:hidden p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-800"
+                className="md:hidden p-2 rounded-md text-neutral-800 dark:text-gray-300 hover:text-black dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -101,60 +87,72 @@ const LandingPage = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: isMenuOpen ? 1 : 0, height: isMenuOpen ? 'auto' : 0 }}
           >
-            <div className="px-2 pt-2 pb-3  space-y-1 bg-gray-900 shadow-lg">
-              <a href="/about" className="block px-3 py-2 font-semibold rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">About</a>
-              <a href="/contactus" className="block px-3 py-2 font-semibold rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">ContactUs</a>
-              <a href="/yourself" className="block px-3 py-2  font-semibold rounded-md text-gray-300 hover:bg-gray-800 hover:text-white">Blogs</a>
-
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-900 shadow-lg border-t dark:border-gray-800">
+              <a href="/about" className="block px-3 py-2 font-semibold rounded-md text-neutral-800 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white">About</a>
+              <a href="/contactus" className="block px-3 py-2 font-semibold rounded-md text-neutral-800 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white">ContactUs</a>
+              <a href="/yourself" className="block px-3 py-2 font-semibold rounded-md text-neutral-800 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white">Blogs</a>
             </div>
           </motion.div>
         </motion.nav>
       </div>
-      <header
-        className="min-h-screen   text-neutral-800 dark:text-white flex  justify-center"
-      >
 
-        <div className="z-10 px-6 lg:max-w-2xl mt-16">
-          <div className="text-xl  lg:text-2xl  text-neutral-800 dark:text-white mb-6">
-            <span className="inline-block text-5xl">👋</span>
-            <span className="ml-2">Hi there, I&apos;m</span>
+      <header className="min-h-screen text-neutral-800 dark:text-white flex justify-center px-4 sm:px-6 lg:px-8">
+        <div className="z-10 w-full max-w-2xl mt-8 sm:mt-12 lg:mt-16">
+          {/* Hero Section */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 sm:mb-12 gap-6">
+            <div className="flex-1">
+              <div className="text-lg sm:text-xl lg:text-2xl text-neutral-800 dark:text-white mb-4 sm:mb-6">
+                <span className="inline-block text-4xl sm:text-5xl">👋</span>
+                <span className="ml-2">Hi there, I&apos;m</span>
+              </div>
+              <h1 className="bg-gradient-stop bg-gradient-to-br from-neutral-800 via-neutral-800 to-neutral-900/30 dark:from-neutral-100 dark:via-neutral-100 via-50% dark:to-neutral-100/30 bg-clip-text py-2 text-4xl sm:text-5xl lg:text-6xl font-medium leading-tight tracking-tighter text-transparent">
+                Dhruv Tripathi
+              </h1>
+              <h2 className="text-xl sm:text-2xl mb-4 text-neutral-800 dark:text-white">
+                FullStack Developer
+              </h2>
+            </div>
+
+            <div className="shrink-0">
+              <Image
+                src="/goku.jpg"
+                alt="Dhruv Tripathi"
+                width={120}
+                height={120}
+                className="rounded-lg border sm:w-[150px] sm:h-[150px]"
+              />
+            </div>
           </div>
-          <h1
-            className="bg-gradient-stop mx-auto max-w-6xl text-balance bg-gradient-to-br from-neutral-800 via-neutral-800 to-neutral-900/30 dark:from-neutral-100 dark:via-neutral-100 via-50% dark:to-neutral-100/30 bg-clip-text py-2 text-5xl font-medium leading-[1.1] tracking-tighter text-transparent md:text-6xl lg:text-5xl"
-          >
-            Dhruv Tripathi
-          </h1>
-          <h2
-            className="text-2xl sm:text-2xl mb-8  text-neutral-800 dark:text-white"
-          >
-            Frontend Developer
-          </h2>
-          <div className="bg-background max-w-2xl rounded-xl  backdrop-blur-sm bg-opacity-80 ">
-            <p className="text-neutral-800 dark:text-neutral-200 leading-relaxed text-lg mb-8">
+
+          {/* About Section */}
+          <div className="bg-background rounded-xl backdrop-blur-sm bg-opacity-80 mb-8">
+            <p className="text-neutral-800 dark:text-neutral-200 leading-relaxed text-base sm:text-lg mb-6 sm:mb-8">
               I&apos;m a passionate full-stack developer building web applications.
               I specialize in React, Node.js, and modern web technologies. When I&apos;m not coding,
               you can find me contributing to open-source projects or writing technical blog posts.
             </p>
-            <div className="w-full overflow-hidden mb-8">
+
+            {/* GitHub Contributions */}
+            <div className="w-full overflow-x-hidden mb-6 sm:mb-8 -mx-4 px-0 sm:mx-0 sm:px-0">
               <GithubContributions />
             </div>
 
-
-            <div className="grid grid-cols-1 md:grid-cols-2  gap-6 animate-fade-in-delay">
+            {/* Achievements */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 animate-fade-in-delay">
               {achievements.map((achievement) => (
                 <div
                   key={achievement.title}
-                  className="p-6 rounded-xl bg-background border shadow-md border-neutral-200 dark:border-neutral-700 ring ring-white/10   transition-all duration-300"
+                  className="p-4 sm:p-6 rounded-xl bg-background border shadow-md border-neutral-200 dark:border-neutral-700 ring ring-white/10 transition-all duration-300"
                 >
                   <div className="flex items-center mb-3">
                     <div className="text-emerald-500 mr-3">{achievement.icon}</div>
-                    <h3 className="font-semibold text-lg">{achievement.title}</h3>
+                    <h3 className="font-semibold text-base sm:text-lg">{achievement.title}</h3>
                   </div>
-                  <p className="text-neutral-800 dark:text-neutral-200">{achievement.description}</p>
+                  <p className="text-sm sm:text-base text-neutral-800 dark:text-neutral-200">{achievement.description}</p>
                   <a
                     href={achievement.href}
                     aria-label={`Visit ${achievement.title}`}
-                    className="text-neutral-800 dark:text-neutral-200 hover:underline flex items-center mt-2"
+                    className="text-sm sm:text-base text-neutral-800 dark:text-neutral-200 hover:underline flex items-center mt-2"
                   >
                     Visit <ExternalLink className="w-4 h-4 ml-1" />
                   </a>
@@ -162,64 +160,59 @@ const LandingPage = () => {
               ))}
             </div>
           </div>
-          <section
-            id="projects"
-            className="py-20   max-w-2xl mx-auto"
-          >
-            <div className="flex items-center mb-12">
-              <h2 className="text-3xl font-semibold   text-neutral-800 dark:text-white">
+
+          {/* Projects Section */}
+          <section id="projects" className="py-12 sm:py-16 lg:py-20">
+            <div className="flex items-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-800 dark:text-white">
                 Selected Projects
               </h2>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
               {projects.map((project) => (
-                <Link key={project.title}
+                <Link
+                  key={project.title}
                   target="_blank"
                   rel="noopener noreferrer"
                   href={project.link}
-                  passHref>
-                  <div
-                    className="bg-background rounded-xl overflow-hidden shadow-lg group  transition-all duration-300 ring ring-white/10"
-                  >
+                  passHref
+                >
+                  <div className="bg-background rounded-xl overflow-hidden shadow-lg group transition-all duration-300 ring ring-white/10 hover:ring-2 hover:ring-emerald-500/50">
                     <div className="relative overflow-hidden aspect-video">
                       <Image
                         src={project.imageUrl}
                         alt={project.title}
-                        className="w-full h-full group-hover:scale-110 transition-transform duration-500"
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                         width={500}
                         height={300}
                         loading="lazy"
                       />
                     </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold mb-2 text-neutral-800 dark:text-white">{project.title}</h3>
-                      <p className="text-neutral-800 dark:text-neutral-200 mb-4 line-clamp-3">{project.description}</p>
-
+                    <div className="p-4 sm:p-6">
+                      <h3 className="text-lg sm:text-xl font-bold mb-2 text-neutral-800 dark:text-white">{project.title}</h3>
+                      <p className="text-sm sm:text-base text-neutral-800 dark:text-neutral-200 mb-4 line-clamp-3">{project.description}</p>
                     </div>
                   </div>
                 </Link>
               ))}
             </div>
           </section>
-          <section
-            id="contact"
-            className="relative py-8  overflow-hidden  bg-background text-white"
-          >
-            <div className="relative max-w-5xl">
-              <div className="mb-8">
-                <h2 className="text-4xl font-bold text-neutral-800 dark:text-white mb-4">
+
+          {/* Contact Section */}
+          <section id="contact" className="relative py-8 sm:py-12 overflow-hidden bg-background text-white">
+            <div className="relative">
+              <div className="mb-6 sm:mb-8">
+                <h2 className="text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-white mb-4">
                   Let&apos;s Work Together
                 </h2>
-                <p className="text-neutral-800 dark:text-neutral-200 text-lg max-w-2xl mx-auto">
+                <p className="text-neutral-800 dark:text-neutral-200 text-base sm:text-lg">
                   I&apos;m always interested in hearing about new projects and opportunities.
                   Feel free to reach out through any of these channels.
-                  <br />
+                  <br className="hidden sm:block" />
                   Looking forward to creating something amazing together!
                 </p>
               </div>
-              <div
-                className="flex space-x-6 bg-background"
-              >
+              <div className="flex flex-wrap gap-3 sm:gap-4 bg-background">
                 {SOCIAL_LINKS.map((link) => (
                   <MagneticSocialLink key={link.link} link={link.link}>
                     {link.label}
@@ -228,13 +221,14 @@ const LandingPage = () => {
               </div>
             </div>
           </section>
-
         </div>
       </header>
-      <footer className="mt-24 border-t p-2 max-w-2xl mx-auto bg-background border-zinc-400 py-4 dark:border-neutral-700">
-        <div className="flex items-center justify-between">
+
+      {/* Footer */}
+      <footer className="mt-12 sm:mt-16 lg:mt-24 border-t p-4 sm:p-6 max-w-2xl mx-auto bg-background border-zinc-400 dark:border-neutral-700">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <a href="https://github.com/dhruv7tripathi" target="_blank">
-            <TextLoop className="text-xs text-zinc-800 dark:text-zinc-200">
+            <TextLoop className="text-xs sm:text-sm text-zinc-800 dark:text-zinc-200">
               <span>Dhruv Tripathi</span>
               <span>FrontEnd Developer</span>
             </TextLoop>
@@ -262,13 +256,14 @@ function MagneticSocialLink({
     <Magnetic springOptions={{ bounce: 0 }} intensity={0.3}>
       <a
         href={link}
-        className="group relative inline-flex shrink-0 items-center gap-[1px] rounded-full bg-zinc-100 px-2.5 py-1 text-sm text-black transition-colors duration-200 hover:bg-zinc-950 hover:text-zinc-50 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
+        className="group relative inline-flex shrink-0 items-center gap-[1px] rounded-full bg-zinc-100 px-2.5 py-1.5 sm:px-3 sm:py-2 text-sm text-black transition-colors duration-200 hover:bg-zinc-950 hover:text-zinc-50 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
       >
         {children}
       </a>
     </Magnetic>
   )
 }
+
 type SocialLink = {
   label: React.ReactNode;
   link: string;
@@ -276,15 +271,15 @@ type SocialLink = {
 
 export const SOCIAL_LINKS: SocialLink[] = [
   {
-    label: <Github size={24} className='bg-background' />,
+    label: <Github size={20} className='bg-background sm:w-6 sm:h-6' />,
     link: 'https://github.com/dhruv7tripathi',
   },
   {
-    label: <FaXTwitter size={24} className='bg-background' />,
+    label: <FaXTwitter size={20} className='bg-background sm:w-6 sm:h-6' />,
     link: 'https://twitter.com/dhruvtripathi77',
   },
   {
-    label: <Linkedin size={24} className='bg-background' />,
+    label: <Linkedin size={20} className='bg-background sm:w-6 sm:h-6' />,
     link: 'https://www.linkedin.com/in/dhruv-tripathi-9848792aa/',
   },
   {
@@ -335,4 +330,3 @@ function ThemeSwitch() {
     </AnimatedBackground>
   )
 }
-

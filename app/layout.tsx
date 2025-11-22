@@ -15,16 +15,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.dhruvtripathi.in"), // ✅ change to your real domain
+  metadataBase: new URL("https://www.dhruvtripathi.in"),
   title: {
-    default: "Dhruv Tripathi | Frontend Developer",
+    default: "Dhruv Tripathi | FullStack Developer",
     template: "%s | Dhruv Tripathi",
   },
   description:
-    "Dhruv Tripathi is a passionate Frontend Developer specializing in React, Next.js, TypeScript, and modern web technologies. Crafting smooth, responsive, and SEO-optimized web experiences.",
+    "Dhruv Tripathi is a passionate FullStack Developer specializing in React, Next.js, TypeScript, and modern web technologies. Crafting smooth, responsive, and SEO-optimized web experiences.",
   keywords: [
     "Dhruv Tripathi",
-    "Frontend Developer",
+    "FullStack Developer",
     "React Developer",
     "Next.js",
     "TypeScript",
@@ -32,14 +32,14 @@ export const metadata: Metadata = {
     "UI Engineer",
   ],
   openGraph: {
-    title: "Dhruv Tripathi | Frontend Developer",
+    title: "Dhruv Tripathi | FullStack Developer",
     description:
-      "Portfolio of Dhruv Tripathi — a React & Next.js Frontend Developer building fast, modern web experiences.",
+      "Portfolio of Dhruv Tripathi — a React & Next.js FullStack Developer building fast, modern web experiences.",
     url: "https://www.dhruvtripathi.in",
     siteName: "Dhruv Tripathi",
     images: [
       {
-        url: "/og-image.png", // ✅ place your OG image in /public
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Dhruv Tripathi Portfolio Preview",
@@ -50,10 +50,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dhruv Tripathi | Frontend Developer",
+    title: "Dhruv Tripathi | FullStack Developer",
     description:
       "React & Next.js developer building sleek, high-performance web applications.",
-    creator: "@dhruvtripathi77", // ✅ replace if you have Twitter handle
+    creator: "@dhruvtripathi77",
     images: ["/og-image.png"],
   },
   alternates: {
