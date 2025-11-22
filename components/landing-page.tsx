@@ -67,14 +67,16 @@ const LandingPage = () => {
                 DT
               </motion.span>
 
-              <div className="hidden md:flex font-semibold items-center space-x-4 lg:space-x-8">
+              <div className="hidden md:flex font-semibold items-center space-x-4 lg:space-x-6">
                 <Link href="/about" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">About</Link>
                 <Link href="/contactus" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">ContactUs</Link>
-                <Link href="/yourself" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">Blogs</Link>
+                <Link href="/resume.pdf"
+                  target='_blank'
+                  className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">Resume</Link>
               </div>
 
               <button
-                className="md:hidden p-2 rounded-md text-neutral-800 dark:text-gray-300 hover:text-black dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800"
+                className="md:hidden p-2 rounded-md text-neutral-800 dark:text-neutral-300 hover:text-black dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -87,10 +89,12 @@ const LandingPage = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: isMenuOpen ? 1 : 0, height: isMenuOpen ? 'auto' : 0 }}
           >
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-900 shadow-lg border-t dark:border-gray-800">
-              <a href="/about" className="block px-3 py-2 font-semibold rounded-md text-neutral-800 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white">About</a>
-              <a href="/contactus" className="block px-3 py-2 font-semibold rounded-md text-neutral-800 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white">ContactUs</a>
-              <a href="/yourself" className="block px-3 py-2 font-semibold rounded-md text-neutral-800 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-black dark:hover:text-white">Blogs</a>
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-neutral-950 shadow-lg border-t dark:border-neutral-800">
+              <a href="/about" className="block px-3 py-2 font-semibold rounded-md text-neutral-800 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-black dark:hover:text-white">About</a>
+              <a href="/contactus" className="block px-3 py-2 font-semibold rounded-md text-neutral-800 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-black dark:hover:text-white">ContactUs</a>
+              <a href="/resume.pdf"
+                target="_blank"
+                className="block px-3 py-2 font-semibold rounded-md text-neutral-800 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-black dark:hover:text-white">Resume</a>
             </div>
           </motion.div>
         </motion.nav>
@@ -126,15 +130,37 @@ const LandingPage = () => {
 
           {/* About Section */}
           <div className="bg-background rounded-xl backdrop-blur-sm bg-opacity-80 mb-8">
-            <p className="text-neutral-800 dark:text-neutral-200 leading-relaxed text-base sm:text-lg mb-6 sm:mb-8">
-              I&apos;m a passionate full-stack developer building web applications.
-              I specialize in React, Node.js, and modern web technologies. When I&apos;m not coding,
-              you can find me contributing to open-source projects or writing technical blog posts.
+            <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed text-sm sm:text-base mb-6 sm:mb-8">
+              I&apos;m a passionate Full-Stack Developer who loves turning ideas into smooth, scalable, and user-friendly web experiences.
+              I specialize in React, Next.js, Node.js, and modern web technologies — with a little pinch of {" "}
+              <span className='dark:text-white font-semibold italic text-black'>
+                Frontend magic ✨
+              </span>
+              <br />
+              When I&apos;m not crafting beautiful interfaces, I dive into{" "}
+              <a
+                href='https://leetcode.com/u/Dhruv_Tripathi0705/'
+                className='dark:text-white font-semibold italic text-black'>Data Structures & Algorithms</a> to sharpen my problem-solving mindset.
+              <br />
+              I also enjoy contributing to {" "}
+              <a className='dark:text-white italic font-semibold text-black'
+                href="https://github.com/dhruv7tripathi"
+              >
+                Open-Source Projects
+              </a>
+              {" "}writing technical blogs, and exploring new tools that push the web forward.
+
+              With a blend of creativity and logic, I&apos;m always excited to build products that truly help people.
+
             </p>
 
             {/* GitHub Contributions */}
             <div className="w-full overflow-x-hidden mb-6 sm:mb-8 -mx-4 px-0 sm:mx-0 sm:px-0">
-              <h1>Commit Canvas</h1>
+              <div className='flex flex-row mb-2'>
+
+                <h1 className='dark:text-white font-semibold text-base text-black'>CanvasCraft </h1>
+                <p className='italic dark:text-neutral-400 text-sm mt-0.5 text-neutral-600'>{" "}-where every update shapes your vision.</p>
+              </div>
               <GithubContributions />
             </div>
 
@@ -227,14 +253,14 @@ const LandingPage = () => {
 
       {/* Footer */}
       <footer className="mt-12 sm:mt-16 lg:mt-24 border-t p-4 sm:p-6 max-w-2xl mx-auto bg-background border-zinc-400 dark:border-neutral-700">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="flex flex-col sm:flex-row items-center justify-between ">
           <a href="https://github.com/dhruv7tripathi" target="_blank">
-            <TextLoop className="text-xs sm:text-sm text-zinc-800 dark:text-zinc-200">
+            <TextLoop className="text-xs sm:text-sm text-neutral-800 dark:text-neutral-200">
               <span>Dhruv Tripathi</span>
               <span>FrontEnd Developer</span>
             </TextLoop>
           </a>
-          <div className="text-xs text-zinc-400">
+          <div className="text-xs text-neutral-400">
             <ThemeSwitch />
           </div>
         </div>
