@@ -11,12 +11,12 @@ import { Magnetic } from './ui/magnit';
 import LeetCodeIcon from './icons/leetcode';
 import {
   Menu,
-  X
+  X,
+  FileText
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import GithubContributions from './secondary/github-canvas';
-
 const THEMES_OPTIONS = [
   {
     label: 'Light',
@@ -108,18 +108,18 @@ const LandingPage = () => {
               <h1 className="bg-gradient-stop bg-gradient-to-br from-neutral-800 via-neutral-800 to-neutral-900/30 dark:from-neutral-100 dark:via-neutral-100 via-50% dark:to-neutral-100/30 bg-clip-text py-2 text-4xl sm:text-5xl lg:text-6xl font-medium leading-tight tracking-tighter text-transparent">
                 Dhruv Tripathi
               </h1>
-              <h2 className="text-xl sm:text-2xl mb-4 text-neutral-800 dark:text-white">
+              {/* <h2 className="text-xl sm:text-2xl mt-4 mb-4 text-neutral-800 dark:text-white">
                 FullStack Developer
-              </h2>
+              </h2> */}
             </div>
 
             <div className="shrink-0">
               <Image
                 src="/goku.jpg"
                 alt="Dhruv Tripathi"
-                width={120}
-                height={120}
-                className="rounded-lg border sm:w-[150px] sm:h-[150px]"
+                width={240}
+                height={240}
+                className="rounded-xl border dark:border-neutral-900 border-neutral-100 sm:w-[180px] sm:h-[180px]"
               />
             </div>
           </div>
@@ -134,6 +134,7 @@ const LandingPage = () => {
 
             {/* GitHub Contributions */}
             <div className="w-full overflow-x-hidden mb-6 sm:mb-8 -mx-4 px-0 sm:mx-0 sm:px-0">
+              <h1>Commit Canvas</h1>
               <GithubContributions />
             </div>
 
@@ -177,7 +178,7 @@ const LandingPage = () => {
                   href={project.link}
                   passHref
                 >
-                  <div className="bg-background rounded-xl overflow-hidden shadow-lg group transition-all duration-300 ring ring-white/10 hover:ring-2 hover:ring-emerald-500/50">
+                  <div className="bg-background rounded-xl overflow-hidden shadow-lg group transition-all duration-300 ring ring-white/10 hover:ring-1 hover:ring-neutral-100 dark:hover:ring-neutral-900">
                     <div className="relative overflow-hidden aspect-video">
                       <Image
                         src={project.imageUrl}
@@ -285,6 +286,10 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: <LeetCodeIcon />,
     link: 'https://leetcode.com/u/Dhruv_Tripathi0705/',
+  },
+  {
+    label: <FileText />,
+    link: '/resume.pdf',
   },
 ]
 
