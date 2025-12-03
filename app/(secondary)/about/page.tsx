@@ -25,8 +25,11 @@ const AboutPage = () => {
               Dhruv Tripathi
             </span>{" "}
           </h1>
-          <p className="text-sm text-neutral-800 dark:text-neutral-200 mt-4">
-            I am a dedicated frontend developer with a strong focus on React, Next.js, and TypeScript. I enjoy crafting seamless user experiences and continuously learning about the latest trends in web development. My goal is to build impactful and efficient web applications.
+          <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed  sm:text-base mb-6 sm:mb-8 mt-4">
+            I am a dedicated {" "}
+            <span className='dark:text-white font-semibold italic text-black'>
+              FullStack Developer
+            </span>{" "} with a strong focus on React, Next.js, and TypeScript. I enjoy crafting seamless user experiences and continuously learning about the latest trends in web development. My goal is to build impactful and efficient web applications.
           </p>
         </section>
 

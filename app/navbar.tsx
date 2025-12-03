@@ -29,17 +29,10 @@ const Navbar: React.FC<NavbarProps> = () => {
             <div className="hidden md:flex font-semibold items-center mr-20 space-x-8">
               <Link href="/about" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">About</Link>
               <Link href="/contactus" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">ContactUs</Link>
-              <Link href="/yourself" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">Blogs</Link>
-              {/* <motion.a
-                href="/Dhruv_Tripathi_Resume.pdf"
-                download
-                className="ml-4 px-6 py-2 bg-white text-white rounded-full flex items-center hover:bg-white transition-colors"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Download size={16} className="mr-2" />
-                Resume
-              </motion.a> */}
+              <a href="/resume.pdf"
+                target="_blank"
+                className="block px-3 py-2 font-semibold rounded-md text-neutral-800 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-black dark:hover:text-white">Resume</a>
+
             </div>
 
             <button

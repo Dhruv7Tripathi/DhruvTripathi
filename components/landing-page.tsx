@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Linkedin } from 'lucide-react';
+import { ArrowUpRight, ExternalLink, Github, Linkedin } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { projects } from '@/contant';
@@ -70,9 +70,45 @@ const LandingPage = () => {
               <div className="hidden md:flex font-semibold items-center space-x-4 lg:space-x-6">
                 <Link href="/about" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">About</Link>
                 <Link href="/contactus" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">ContactUs</Link>
-                <Link href="/resume.pdf"
-                  target='_blank'
-                  className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">Resume</Link>
+                <Link href="/resume.pdf" target="_blank" className="inline-flex items-center">
+                  <motion.span
+                    initial="initial"
+                    whileHover="hover"
+                    className="relative inline-flex items-center gap-2 cursor-pointer"
+                  >
+                    {/* Resume Text */}
+                    <motion.span
+                      className="text-sm font-medium"
+                      variants={{
+                        // hover: { color: "#38bdf8" } // change color based on theme
+                      }}
+                      transition={{ duration: 0.2, type: "spring", stiffness: 300 }}
+                    >
+                      Resume
+                    </motion.span>
+                    {/* Underline */}
+                    <motion.span
+                      className="absolute left-0 -bottom-[2px] h-[2px] bg-current w-full"
+                      variants={{
+                        initial: { scaleX: 0 },
+                        hover: { scaleX: 1 }
+                      }}
+                      transition={{ duration: 0.25, ease: "easeOut" }}
+                      style={{ originX: 0 }}
+                    />
+
+                    {/* Arrow Animation */}
+                    <motion.span
+                      className="opacity-0"
+                      variants={{
+                        hover: { y: -3, opacity: 1 }
+                      }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                    >
+                      <ArrowUpRight className="h-4 w-4" />
+                    </motion.span>
+                  </motion.span>
+                </Link>
               </div>
 
               <button
