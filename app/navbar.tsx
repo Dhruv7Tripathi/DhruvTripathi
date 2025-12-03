@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { ArrowUpRight, Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
@@ -17,21 +17,59 @@ const Navbar: React.FC<NavbarProps> = () => {
         className={`sticky z-10 top-0 w-full transition-all duration-300 
           }`}
       >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <motion.span
-              className="text-3xl font-bold  lg:ml-11 px-2 lg:px-44  text-neutral-800 dark:text-white"
+            <Link href="/" className="">
+              <motion.span
+                className="text-3xl font-bold ml-4 px-2   text-neutral-800 dark:text-white"
 
-            >
-              DT
-            </motion.span>
+              >
+                DT
+              </motion.span>
+            </Link>
 
-            <div className="hidden md:flex font-semibold items-center mr-20 space-x-8">
-              <Link href="/about" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">About</Link>
+            <div className="hidden md:flex font-semibold items-center  space-x-6 ">
+              {/* <Link href="/about" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">About</Link> */}
+              <Link href="/resume.pdf" target="_blank" className="inline-flex items-center">
+                <motion.span
+                  initial="initial"
+                  whileHover="hover"
+                  className="relative inline-flex items-center gap-2 cursor-pointer"
+                >
+                  {/* Resume Text */}
+                  <motion.span
+                    className="text-lg font-medium"
+                    variants={{
+                      // hover: { color: "#38bdf8" } // change color based on theme
+                    }}
+                    transition={{ duration: 0.2, type: "spring", stiffness: 300 }}
+                  >
+                    Resume
+                  </motion.span>
+                  {/* Underline */}
+                  <motion.span
+                    className="absolute left-0 -bottom-[2px] h-[2px] bg-current w-full"
+                    variants={{
+                      initial: { scaleX: 0 },
+                      hover: { scaleX: 1 }
+                    }}
+                    transition={{ duration: 0.25, ease: "easeOut" }}
+                    style={{ originX: 0 }}
+                  />
+
+                  {/* Arrow Animation */}
+                  <motion.span
+                    className="opacity-0"
+                    variants={{
+                      hover: { y: -3, opacity: 1 }
+                    }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
+                    <ArrowUpRight className="h-4 w-4" />
+                  </motion.span>
+                </motion.span>
+              </Link>
               <Link href="/contactus" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">ContactUs</Link>
-              <a href="/resume.pdf"
-                target="_blank"
-                className="block px-3 py-2 font-semibold rounded-md text-neutral-800 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 hover:text-black dark:hover:text-white">Resume</a>
 
             </div>
 

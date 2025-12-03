@@ -25,12 +25,34 @@ const AboutPage = () => {
               Dhruv Tripathi
             </span>{" "}
           </h1>
-          <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed  sm:text-base mb-6 sm:mb-8 mt-4">
-            I am a dedicated {" "}
-            <span className='dark:text-white font-semibold italic text-black'>
+          <p className="text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed sm:text-base mb-6 sm:mb-8 mt-4">
+            A results-driven{" "}
+            <span className="dark:text-white font-semibold italic text-black">
               FullStack Developer
-            </span>{" "} with a strong focus on React, Next.js, and TypeScript. I enjoy crafting seamless user experiences and continuously learning about the latest trends in web development. My goal is to build impactful and efficient web applications.
+            </span>{" "}
+            specializing in React, Next.js, TypeScript, and modern JavaScript ecosystems. I focus on
+            building fast, scalable, and user-centric applications that deliver measurable impact.
+
+            <br /><br />
+
+            I enjoy architecting clean {" "}
+            <span className="dark:text-white font-semibold italic text-black">
+              Frontend Systems
+            </span>{" "}, optimizing performance, and writing
+            maintainable, production-ready code. On the backend, I work with Node.js, Prisma,
+            PostgreSQL, and REST/GraphQL APIs to create robust and reliable service layers.
+
+            <br /><br />
+
+            I stay updated with the latest industry trends—from UI/UX improvements to modern tooling
+            and deployment workflows to ensure the products I build are future-ready. {" "}
+            <span className="dark:text-white font-semibold italic text-black">
+              My goals
+            </span>{" "} is
+            to bring a mix of technical depth, product thinking, and continuous learning to every
+            project I take on.
           </p>
+
         </section>
 
         <section className="mb-16">

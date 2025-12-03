@@ -191,7 +191,7 @@ const LandingPage = () => {
             </p>
 
             {/* GitHub Contributions */}
-            <div className="w-full overflow-x-hidden mb-6 sm:mb-8 -mx-4 px-0 sm:mx-0 sm:px-0">
+            <div className="w-full overflow-x-hidden mb-6 sm:mb-8  -mx-4 px-0 ml-0.5 sm:mx-0 sm:px-0">
               <div className='flex flex-row mb-2'>
 
                 <h1 className='dark:text-white font-semibold text-base text-black'>CanvasCraft </h1>
@@ -288,7 +288,7 @@ const LandingPage = () => {
       </header>
 
       {/* Footer */}
-      <footer className="mt-12 sm:mt-16 lg:mt-24 border-t p-4 sm:p-6 max-w-2xl mx-auto bg-background border-zinc-400 dark:border-neutral-700">
+      <footer className="mt-12 sm:mt-16 lg:mt-24  border-t p-1 sm:p-2 max-w-2xl mx-auto bg-background border-zinc-400 dark:border-neutral-700">
         <div className="flex flex-col sm:flex-row items-center justify-between ">
           <a href="https://github.com/dhruv7tripathi" target="_blank">
             <TextLoop className="text-xs sm:text-sm text-neutral-800 dark:text-neutral-200">
