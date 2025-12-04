@@ -78,7 +78,7 @@ const LandingPage = () => {
                   >
                     {/* Resume Text */}
                     <motion.span
-                      className="text-sm font-medium"
+                      className="text-lg font-medium"
                       variants={{
                         // hover: { color: "#38bdf8" } // change color based on theme
                       }}
@@ -99,9 +99,9 @@ const LandingPage = () => {
 
                     {/* Arrow Animation */}
                     <motion.span
-                      className="opacity-0 mt-1"
+                      className="opacity-0 mt-2 "
                       variants={{
-                        hover: { y: -3, opacity: 1 }
+                        hover: { y: -2, opacity: 1 }
                       }}
                       transition={{ type: "spring", stiffness: 300 }}
                     >
@@ -245,7 +245,7 @@ const LandingPage = () => {
                       <Image
                         src={project.imageUrl}
                         alt={project.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        className="w-full h-full object-cover  grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all  duration-500"
                         width={500}
                         height={300}
                         loading="lazy"
@@ -268,7 +268,7 @@ const LandingPage = () => {
                 <h2 className="text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-white mb-4">
                   Let&apos;s Work Together
                 </h2>
-                <p className="text-neutral-800 dark:text-neutral-200 text-base sm:text-lg">
+                <p className="text-neutral-800 italic dark:text-neutral-200 text-base sm:text-lg">
                   I&apos;m always interested in hearing about new projects and opportunities.
                   Feel free to reach out through any of these channels.
                   <br className="hidden sm:block" />
@@ -319,7 +319,7 @@ function MagneticSocialLink({
     <Magnetic springOptions={{ bounce: 0 }} intensity={0.3}>
       <a
         href={link}
-        className="group relative inline-flex shrink-0 items-center gap-[1px] rounded-full bg-zinc-100 px-2.5 py-1.5 sm:px-3 sm:py-2 text-sm text-black transition-colors duration-200 hover:bg-zinc-950 hover:text-zinc-50 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700"
+        className="group relative inline-flex shrink-0 items-center gap-[1px] rounded-full bg-neutral-100 px-2.5 py-1.5 sm:px-3 sm:py-2 text-sm text-black transition-colors duration-200 hover:bg-neutral-950 hover:text-neutral-50 dark:bg-neutral-800 dark:text-neutral-100 dark:hover:bg-neutral-700"
       >
         {children}
       </a>
