@@ -77,7 +77,7 @@ const AboutPage = () => {
                   <p className="text-muted-foreground mb-2">{edu.degree}</p>
                   <p className="text-muted-foreground mb-2">{edu.performance}</p>
                   <p className="text-sm text-muted-foreground mb-4">{edu.year}</p>
-                  <p>{edu.description}</p>
+                  {/* <p>{edu.description}</p> */}
                 </CardContent>
               </Card>
             ))}

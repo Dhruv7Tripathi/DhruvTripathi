@@ -88,7 +88,7 @@ const LandingPage = () => {
                     </motion.span>
                     {/* Underline */}
                     <motion.span
-                      className="absolute left-0 -bottom-[2px] h-[2px] bg-current w-full"
+                      className="absolute left-0 -bottom-[2px] h-[2px] bg-current w-16"
                       variants={{
                         initial: { scaleX: 0 },
                         hover: { scaleX: 1 }
@@ -99,7 +99,7 @@ const LandingPage = () => {
 
                     {/* Arrow Animation */}
                     <motion.span
-                      className="opacity-0"
+                      className="opacity-0 mt-1"
                       variants={{
                         hover: { y: -3, opacity: 1 }
                       }}
@@ -293,7 +293,7 @@ const LandingPage = () => {
           <a href="https://github.com/dhruv7tripathi" target="_blank">
             <TextLoop className="text-xs sm:text-sm text-neutral-800 dark:text-neutral-200">
               <span>Dhruv Tripathi</span>
-              <span>FrontEnd Developer</span>
+              <span>FullStack Developer</span>
             </TextLoop>
           </a>
           <div className="text-xs text-neutral-400">

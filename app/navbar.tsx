@@ -30,6 +30,7 @@ const Navbar: React.FC<NavbarProps> = () => {
 
             <div className="hidden md:flex font-semibold items-center  space-x-6 ">
               {/* <Link href="/about" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">About</Link> */}
+              <Link href="/contactus" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">ContactUs</Link>
               <Link href="/resume.pdf" target="_blank" className="inline-flex items-center">
                 <motion.span
                   initial="initial"
@@ -48,7 +49,7 @@ const Navbar: React.FC<NavbarProps> = () => {
                   </motion.span>
                   {/* Underline */}
                   <motion.span
-                    className="absolute left-0 -bottom-[2px] h-[2px] bg-current w-full"
+                    className="absolute left-0 -bottom-[2px] h-[2px] bg-current w-16"
                     variants={{
                       initial: { scaleX: 0 },
                       hover: { scaleX: 1 }
@@ -59,9 +60,9 @@ const Navbar: React.FC<NavbarProps> = () => {
 
                   {/* Arrow Animation */}
                   <motion.span
-                    className="opacity-0"
+                    className="opacity-0 mt-2 "
                     variants={{
-                      hover: { y: -3, opacity: 1 }
+                      hover: { y: -2, opacity: 1 }
                     }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
@@ -69,12 +70,11 @@ const Navbar: React.FC<NavbarProps> = () => {
                   </motion.span>
                 </motion.span>
               </Link>
-              <Link href="/contactus" className="text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors">ContactUs</Link>
 
             </div>
 
             <button
-              className="md:hidden p-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-800"
+              className="md:hidden p-2 rounded-md text-neutral-300 hover:text-white hover:bg-neutral-800"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}

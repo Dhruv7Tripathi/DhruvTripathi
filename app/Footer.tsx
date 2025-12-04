@@ -73,7 +73,7 @@ export function Footer() {
         <a href="https://github.com/dhruv7tripathi" target="_blank">
           <TextLoop className="text-xs text-neutral-800 dark:text-neutral-200">
             <span>Dhruv Tripathi</span>
-            <span>FrontEnd Developer</span>
+            <span>FullStack Developer</span>
           </TextLoop>
         </a>
         <div className="text-xs text-zinc-400">
