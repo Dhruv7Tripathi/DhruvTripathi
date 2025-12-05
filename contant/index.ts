@@ -55,7 +55,7 @@ export const projects = [
     description: " Beautiful, responsive UI components and templates built with React, TypeScript, and Tailwind CSS. Ship faster with our production-ready blocks.",
     link: "https://layrdui.dhruvtripathi.in",
     // github: "#privaterepo",
-    imageUrl: "/projects/layrdui.png",
+    imageUrl: "/layrdui.png",
     // tags: ["Nextjs", "Typescript", "TailwindCSS", "FramerMotion"]
   },
   {

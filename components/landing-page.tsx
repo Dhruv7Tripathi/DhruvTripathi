@@ -205,7 +205,7 @@ const LandingPage = () => {
               {achievements.map((achievement) => (
                 <div
                   key={achievement.title}
-                  className="p-4 sm:p-6 rounded-xl bg-background border shadow-md border-neutral-200 dark:border-neutral-700 ring ring-white/10 transition-all duration-300"
+                  className="p-4 sm:p-6 rounded-xl bg-background border shadow-md border-neutral-200 dark:border-neutral-800  transition-all duration-300"
                 >
                   <div className="flex items-center mb-3">
                     <div className="text-emerald-500 mr-3">{achievement.icon}</div>
@@ -240,7 +240,7 @@ const LandingPage = () => {
                   href={project.link}
                   passHref
                 >
-                  <div className="bg-background rounded-xl overflow-hidden shadow-lg group transition-all duration-300 ring ring-white/10 hover:ring-1 hover:ring-neutral-100 dark:hover:ring-neutral-900">
+                  <div className="bg-background rounded-xl overflow-hidden shadow-lg group transition-all duration-300 border border-white/10 hover:border-1 hover:border-neutral-100 dark:hover:border-neutral-900">
                     <div className="relative overflow-hidden aspect-video">
                       <Image
                         src={project.imageUrl}
@@ -268,7 +268,7 @@ const LandingPage = () => {
                 <h2 className="text-3xl sm:text-4xl font-bold text-neutral-800 dark:text-white mb-4">
                   Let&apos;s Work Together
                 </h2>
-                <p className="text-neutral-800 italic dark:text-neutral-200 text-base sm:text-lg">
+                <p className="text-neutral-800 italic dark:text-neutral-200 text-sm sm:text-base">
                   I&apos;m always interested in hearing about new projects and opportunities.
                   Feel free to reach out through any of these channels.
                   <br className="hidden sm:block" />
