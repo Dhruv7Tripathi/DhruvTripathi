@@ -53,7 +53,7 @@ function ThemeSwitch() {
         return (
           <button
             key={theme.id}
-            className="inline-flex h-7 w-7 items-center justify-center text-zinc-500 transition-colors duration-100 focus-visible:outline-2 data-[checked=true]:text-zinc-950 dark:text-zinc-400 dark:data-[checked=true]:text-zinc-50"
+            className="inline-flex h-7 w-7 items-center justify-center text-neutral-500 transition-colors duration-100 focus-visible:outline-2 data-[checked=true]:text-neutral-950 dark:text-neutral-400 dark:data-[checked=true]:text-neutral-50"
             type="button"
             aria-label={`Switch to ${theme.label} theme`}
             data-id={theme.id}
@@ -68,7 +68,7 @@ function ThemeSwitch() {
 
 export function Footer() {
   return (
-    <footer className="mt-6 border-t bg-background border-zinc-300 px-0 py-4 dark:border-zinc-500">
+    <footer className="mt-6 border-t bg-background border-neutral-300 px-0 py-4 dark:border-neutral-300">
       <div className="flex items-center justify-between">
         <a href="https://github.com/dhruv7tripathi" target="_blank">
           <TextLoop className="text-xs text-neutral-800 dark:text-neutral-200">
@@ -76,7 +76,7 @@ export function Footer() {
             <span>FullStack Developer</span>
           </TextLoop>
         </a>
-        <div className="text-xs text-zinc-400">
+        <div className="text-xs text-neutral-400">
           <ThemeSwitch />
         </div>
       </div>

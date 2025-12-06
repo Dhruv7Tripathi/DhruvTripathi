@@ -61,7 +61,7 @@ const AboutPage = () => {
             {education.map((edu, index) => (
               <Card
                 key={index}
-                className="rounded-xl ring-2 ring-white/5 dark:ring-white/10 overflow-hidden"
+                className="rounded-lg ring-1 ring-white/5 dark:ring-white/10 overflow-hidden"
               >
                 <div className="relative rounded-lg aspect-video overflow-hidden group">
                   <Image
@@ -69,15 +69,15 @@ const AboutPage = () => {
                     alt={edu.institution}
                     width={500}
                     height={500}
-                    className="w-full h-full grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500 rounded-xl"
+                    className="w-full h-full p-2 grayscale group-hover:grayscale-0 group-hover:scale-100 transition-all duration-500 rounded-xl"
                   />
                 </div>
 
                 <CardContent className="p-4">
-                  <h3 className="text-xl font-semibold mb-2">{edu.institution}</h3>
-                  <p className="text-muted-foreground mb-2">{edu.degree}</p>
-                  <p className="text-muted-foreground mb-2">{edu.performance}</p>
-                  <p className="text-sm text-muted-foreground mb-4">{edu.year}</p>
+                  <h3 className="text-xl font-semibold mb-0">{edu.institution}</h3>
+                  <p className="text-muted-foreground text-base mb-0">{edu.degree}</p>
+                  <p className="text-muted-foreground text-base mb-0">{edu.performance}</p>
+                  <p className="text-sm text-muted-foreground mb-1">{edu.year}</p>
                   {/* <p>{edu.description}</p> */}
                 </CardContent>
               </Card>
