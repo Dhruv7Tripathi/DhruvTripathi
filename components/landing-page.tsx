@@ -231,7 +231,7 @@ const LandingPage = () => {
                 Selected Projects
               </h2>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-6">
               {projects.map((project) => (
                 <Link
                   key={project.title}
@@ -240,20 +240,20 @@ const LandingPage = () => {
                   href={project.link}
                   passHref
                 >
-                  <div className="bg-background rounded-xl overflow-hidden shadow-lg group transition-all duration-300 border border-white/10 hover:border-1 hover:border-neutral-100 dark:hover:border-neutral-900">
+                  <div className="bg-background rounded-lg overflow-hidden shadow-lg group transition-all duration-300 border border-white/10 hover:border-1 hover:border-neutral-100 dark:hover:border-neutral-900">
                     <div className="relative overflow-hidden aspect-video">
                       <Image
                         src={project.imageUrl}
                         alt={project.title}
-                        className="w-full h-full object-cover  grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all  duration-500"
+                        className="w-full h-full p-2 rounded-xl grayscale group-hover:grayscale-0 group-hover:scale-100  duration-200"
                         width={500}
                         height={300}
                         loading="lazy"
                       />
                     </div>
-                    <div className="p-4 sm:p-6">
-                      <h3 className="text-lg sm:text-xl font-bold mb-2 text-neutral-800 dark:text-white">{project.title}</h3>
-                      <p className="text-sm sm:text-base text-neutral-800 dark:text-neutral-200 mb-4 line-clamp-3">{project.description}</p>
+                    <div className="p-2 sm:p-3">
+                      <h3 className="text-lg sm:text-xl font-semibold mb-2 text-neutral-800 dark:text-white">{project.title}</h3>
+                      <p className="text-sm sm:text-sm text-neutral-800 dark:text-neutral-200 mb-4 line-clamp-3">{project.description}</p>
                     </div>
                   </div>
                 </Link>
@@ -319,7 +319,7 @@ function MagneticSocialLink({
     <Magnetic springOptions={{ bounce: 0 }} intensity={0.3}>
       <a
         href={link}
-        className="group relative inline-flex shrink-0 items-center gap-[1px] rounded-full bg-neutral-100 px-2.5 py-1.5 sm:px-3 sm:py-2 text-sm text-black transition-colors duration-200 hover:bg-neutral-950 hover:text-neutral-50 dark:bg-neutral-800 dark:text-neutral-100 dark:hover:bg-neutral-700"
+        className="group relative inline-flex shrink-0 items-center gap-[1px] rounded-xl bg-neutral-100 px-2.5 py-1.5 sm:px-3 sm:py-2 text-sm text-black transition-colors duration-200 hover:bg-neutral-950 hover:text-neutral-50 dark:bg-neutral-900 dark:text-neutral-100 dark:hover:bg-neutral-900"
       >
         {children}
       </a>
@@ -338,16 +338,16 @@ export const SOCIAL_LINKS: SocialLink[] = [
     link: 'https://github.com/dhruv7tripathi',
   },
   {
+    label: <LeetCodeIcon />,
+    link: 'https://leetcode.com/u/Dhruv_Tripathi0705/',
+  },
+  {
     label: <FaXTwitter size={20} className='bg-background sm:w-6 sm:h-6' />,
     link: 'https://twitter.com/dhruvtripathi77',
   },
   {
     label: <Linkedin size={20} className='bg-background sm:w-6 sm:h-6' />,
     link: 'https://www.linkedin.com/in/dhruv-tripathi-9848792aa/',
-  },
-  {
-    label: <LeetCodeIcon />,
-    link: 'https://leetcode.com/u/Dhruv_Tripathi0705/',
   },
   {
     label: <FileText />,

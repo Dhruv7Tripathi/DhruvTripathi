@@ -63,15 +63,16 @@ const AboutPage = () => {
                 key={index}
                 className="rounded-xl ring-2 ring-white/5 dark:ring-white/10 overflow-hidden"
               >
-                <div className="relative rounded-lg aspect-video">
+                <div className="relative rounded-lg aspect-video overflow-hidden group">
                   <Image
                     src={edu.imageUrl}
                     alt={edu.institution}
-                    className="w-full h-full rounded-xl"
                     width={500}
                     height={500}
+                    className="w-full h-full grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-500 rounded-xl"
                   />
                 </div>
+
                 <CardContent className="p-4">
                   <h3 className="text-xl font-semibold mb-2">{edu.institution}</h3>
                   <p className="text-muted-foreground mb-2">{edu.degree}</p>
