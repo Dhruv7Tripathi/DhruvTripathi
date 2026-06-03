@@ -1,0 +1,34 @@
+
+export const useMDXComponents = (components) => {
+  return {
+    ...components,
+
+    // Custom <Cover /> component for MDX
+    Cover: ({
+      src,
+      alt,
+      caption,
+    }) => (
+      <figure>
+        <img src={src} alt={alt} className="rounded-xl" />
+        {caption && (
+          <figcaption className="text-center text-sm text-muted-foreground mt-2">
+            {caption}
+          </figcaption>
+        )}
+      </figure>
+    ),
+
+    // Custom <code> block for MDX
+    code: ({
+      children,
+      ...props
+    }) => {
+      return (
+        <code {...props}>
+          {typeof children === 'string' ? children : ''}
+        </code>
+      )
+    },
+  }
+}
