@@ -164,7 +164,6 @@ const LandingPage = () => {
             </div>
           </div>
 
-          {/* About Section */}
           <div className="bg-background rounded-xl backdrop-blur-sm bg-opacity-80 mb-8">
             <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed text-sm sm:text-base mb-6 sm:mb-8">
               I&apos;m a passionate Full-Stack Developer who loves turning ideas into smooth, scalable, and user-friendly web experiences.
