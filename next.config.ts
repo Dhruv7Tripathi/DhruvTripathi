@@ -13,16 +13,11 @@
 
 // export default nextConfig;
 
-<<<<<<< HEAD
 // @ts-ignore - '@next/mdx' may not have local type declarations in this environment.
 import createMDX from '@next/mdx';
 // If TypeScript can't find 'next' types in this environment, provide a minimal
 // local fallback so this file still typechecks.
 type NextConfig = any;
-=======
-import createMDX from '@next/mdx';
-import type { NextConfig } from 'next';
->>>>>>> 87d1a931436f1b425527b319827906e37a04b6f3
 /** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
 

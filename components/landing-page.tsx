@@ -155,27 +155,15 @@ const LandingPage = () => {
 
             <div className="shrink-0">
               <Image
-<<<<<<< HEAD
                 src="/Tommy SHelby.jpeg"
                 alt="Dhruv Tripathi"
                 width={240}
                 height={240}
                 className="rounded-xl border object-cover dark:border-neutral-900 border-neutral-100 sm:w-[180px] sm:h-[180px]"
-=======
-                src="/goku.jpg"
-                alt="Dhruv Tripathi"
-                width={240}
-                height={240}
-                className="rounded-xl border dark:border-neutral-900 border-neutral-100 sm:w-[180px] sm:h-[180px]"
->>>>>>> 87d1a931436f1b425527b319827906e37a04b6f3
               />
             </div>
           </div>
 
-<<<<<<< HEAD
-=======
-          {/* About Section */}
->>>>>>> 87d1a931436f1b425527b319827906e37a04b6f3
           <div className="bg-background rounded-xl backdrop-blur-sm bg-opacity-80 mb-8">
             <p className="text-neutral-600 dark:text-neutral-400 leading-relaxed text-sm sm:text-base mb-6 sm:mb-8">
               I&apos;m a passionate Full-Stack Developer who loves turning ideas into smooth, scalable, and user-friendly web experiences.
