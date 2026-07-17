@@ -155,7 +155,7 @@ const LandingPage = () => {
 
             <div className="shrink-0">
               <Image
-                src="/Tommy Shelby.jpeg"
+                src="/dhruv.png"
                 alt="Dhruv Tripathi"
                 width={240}
                 height={240}
